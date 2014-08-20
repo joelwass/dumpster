@@ -21,6 +21,22 @@
 		EEA38DF01991A74A002623C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD21991A74A002623C3 /* UIKit.framework */; };
 		EEA38DF81991A74A002623C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEA38DF61991A74A002623C3 /* InfoPlist.strings */; };
 		EEA38DFA1991A74A002623C3 /* DumpsterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA38DF91991A74A002623C3 /* DumpsterTests.m */; };
+		EEA38E071991A80E002623C3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E061991A80E002623C3 /* AudioToolbox.framework */; };
+		EEA38E091991A813002623C3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E081991A813002623C3 /* CFNetwork.framework */; };
+		EEA38E0B1991A821002623C3 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E0A1991A821002623C3 /* libz.dylib */; };
+		EEA38E0D1991A826002623C3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E0C1991A826002623C3 /* MobileCoreServices.framework */; };
+		EEA38E0F1991A82C002623C3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E0E1991A82C002623C3 /* QuartzCore.framework */; };
+		EEA38E111991A836002623C3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E101991A836002623C3 /* Security.framework */; };
+		EEA38E131991A83C002623C3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E121991A83C002623C3 /* StoreKit.framework */; };
+		EEA38E151991A843002623C3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E141991A843002623C3 /* SystemConfiguration.framework */; };
+		EEA38E171991A8E7002623C3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E161991A8E7002623C3 /* Parse.framework */; };
+		EEB0BF2B199F2BA8006D7B3D /* YCJQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB0BF2A199F2BA8006D7B3D /* YCJQuestions.m */; };
+		EEB0BF2F199F2C61006D7B3D /* YCJQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB0BF2D199F2C61006D7B3D /* YCJQuestionViewController.m */; };
+		EEB0BF30199F2C61006D7B3D /* YCJQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB0BF2E199F2C61006D7B3D /* YCJQuestionViewController.xib */; };
+		EEB0BF33199F2CF9006D7B3D /* YCJAnswers.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB0BF32199F2CF9006D7B3D /* YCJAnswers.m */; };
+		EEB0BF3719A4CB31006D7B3D /* logo270.png in Resources */ = {isa = PBXBuildFile; fileRef = EEB0BF3419A4CB31006D7B3D /* logo270.png */; };
+		EEB0BF3819A4CB31006D7B3D /* logo180.png in Resources */ = {isa = PBXBuildFile; fileRef = EEB0BF3519A4CB31006D7B3D /* logo180.png */; };
+		EEB0BF3919A4CB31006D7B3D /* logo90.png in Resources */ = {isa = PBXBuildFile; fileRef = EEB0BF3619A4CB31006D7B3D /* logo90.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +69,25 @@
 		EEA38DF51991A74A002623C3 /* DumpsterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DumpsterTests-Info.plist"; sourceTree = "<group>"; };
 		EEA38DF71991A74A002623C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EEA38DF91991A74A002623C3 /* DumpsterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DumpsterTests.m; sourceTree = "<group>"; };
+		EEA38E061991A80E002623C3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EEA38E081991A813002623C3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EEA38E0A1991A821002623C3 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		EEA38E0C1991A826002623C3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EEA38E0E1991A82C002623C3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EEA38E101991A836002623C3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EEA38E121991A83C002623C3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		EEA38E141991A843002623C3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EEA38E161991A8E7002623C3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../../../Downloads/Parse.framework; sourceTree = "<group>"; };
+		EEB0BF29199F2BA8006D7B3D /* YCJQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCJQuestions.h; sourceTree = "<group>"; };
+		EEB0BF2A199F2BA8006D7B3D /* YCJQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCJQuestions.m; sourceTree = "<group>"; };
+		EEB0BF2C199F2C61006D7B3D /* YCJQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCJQuestionViewController.h; sourceTree = "<group>"; };
+		EEB0BF2D199F2C61006D7B3D /* YCJQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCJQuestionViewController.m; sourceTree = "<group>"; };
+		EEB0BF2E199F2C61006D7B3D /* YCJQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCJQuestionViewController.xib; sourceTree = "<group>"; };
+		EEB0BF31199F2CF9006D7B3D /* YCJAnswers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCJAnswers.h; sourceTree = "<group>"; };
+		EEB0BF32199F2CF9006D7B3D /* YCJAnswers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCJAnswers.m; sourceTree = "<group>"; };
+		EEB0BF3419A4CB31006D7B3D /* logo270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo270.png; sourceTree = "<group>"; };
+		EEB0BF3519A4CB31006D7B3D /* logo180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo180.png; sourceTree = "<group>"; };
+		EEB0BF3619A4CB31006D7B3D /* logo90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo90.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +95,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEA38E151991A843002623C3 /* SystemConfiguration.framework in Frameworks */,
+				EEA38E131991A83C002623C3 /* StoreKit.framework in Frameworks */,
+				EEA38E111991A836002623C3 /* Security.framework in Frameworks */,
+				EEA38E0F1991A82C002623C3 /* QuartzCore.framework in Frameworks */,
+				EEA38E0D1991A826002623C3 /* MobileCoreServices.framework in Frameworks */,
+				EEA38E0B1991A821002623C3 /* libz.dylib in Frameworks */,
 				EEA38DD11991A74A002623C3 /* CoreGraphics.framework in Frameworks */,
+				EEA38E091991A813002623C3 /* CFNetwork.framework in Frameworks */,
+				EEA38E071991A80E002623C3 /* AudioToolbox.framework in Frameworks */,
 				EEA38DD31991A74A002623C3 /* UIKit.framework in Frameworks */,
+				EEA38E171991A8E7002623C3 /* Parse.framework in Frameworks */,
 				EEA38DCF1991A74A002623C3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +126,8 @@
 		EEA38DC21991A74A002623C3 = {
 			isa = PBXGroup;
 			children = (
+				EEB0BF28199F2B81006D7B3D /* Views */,
+				EEA38E031991A753002623C3 /* Models */,
 				EEA38DD41991A74A002623C3 /* Dumpster */,
 				EEA38DF31991A74A002623C3 /* DumpsterTests */,
 				EEA38DCD1991A74A002623C3 /* Frameworks */,
@@ -101,6 +147,15 @@
 		EEA38DCD1991A74A002623C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EEA38E161991A8E7002623C3 /* Parse.framework */,
+				EEA38E141991A843002623C3 /* SystemConfiguration.framework */,
+				EEA38E121991A83C002623C3 /* StoreKit.framework */,
+				EEA38E101991A836002623C3 /* Security.framework */,
+				EEA38E0E1991A82C002623C3 /* QuartzCore.framework */,
+				EEA38E0C1991A826002623C3 /* MobileCoreServices.framework */,
+				EEA38E0A1991A821002623C3 /* libz.dylib */,
+				EEA38E081991A813002623C3 /* CFNetwork.framework */,
+				EEA38E061991A80E002623C3 /* AudioToolbox.framework */,
 				EEA38DCE1991A74A002623C3 /* Foundation.framework */,
 				EEA38DD01991A74A002623C3 /* CoreGraphics.framework */,
 				EEA38DD21991A74A002623C3 /* UIKit.framework */,
@@ -126,6 +181,9 @@
 		EEA38DD51991A74A002623C3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EEB0BF3419A4CB31006D7B3D /* logo270.png */,
+				EEB0BF3519A4CB31006D7B3D /* logo180.png */,
+				EEB0BF3619A4CB31006D7B3D /* logo90.png */,
 				EEA38DD61991A74A002623C3 /* Dumpster-Info.plist */,
 				EEA38DD71991A74A002623C3 /* InfoPlist.strings */,
 				EEA38DDA1991A74A002623C3 /* main.m */,
@@ -150,6 +208,27 @@
 				EEA38DF61991A74A002623C3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EEA38E031991A753002623C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EEB0BF29199F2BA8006D7B3D /* YCJQuestions.h */,
+				EEB0BF2A199F2BA8006D7B3D /* YCJQuestions.m */,
+				EEB0BF31199F2CF9006D7B3D /* YCJAnswers.h */,
+				EEB0BF32199F2CF9006D7B3D /* YCJAnswers.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EEB0BF28199F2B81006D7B3D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EEB0BF2C199F2C61006D7B3D /* YCJQuestionViewController.h */,
+				EEB0BF2D199F2C61006D7B3D /* YCJQuestionViewController.m */,
+				EEB0BF2E199F2C61006D7B3D /* YCJQuestionViewController.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,8 +309,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEA38DE71991A74A002623C3 /* Images.xcassets in Resources */,
+				EEB0BF3919A4CB31006D7B3D /* logo90.png in Resources */,
 				EEA38DD91991A74A002623C3 /* InfoPlist.strings in Resources */,
+				EEB0BF3819A4CB31006D7B3D /* logo180.png in Resources */,
 				EEA38DE21991A74A002623C3 /* Main.storyboard in Resources */,
+				EEB0BF30199F2C61006D7B3D /* YCJQuestionViewController.xib in Resources */,
+				EEB0BF3719A4CB31006D7B3D /* logo270.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,8 +334,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEA38DE51991A74A002623C3 /* YCJViewController.m in Sources */,
+				EEB0BF2B199F2BA8006D7B3D /* YCJQuestions.m in Sources */,
 				EEA38DDB1991A74A002623C3 /* main.m in Sources */,
 				EEA38DDF1991A74A002623C3 /* YCJAppDelegate.m in Sources */,
+				EEB0BF33199F2CF9006D7B3D /* YCJAnswers.m in Sources */,
+				EEB0BF2F199F2C61006D7B3D /* YCJQuestionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +463,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/joelwasserman/Downloads,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dumpster/Dumpster-Prefix.pch";
 				INFOPLIST_FILE = "Dumpster/Dumpster-Info.plist";
@@ -390,6 +480,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/joelwasserman/Downloads,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dumpster/Dumpster-Prefix.pch";
 				INFOPLIST_FILE = "Dumpster/Dumpster-Info.plist";
@@ -457,6 +551,7 @@
 				EEA38DFF1991A74A002623C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EEA38E001991A74A002623C3 /* Build configuration list for PBXNativeTarget "DumpsterTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +560,7 @@
 				EEA38E021991A74A002623C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
