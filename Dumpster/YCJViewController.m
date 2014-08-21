@@ -40,12 +40,43 @@
         }
         
         // Normal Animation
-        UIImageView *animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(110, 160, 100, 100)];
+        UIImageView *animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 160, 120, 120)];
         animationImageView.animationImages = images;
         animationImageView.animationDuration = 1.5;
         
         [self.view addSubview:animationImageView];
         [animationImageView startAnimating];
+    
+    
+    
+    
+    
+    // ****************************************************************************
+    // this is for entering in questions and answers into our database
+    
+    
+    
+    
+
+    char str[50] = {0};                  // init all to 0
+    printf("Enter question: ");
+    scanf("%s", str);
+    
+    char a1[50] = {0};                  // init all to 0
+    printf("Enter question: ");
+    scanf("%s", str);
+    
+    char a2[50] = {0};                  // init all to 0
+    printf("Enter question: ");
+    scanf("%s", str);
+    
+    char a3[50] = {0};                  // init all to 0
+    printf("Enter question: ");
+    scanf("%s", str);
+    
+    char a4[50] = {0};                  // init all to 0
+    printf("Enter question: ");
+    scanf("%s", str);
     }
 
 - (void)didReceiveMemoryWarning
