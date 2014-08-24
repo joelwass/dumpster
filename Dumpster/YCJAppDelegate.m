@@ -20,15 +20,17 @@
     PFObject *questions = [PFObject objectWithClassName:@"Questions"];
     questions[@"QNumber"] = @"1";
     questions[@"Question"] = @"how old is logan";
+    [questions saveInBackground];
     
     PFObject *answers = [PFObject objectWithClassName:@"Answers"];
     answers[@"QNumber"] = @"1";
-    answers[@"incAnswer1"] = @"2";
+    answers[@"Answer"] = @"2";
+    [answers saveInBackground];
     
     
-    PFObject *testObject = [PFObject objectWithClassName:@"Questions"];
-    testObject[@"question"] = @"who is first president";
-    [testObject saveInBackground];
+    //PFObject *testObject = [PFObject objectWithClassName:@"Questions"];
+    //testObject[@"question"] = @"who is first president";
+    //[testObject saveInBackground];
     
     
     // Override point for customization after application launch.
