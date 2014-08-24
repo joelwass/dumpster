@@ -7,6 +7,7 @@
 //
 
 #import "YCJViewController.h"
+#import "Parse/parse.h"
 
 @interface YCJViewController ()
 
@@ -58,27 +59,29 @@
     
     
 
-    char str[50] = {0};                  // init all to 0
-    printf("Enter question: ");
-    scanf("%s", str);
+//    NSString *question;                  // init all to 0
+//    printf("Enter question: ");
+   // scanf("%i", question);
+    
+
     
     //222222222
     
-    char a1[50] = {0};                  // init all to 0
-    printf("Enter incAnswer1: ");
-    scanf("%s", str);
-    
-    char a2[50] = {0};                  // init all to 0
-    printf("Enter incAnswer2: ");
-    scanf("%s", str);
-    
-    char a3[50] = {0};                  // init all to 0
-    printf("Enter incAnswer3: ");
-    scanf("%s", str);
-    
-    char a4[50] = {0};                  // init all to 0
-    printf("Enter correctAnswer: ");
-    scanf("%s", str);
+//    char a1[50] = {0};                  // init all to 0
+//    printf("Enter incAnswer1: ");
+//    scanf("%s", str);
+//    
+//    char a2[50] = {0};                  // init all to 0
+//    printf("Enter incAnswer2: ");
+//    scanf("%s", str);
+//    
+//    char a3[50] = {0};                  // init all to 0
+//    printf("Enter incAnswer3: ");
+//    scanf("%s", str);
+//    
+//    char a4[50] = {0};                  // init all to 0
+//    printf("Enter correctAnswer: ");
+//    scanf("%s", str);
     }
 
 - (void)didReceiveMemoryWarning
