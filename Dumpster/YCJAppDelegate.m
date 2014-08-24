@@ -17,6 +17,14 @@
                   clientKey:@"NumQirLXh0D8O4d9oSh8tRX8fPG0GUkGtZ3Npef7"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    PFObject *questions = [PFObject objectWithClassName:@"Questions"];
+    questions[@"QNumber"] = @"1";
+    questions[@"Question"] = @"how old is logan";
+    
+    PFObject *answers = [PFObject objectWithClassName:@"Answers"];
+    answers[@"QNumber"] = @"1";
+    answers[@"incAnswer1"] = @"2";
+    
     
     PFObject *testObject = [PFObject objectWithClassName:@"Questions"];
     testObject[@"question"] = @"who is first president";
