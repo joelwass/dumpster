@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4D8CDDE4-8903-4ECF-BE83-64362D6C1AB9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Dumpster</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CD88924B-23AE-4119-810F-4D4563AE0426</key>
+		<string>https://www.github.com/LoganGirard/dumpster.git/</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Dumpster.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CD88924B-23AE-4119-810F-4D4563AE0426</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://www.github.com/LoganGirard/dumpster.git/</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CD88924B-23AE-4119-810F-4D4563AE0426</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CD88924B-23AE-4119-810F-4D4563AE0426</string>
+			<key>IDESourceControlWCCName</key>
+			<string>dumpster</string>
+		</dict>
+	</array>
+</dict>
+</plist>

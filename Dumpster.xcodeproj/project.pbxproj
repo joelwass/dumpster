@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81F9413519AA6D1200EE4837 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F9413419AA6D1200EE4837 /* Parse.framework */; };
 		EEA38DCF1991A74A002623C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DCE1991A74A002623C3 /* Foundation.framework */; };
 		EEA38DD11991A74A002623C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD01991A74A002623C3 /* CoreGraphics.framework */; };
 		EEA38DD31991A74A002623C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD21991A74A002623C3 /* UIKit.framework */; };
@@ -29,7 +30,6 @@
 		EEA38E111991A836002623C3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E101991A836002623C3 /* Security.framework */; };
 		EEA38E131991A83C002623C3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E121991A83C002623C3 /* StoreKit.framework */; };
 		EEA38E151991A843002623C3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E141991A843002623C3 /* SystemConfiguration.framework */; };
-		EEA38E171991A8E7002623C3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E161991A8E7002623C3 /* Parse.framework */; };
 		EEB0BF2B199F2BA8006D7B3D /* YCJQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB0BF2A199F2BA8006D7B3D /* YCJQuestions.m */; };
 		EEB0BF2F199F2C61006D7B3D /* YCJQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB0BF2D199F2C61006D7B3D /* YCJQuestionViewController.m */; };
 		EEB0BF30199F2C61006D7B3D /* YCJQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB0BF2E199F2C61006D7B3D /* YCJQuestionViewController.xib */; };
@@ -50,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81F9413419AA6D1200EE4837 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../parse-library-1.2.21/Parse.framework"; sourceTree = "<group>"; };
 		EEA38DCB1991A74A002623C3 /* Dumpster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dumpster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA38DCE1991A74A002623C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEA38DD01991A74A002623C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -77,7 +78,6 @@
 		EEA38E101991A836002623C3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EEA38E121991A83C002623C3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EEA38E141991A843002623C3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		EEA38E161991A8E7002623C3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../../../Downloads/Parse.framework; sourceTree = "<group>"; };
 		EEB0BF29199F2BA8006D7B3D /* YCJQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCJQuestions.h; sourceTree = "<group>"; };
 		EEB0BF2A199F2BA8006D7B3D /* YCJQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCJQuestions.m; sourceTree = "<group>"; };
 		EEB0BF2C199F2C61006D7B3D /* YCJQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCJQuestionViewController.h; sourceTree = "<group>"; };
@@ -95,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F9413519AA6D1200EE4837 /* Parse.framework in Frameworks */,
 				EEA38E151991A843002623C3 /* SystemConfiguration.framework in Frameworks */,
 				EEA38E131991A83C002623C3 /* StoreKit.framework in Frameworks */,
 				EEA38E111991A836002623C3 /* Security.framework in Frameworks */,
@@ -105,7 +106,6 @@
 				EEA38E091991A813002623C3 /* CFNetwork.framework in Frameworks */,
 				EEA38E071991A80E002623C3 /* AudioToolbox.framework in Frameworks */,
 				EEA38DD31991A74A002623C3 /* UIKit.framework in Frameworks */,
-				EEA38E171991A8E7002623C3 /* Parse.framework in Frameworks */,
 				EEA38DCF1991A74A002623C3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,7 +147,7 @@
 		EEA38DCD1991A74A002623C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EEA38E161991A8E7002623C3 /* Parse.framework */,
+				81F9413419AA6D1200EE4837 /* Parse.framework */,
 				EEA38E141991A843002623C3 /* SystemConfiguration.framework */,
 				EEA38E121991A83C002623C3 /* StoreKit.framework */,
 				EEA38E101991A836002623C3 /* Security.framework */,
@@ -466,6 +466,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/joelwasserman/Downloads,
+					"/Users/lgirard/Documents/parse-library-1.2.21",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dumpster/Dumpster-Prefix.pch";
@@ -483,6 +484,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/joelwasserman/Downloads,
+					"/Users/lgirard/Documents/parse-library-1.2.21",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dumpster/Dumpster-Prefix.pch";
