@@ -16,9 +16,13 @@
     [Parse setApplicationId:@"cps9plEsIoTBlqLqhqAocp8PBU7iuJNNucRxn7z2"
                   clientKey:@"NumQirLXh0D8O4d9oSh8tRX8fPG0GUkGtZ3Npef7"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
+    
+    
+    PFObject *testObject = [PFObject objectWithClassName:@"Questions"];
+    testObject[@"question"] = @"who is first president";
     [testObject saveInBackground];
+    
+    
     // Override point for customization after application launch.
     return YES;
 }
