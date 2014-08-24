@@ -62,20 +62,22 @@
     printf("Enter question: ");
     scanf("%s", str);
     
+    //222222222
+    
     char a1[50] = {0};                  // init all to 0
-    printf("Enter question: ");
+    printf("Enter incAnswer1: ");
     scanf("%s", str);
     
     char a2[50] = {0};                  // init all to 0
-    printf("Enter question: ");
+    printf("Enter incAnswer2: ");
     scanf("%s", str);
     
     char a3[50] = {0};                  // init all to 0
-    printf("Enter question: ");
+    printf("Enter incAnswer3: ");
     scanf("%s", str);
     
     char a4[50] = {0};                  // init all to 0
-    printf("Enter question: ");
+    printf("Enter correctAnswer: ");
     scanf("%s", str);
     }
 
