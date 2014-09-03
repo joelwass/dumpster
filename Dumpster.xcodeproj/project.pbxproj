@@ -37,6 +37,7 @@
 		EEB0BF3719A4CB31006D7B3D /* logo270.png in Resources */ = {isa = PBXBuildFile; fileRef = EEB0BF3419A4CB31006D7B3D /* logo270.png */; };
 		EEB0BF3819A4CB31006D7B3D /* logo180.png in Resources */ = {isa = PBXBuildFile; fileRef = EEB0BF3519A4CB31006D7B3D /* logo180.png */; };
 		EEB0BF3919A4CB31006D7B3D /* logo90.png in Resources */ = {isa = PBXBuildFile; fileRef = EEB0BF3619A4CB31006D7B3D /* logo90.png */; };
+		EEB983ED19B7600E0014D8B7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB983EC19B7600E0014D8B7 /* Bolts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		EEB0BF3419A4CB31006D7B3D /* logo270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo270.png; sourceTree = "<group>"; };
 		EEB0BF3519A4CB31006D7B3D /* logo180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo180.png; sourceTree = "<group>"; };
 		EEB0BF3619A4CB31006D7B3D /* logo90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo90.png; sourceTree = "<group>"; };
+		EEB983EC19B7600E0014D8B7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				EEA38E0D1991A826002623C3 /* MobileCoreServices.framework in Frameworks */,
 				EEA38E0B1991A821002623C3 /* libz.dylib in Frameworks */,
 				EEA38DD11991A74A002623C3 /* CoreGraphics.framework in Frameworks */,
+				EEB983ED19B7600E0014D8B7 /* Bolts.framework in Frameworks */,
 				EEA38E091991A813002623C3 /* CFNetwork.framework in Frameworks */,
 				EEA38E071991A80E002623C3 /* AudioToolbox.framework in Frameworks */,
 				EEA38DD31991A74A002623C3 /* UIKit.framework in Frameworks */,
@@ -147,6 +150,7 @@
 		EEA38DCD1991A74A002623C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EEB983EC19B7600E0014D8B7 /* Bolts.framework */,
 				EEA38E161991A8E7002623C3 /* Parse.framework */,
 				EEA38E141991A843002623C3 /* SystemConfiguration.framework */,
 				EEA38E121991A83C002623C3 /* StoreKit.framework */,
@@ -466,6 +470,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/joelwasserman/Downloads,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dumpster/Dumpster-Prefix.pch";
@@ -483,6 +488,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/joelwasserman/Downloads,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dumpster/Dumpster-Prefix.pch";

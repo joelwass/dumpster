@@ -15,7 +15,7 @@ NSString *question = NULL;
 
 - (void)buildQuestions:(NSMutableDictionary *)questionList
 {
-    questionNumber = arc4random() % 100;
+  //  questionNumber = arc4random() % 100;
     
     PFQuery *query = [PFQuery queryWithClassName:@"Questions"];
     [query whereKey:@"QNumber" equalTo:questionNumber];
