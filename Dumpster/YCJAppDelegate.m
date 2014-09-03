@@ -17,10 +17,10 @@
                   clientKey:@"NumQirLXh0D8O4d9oSh8tRX8fPG0GUkGtZ3Npef7"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    PFObject *questions = [PFObject objectWithClassName:@"Questions"];
-    questions[@"QNumber"] = @"1";
-    questions[@"Question"] = @"how old is logan";
-    [questions saveInBackground];
+//    PFObject *questions = [PFObject objectWithClassName:@"Questions"];
+//    questions[@"QNumber"] = @"1";
+//    questions[@"Question"] = @"how old is logan";
+//    [questions saveInBackground];
     
     PFObject *answers = [PFObject objectWithClassName:@"Answers"];
     answers[@"QNumber"] = @"1";
