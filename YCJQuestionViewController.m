@@ -7,6 +7,7 @@
 //
 
 #import "YCJQuestionViewController.h"
+#import "YCJQuestions.h"
 
 @interface YCJQuestionViewController ()
 
@@ -26,6 +27,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //let's call the questions method within YCJQuestions.h so that we present a question. figure out how to do that? lewlz
+    [YCJQuestions buildQuestions];
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
 

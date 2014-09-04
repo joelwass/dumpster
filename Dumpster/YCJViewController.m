@@ -8,6 +8,7 @@
 
 #import "YCJViewController.h"
 #import "Parse/parse.h"
+#import "YCJQuestionViewController.h"
 
 @interface YCJViewController ()
 
@@ -15,6 +16,19 @@
 
 @implementation YCJViewController
 
+
+int animationCompletion = 0; //created a variable to store animation count so we can load new view controller in viewDidAppear method
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    if (animationCompletion == 1){    // if the animation count has gone through, so if the animation is complete, then:
+        
+        YCJQuestionViewController *questions = [[YCJQuestionViewController alloc] initWithNibName:NULL bundle:NULL]; //create new view controller
+        [self presentViewController:questions animated:NO completion:NULL]; //present new view controller
+    }
+    
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -43,10 +57,17 @@
         // Normal Animation
         UIImageView *animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 160, 120, 120)];
         animationImageView.animationImages = images;
-        animationImageView.animationDuration = 1.5;
-        
+        animationImageView.animationDuration = 1;
+        animationImageView.animationRepeatCount = 3;
+    
+    if ([date timeIntervalSinceNow > 4]) {
+        animationCompletion = 1;
+    }
+    
         [self.view addSubview:animationImageView];
         [animationImageView startAnimating];
+   
+
     
     
     
