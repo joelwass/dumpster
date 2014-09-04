@@ -13,19 +13,22 @@
 id questionNumber = 0;
 NSString *question = NULL;
 
-- (void)buildQuestions:(NSMutableDictionary *)questionList
-{
-  //  questionNumber = arc4random() % 100;
+- (void)buildQuestions{
     
+   
     PFQuery *query = [PFQuery queryWithClassName:@"Questions"];
-    [query whereKey:@"QNumber" equalTo:questionNumber];
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        if (!object) {
-            // Did not find any UserStats for the current user
-        } else {
-            // Found UserStats
-            int highScore = [[object objectForKey:@"highScore"] intValue];
-        }
+    
+    [query getObjectInBackgroundWithId:@"DIJTUwrtPo" block:^(PFObject *Questions, NSError *error) {
+        // Do something with the returned PFObject in the gameScore variable.
+        NSLog(@"Hi again");
+        NSLog(@"%@", Questions[@"Question"]);
+        
     }];
+
+    
+    
+
 }
+    
+
 @end
