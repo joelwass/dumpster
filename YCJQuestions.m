@@ -10,22 +10,23 @@
 #import <Parse/Parse.h>
 
 @implementation YCJQuestions
-id questionNumber = 0;
 NSString *question = NULL;
 
 - (void)buildQuestions:(NSMutableDictionary *)questionList
 {
-  //  questionNumber = arc4random() % 100;
-    
+    int questionNumber = rand() % 1;
+    NSString* questionID = [NSString stringWithFormat:@"%i", questionNumber];
     PFQuery *query = [PFQuery queryWithClassName:@"Questions"];
-    [query whereKey:@"QNumber" equalTo:questionNumber];
+    [query whereKey:@"QNumber" equalTo:questionID];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         if (!object) {
             // Did not find any UserStats for the current user
         } else {
             // Found UserStats
-            int highScore = [[object objectForKey:@"highScore"] intValue];
+            question = [object objectForKey:@"question"];
         }
     }];
+    
+    NSLog(@"%@, stuff", question);
 }
 @end
