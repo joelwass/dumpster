@@ -10,13 +10,13 @@
 
 @interface YCJQuestions : NSObject
 
-@property (strong, nonatomic) NSString *question;
-@property (strong, nonatomic) NSString *answer1;
-@property (strong, nonatomic) NSString *answer2;
-@property (strong, nonatomic) NSString *answer3;
-@property (strong, nonatomic) NSString *answerCorrect;
-@property (strong, nonatomic) NSMutableDictionary *questionList;
-@property (strong, nonatomic) NSArray *answers;
+@property (strong, atomic) NSString *question;
+@property (strong, atomic) NSString *answer1;
+@property (strong, atomic) NSString *answer2;
+@property (strong, atomic) NSString *answer3;
+@property (strong, atomic) NSString *answerCorrect;
+@property (strong, atomic) NSMutableDictionary *questionList;
+@property (strong, atomic) NSArray *answers;
 
 - (void)buildQuestions;
 
