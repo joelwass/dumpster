@@ -8,6 +8,7 @@
 
 #import "YCJAppDelegate.h"
 #import "YCJQuestions.h"
+#import "YCJQuestionViewController.h"
 #import <Parse/Parse.h>
 
 @implementation YCJAppDelegate
@@ -19,9 +20,10 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     
-    YCJQuestions *listOfQuestions = [YCJQuestions new];
-    
-    [listOfQuestions buildQuestions];
+       
+//    YCJQuestions *listOfQuestions = [YCJQuestions new];
+//    
+//    [listOfQuestions buildQuestions];
     
     // Override point for customization after application launch.
     return YES;

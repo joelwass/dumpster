@@ -72,10 +72,14 @@
 -(IBAction)ButtonPressed:(UIButton *)sender
 {
     
-    YCJQuestionViewController *wc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"Questions"];
+    YCJQuestionViewController *wc = [[YCJQuestionViewController alloc] initWithNibName:NULL bundle:NULL];
+    [self presentViewController:wc animated:NO completion:NULL];
     
-    [self.navigationController pushViewController:wc animated:YES];
-    
+    if (wc) {
+        [wc viewDidLoad];
+    }else{
+        NSLog(@"error, Questions failed to load");
+    }
     
 }
 

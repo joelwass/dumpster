@@ -7,6 +7,7 @@
 //
 
 #import "YCJQuestionViewController.h"
+#import "YCJQuestions.h"
 
 @interface YCJQuestionViewController ()
 
@@ -27,6 +28,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    YCJQuestions *questionList = [[YCJQuestions alloc]init];
+    
+    NSLog(@"%@", questionList.answerCorrect);
    
 }
 
