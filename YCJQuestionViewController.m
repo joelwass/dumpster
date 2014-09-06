@@ -8,6 +8,7 @@
 
 #import "YCJQuestionViewController.h"
 #import "YCJAPViewController.h"
+#import "YCJWVViewController.h"
 #import "YCJQuestions.h"
 #import "Parse/Parse.h"
 
@@ -31,7 +32,7 @@
     YCJQuestionViewController *firstVC = [[YCJQuestionViewController alloc] initWithNibName:nil bundle:nil];
     YCJAPViewController *secondVC = [[YCJAPViewController alloc] initWithNibName:nil bundle:nil];
     
-    UINavigationController.viewControllers = [NSArray arrayWithObjects:firstVC, secondVC, nil];
+    NavigationController.viewControllers = [NSArray arrayWithObjects:firstVC, secondVC, nil];
     [UINavigationController popToViewController:secondVC animated:NO];
 }
 
@@ -50,7 +51,16 @@
     [super viewDidLoad];
     
 
-
+    UIViewController *firstController = [[YCJQuestionViewController alloc] initWithNibName:@"MyFirstViewCon" bundle:nil];
+    UIViewController *secondController = [[YCJAPViewController alloc] initWithNibName:@"SecondViewCon" bundle:nil] ;
+    UIViewController *thirdController = [[YCJWVViewController alloc] initWithNibName:@"ThirdViewCon" bundle:nil];
+    
+    UINavigationController *theNavCon = [[UINavigationController alloc] initWithRootViewController:firstController];
+    
+    [theNavCon pushViewController:secondController animated:NO];
+    [theNavCon pushViewController:thirdController animated:NO];
+    
+    self.window.rootViewController = theNavCon;
     
     PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
     
