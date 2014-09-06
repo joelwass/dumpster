@@ -28,9 +28,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    YCJQuestions *questionList = [[YCJQuestions alloc]init];
+
+//Not sure what to do with this shit yet, commenting out to save network traffic
     
-    NSLog(@"%@", questionList.answerCorrect);
+//    YCJQuestions *questionList = [[YCJQuestions alloc]init];
+//    
+//    NSLog(@"%@", questionList.answerCorrect);
+
+    
    
 }
 
