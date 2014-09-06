@@ -38,6 +38,8 @@
 		EEB0BF3819A4CB31006D7B3D /* logo180.png in Resources */ = {isa = PBXBuildFile; fileRef = EEB0BF3519A4CB31006D7B3D /* logo180.png */; };
 		EEB0BF3919A4CB31006D7B3D /* logo90.png in Resources */ = {isa = PBXBuildFile; fileRef = EEB0BF3619A4CB31006D7B3D /* logo90.png */; };
 		EEB983ED19B7600E0014D8B7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB983EC19B7600E0014D8B7 /* Bolts.framework */; };
+		EEB983F119BB9F270014D8B7 /* YCJAPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB983EF19BB9F270014D8B7 /* YCJAPViewController.m */; };
+		EEB983F219BB9F270014D8B7 /* YCJAPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB983F019BB9F270014D8B7 /* YCJAPViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,9 @@
 		EEB0BF3519A4CB31006D7B3D /* logo180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo180.png; sourceTree = "<group>"; };
 		EEB0BF3619A4CB31006D7B3D /* logo90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo90.png; sourceTree = "<group>"; };
 		EEB983EC19B7600E0014D8B7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		EEB983EE19BB9F270014D8B7 /* YCJAPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCJAPViewController.h; sourceTree = "<group>"; };
+		EEB983EF19BB9F270014D8B7 /* YCJAPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCJAPViewController.m; sourceTree = "<group>"; };
+		EEB983F019BB9F270014D8B7 /* YCJAPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCJAPViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +236,9 @@
 				EEB0BF2C199F2C61006D7B3D /* YCJQuestionViewController.h */,
 				EEB0BF2D199F2C61006D7B3D /* YCJQuestionViewController.m */,
 				EEB0BF2E199F2C61006D7B3D /* YCJQuestionViewController.xib */,
+				EEB983EE19BB9F270014D8B7 /* YCJAPViewController.h */,
+				EEB983EF19BB9F270014D8B7 /* YCJAPViewController.m */,
+				EEB983F019BB9F270014D8B7 /* YCJAPViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -318,6 +326,7 @@
 				EEB0BF3819A4CB31006D7B3D /* logo180.png in Resources */,
 				EEA38DE21991A74A002623C3 /* Main.storyboard in Resources */,
 				EEB0BF30199F2C61006D7B3D /* YCJQuestionViewController.xib in Resources */,
+				EEB983F219BB9F270014D8B7 /* YCJAPViewController.xib in Resources */,
 				EEB0BF3719A4CB31006D7B3D /* logo270.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +350,7 @@
 				EEB0BF2B199F2BA8006D7B3D /* YCJQuestions.m in Sources */,
 				EEA38DDB1991A74A002623C3 /* main.m in Sources */,
 				EEA38DDF1991A74A002623C3 /* YCJAppDelegate.m in Sources */,
+				EEB983F119BB9F270014D8B7 /* YCJAPViewController.m in Sources */,
 				EEB0BF33199F2CF9006D7B3D /* YCJAnswers.m in Sources */,
 				EEB0BF2F199F2C61006D7B3D /* YCJQuestionViewController.m in Sources */,
 			);

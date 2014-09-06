@@ -7,8 +7,10 @@
 //
 
 #import "YCJQuestionViewController.h"
+#import "YCJAPViewController.h"
 #import "YCJQuestions.h"
 #import "Parse/Parse.h"
+
 
 
 
@@ -24,6 +26,14 @@
 @end
 
 @implementation YCJQuestionViewController
+- (IBAction)button1:(UIButton *)sender {
+    
+    YCJQuestionViewController *firstVC = [[YCJQuestionViewController alloc] initWithNibName:nil bundle:nil];
+    YCJAPViewController *secondVC = [[YCJAPViewController alloc] initWithNibName:nil bundle:nil];
+    
+    UINavigationController.viewControllers = [NSArray arrayWithObjects:firstVC, secondVC, nil];
+    [UINavigationController popToViewController:secondVC animated:NO];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
