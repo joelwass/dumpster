@@ -19,8 +19,20 @@
                   clientKey:@"NumQirLXh0D8O4d9oSh8tRX8fPG0GUkGtZ3Npef7"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+<<<<<<< HEAD
 
     YCJQuestions *listOfQuestions = [YCJQuestions new];
+=======
+//    PFObject *questions = [PFObject objectWithClassName:@"Questions"];
+//    questions[@"QNumber"] = @"1";
+//    questions[@"Question"] = @"how old is logan";
+//    [questions saveInBackground];
+//    
+//    PFObject *answers = [PFObject objectWithClassName:@"Answers"];
+//    answers[@"QNumber"] = @"1";
+//    answers[@"Answer"] = @"2";
+//    [answers saveInBackground];
+>>>>>>> de9b30da73c053b442907c8ab272b71387ec38c8
     
     [listOfQuestions buildQuestions];
     

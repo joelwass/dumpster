@@ -8,8 +8,11 @@
 
 #import "YCJQuestionViewController.h"
 #import "YCJQuestions.h"
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> de9b30da73c053b442907c8ab272b71387ec38c8
 
 @interface YCJQuestionViewController ()
 
@@ -50,12 +53,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+<<<<<<< HEAD
 // Do any additional setup after loading the view from its nib.
 
 //Not sure what to do with this shit yet, commenting out to save network traffic
     
     
    
+=======
+    
+    //let's call the questions method within YCJQuestions.h so that we present a question. figure out how to do that? lewlz
+    [YCJQuestions buildQuestions];
+    
+    
+    // Do any additional setup after loading the view from its nib.
+>>>>>>> de9b30da73c053b442907c8ab272b71387ec38c8
 }
 
 - (void)didReceiveMemoryWarning
