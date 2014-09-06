@@ -72,23 +72,21 @@
 
 -(IBAction)ButtonPressed:(UIButton *)sender
 {
-    YCJQuestions *questionList = [[YCJQuestions alloc] init];
-    
-    [questionList buildQuestions];
-    
-    UILabel *questionLabel = [[UILabel alloc] init];
-    questionLabel.text = questionList.question;
     
     
-    YCJQuestionViewController *wc = [[YCJQuestionViewController alloc] initWithButton:nil button2:nil button3:nil button4:nil question:questionLabel];
-    [self presentViewController:wc animated:NO completion:NULL];
     
-    if (wc) {
-        [wc viewDidLoad];
-    }else{
-        NSLog(@"error, Questions failed to load");
-    }
+           
+    YCJQuestionViewController *wc = [[YCJQuestionViewController alloc]init];
+        [self presentViewController:wc animated:NO completion:NULL];
+        
+       
+
+        
+        
+   
+
     
-}
+    
+   }
 
 @end
