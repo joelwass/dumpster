@@ -21,7 +21,9 @@ NSString *question = NULL;
     [query getObjectInBackgroundWithId:@"DIJTUwrtPo" block:^(PFObject *Questions, NSError *error) {
         // Do something with the returned PFObject in the gameScore variable.
         NSLog(@"Hi again");
-        NSLog(@"%@", Questions[@"Question"]);
+        
+        self.question = Questions[@"Question"];
+        
         
     }];
 
