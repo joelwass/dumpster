@@ -7,6 +7,8 @@
 //
 
 #import "YCJAppDelegate.h"
+#import "YCJQuestions.h"
+#import "YCJQuestionViewController.h"
 #import <Parse/Parse.h>
 
 @implementation YCJAppDelegate
@@ -17,21 +19,11 @@
                   clientKey:@"NumQirLXh0D8O4d9oSh8tRX8fPG0GUkGtZ3Npef7"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    PFObject *questions = [PFObject objectWithClassName:@"Questions"];
-    questions[@"QNumber"] = @"1";
-    questions[@"Question"] = @"how old is logan";
-    [questions saveInBackground];
     
-    PFObject *answers = [PFObject objectWithClassName:@"Answers"];
-    answers[@"QNumber"] = @"1";
-    answers[@"Answer"] = @"2";
-    [answers saveInBackground];
-    
-    
-    //PFObject *testObject = [PFObject objectWithClassName:@"Questions"];
-    //testObject[@"question"] = @"who is first president";
-    //[testObject saveInBackground];
-    
+       
+//    YCJQuestions *listOfQuestions = [YCJQuestions new];
+//    
+//    [listOfQuestions buildQuestions];
     
     // Override point for customization after application launch.
     return YES;

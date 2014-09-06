@@ -8,6 +8,7 @@
 
 #import "YCJViewController.h"
 #import "Parse/parse.h"
+#import "YCJQuestionViewController.h"
 
 @interface YCJViewController ()
 
@@ -49,45 +50,37 @@
         [animationImageView startAnimating];
     
     
-    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button addTarget:self
+               action:@selector(ButtonPressed:)
+     forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"START" forState:UIControlStateNormal];
+    button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
+    [self.view addSubview:button];
     
     
     // ****************************************************************************
-    // this is for entering in questions and answers into our database
     
-    
-    
-    
-
-//    NSString *question;                  // init all to 0
-//    printf("Enter question: ");
-   // scanf("%i", question);
-    
-
-    
-    //222222222
-    
-//    char a1[50] = {0};                  // init all to 0
-//    printf("Enter incAnswer1: ");
-//    scanf("%s", str);
-//    
-//    char a2[50] = {0};                  // init all to 0
-//    printf("Enter incAnswer2: ");
-//    scanf("%s", str);
-//    
-//    char a3[50] = {0};                  // init all to 0
-//    printf("Enter incAnswer3: ");
-//    scanf("%s", str);
-//    
-//    char a4[50] = {0};                  // init all to 0
-//    printf("Enter correctAnswer: ");
-//    scanf("%s", str);
     }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)ButtonPressed:(UIButton *)sender
+{
+    
+    YCJQuestionViewController *wc = [[YCJQuestionViewController alloc] initWithNibName:NULL bundle:NULL];
+    [self presentViewController:wc animated:NO completion:NULL];
+    
+    if (wc) {
+        [wc viewDidLoad];
+    }else{
+        NSLog(@"error, Questions failed to load");
+    }
+    
 }
 
 @end

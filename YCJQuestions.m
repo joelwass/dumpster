@@ -12,6 +12,7 @@
 @implementation YCJQuestions
 NSString *question = NULL;
 
+<<<<<<< HEAD
 - (void)buildQuestions:(NSMutableDictionary *)questionList
 {
     int questionNumber = rand() % 1;
@@ -28,5 +29,24 @@ NSString *question = NULL;
     }];
     
     NSLog(@"%@, stuff", question);
+=======
+- (void)buildQuestions{
+    
+   
+    PFQuery *query = [PFQuery queryWithClassName:@"Questions"];
+    
+    [query getObjectInBackgroundWithId:@"DIJTUwrtPo" block:^(PFObject *Questions, NSError *error) {
+        // Do something with the returned PFObject in the gameScore variable.
+        NSLog(@"Hi again");
+        NSLog(@"%@", Questions[@"Question"]);
+        
+    }];
+
+    
+    
+
+>>>>>>> origin/testing2
 }
+    
+
 @end

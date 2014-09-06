@@ -18,6 +18,6 @@
 @property (strong, nonatomic) NSMutableDictionary *questionList;
 @property (strong, nonatomic) NSArray *answers;
 
-- (void)buildQuestions:(NSMutableDictionary *)questionList;
+- (void)buildQuestions;
 
 @end
