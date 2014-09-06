@@ -12,24 +12,7 @@
 @implementation YCJQuestions
 NSString *question = NULL;
 
-<<<<<<< HEAD
-- (void)buildQuestions:(NSMutableDictionary *)questionList
-{
-    int questionNumber = rand() % 1;
-    NSString* questionID = [NSString stringWithFormat:@"%i", questionNumber];
-    PFQuery *query = [PFQuery queryWithClassName:@"Questions"];
-    [query whereKey:@"QNumber" equalTo:questionID];
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        if (!object) {
-            // Did not find any UserStats for the current user
-        } else {
-            // Found UserStats
-            question = [object objectForKey:@"question"];
-        }
-    }];
-    
-    NSLog(@"%@, stuff", question);
-=======
+
 - (void)buildQuestions{
     
    
@@ -45,7 +28,6 @@ NSString *question = NULL;
     
     
 
->>>>>>> origin/testing2
 }
     
 
