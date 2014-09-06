@@ -9,6 +9,7 @@
 #import "YCJViewController.h"
 #import "Parse/parse.h"
 #import "YCJQuestionViewController.h"
+#import "YCJQuestions.h"
 
 @interface YCJViewController ()
 
@@ -71,8 +72,15 @@
 
 -(IBAction)ButtonPressed:(UIButton *)sender
 {
+    YCJQuestions *questionList = [[YCJQuestions alloc] init];
     
-    YCJQuestionViewController *wc = [[YCJQuestionViewController alloc] initWithNibName:NULL bundle:NULL];
+    [questionList buildQuestions];
+    
+    UILabel *questionLabel = [[UILabel alloc] init];
+    questionLabel.text = questionList.question;
+    
+    
+    YCJQuestionViewController *wc = [[YCJQuestionViewController alloc] initWithButton:nil button2:nil button3:nil button4:nil question:questionLabel];
     [self presentViewController:wc animated:NO completion:NULL];
     
     if (wc) {

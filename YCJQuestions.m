@@ -22,7 +22,7 @@ NSString *question = NULL;
         // Do something with the returned PFObject in the gameScore variable.
         NSLog(@"Hi again");
         
-        self.question = Questions[@"Question"];
+        _question = Questions[@"Question"];
         
         
     }];
