@@ -19,11 +19,8 @@
                   clientKey:@"NumQirLXh0D8O4d9oSh8tRX8fPG0GUkGtZ3Npef7"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    
-       
-    YCJQuestions *listOfQuestions = [YCJQuestions new];
-    
-    [listOfQuestions buildQuestions];
+//    YCJQuestions *questionList = [[YCJQuestions alloc]init];
+//    [questionList buildQuestions];
     
     // Override point for customization after application launch.
     return YES;

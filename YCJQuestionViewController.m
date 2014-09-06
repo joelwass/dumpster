@@ -8,6 +8,7 @@
 
 #import "YCJQuestionViewController.h"
 #import "YCJQuestions.h"
+#import "Parse/Parse.h"
 
 
 
@@ -33,27 +34,34 @@
     return self;
 }
 
--(id)initWithButton:(UIButton *)button1 button2:(UIButton *)button2 button3:(UIButton *)button3 button4:(UIButton *)button4 question:(UILabel *)question
-{
-    if( self = [super init])
-    {
-        _button1 = button1;
-        _button2 = button2;
-        _button3 = button3;
-        _button4 = button4;
-        _questionLabel = question;
-    }
-    return self;
-    
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-// Do any additional setup after loading the view from its nib.
-
-//Not sure what to do with this shit yet, commenting out to save network traffic
     
+
+    
+    PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
+    
+    [questionQuery getObjectInBackgroundWithId:@"DIJTUwrtPo" block:^(PFObject *Questions, NSError *error) {
+        // Do something with the returned PFObject in the gameScore variable.
+        _questionLabel.text = Questions[@"Question"];
+        
+    }];
+    
+    
+    PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
+    
+    [answerQuery getObjectInBackgroundWithId:@"zTyjQ2Qm0z" block:^(PFObject *Answers, NSError *error) {
+        // Do something with the returned PFObject in the gameScore variable.
+        [_button1 setTitle:Answers[@"Answer4"] forState:UIControlStateNormal];
+        [_button2 setTitle:Answers[@"Answer2"] forState:UIControlStateNormal];
+        [_button3 setTitle:Answers[@"Answer3"] forState:UIControlStateNormal];
+        [_button4 setTitle:Answers[@"Answer"] forState:UIControlStateNormal];
+        
+    }];
+    
+
     
    
 }
