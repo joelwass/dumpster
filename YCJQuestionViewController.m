@@ -50,6 +50,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    _questionLabel.text = @"help";
 // Do any additional setup after loading the view from its nib.
 
 //Not sure what to do with this shit yet, commenting out to save network traffic

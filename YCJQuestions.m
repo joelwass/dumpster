@@ -23,7 +23,7 @@ NSString *question = NULL;
         NSLog(@"Hi again");
         
         _question = Questions[@"Question"];
-        
+        NSLog(_question);
         
     }];
 

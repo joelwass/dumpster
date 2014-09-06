@@ -10,4 +10,6 @@
 
 @interface YCJQuestionViewController : UIViewController
 
+-(id)initWithButton:(UIButton *)button1 button2:(UIButton *)button2 button3:(UIButton *)button3 button4:(UIButton *)button4 question:(UILabel *)question;
+
 @end
