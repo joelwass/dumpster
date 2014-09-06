@@ -8,7 +8,7 @@
 
 #import "YCJQuestionViewController.h"
 #import "YCJQuestions.h"
-#import "YCJQuestions.m"
+
 
 
 @interface YCJQuestionViewController ()
@@ -31,6 +31,20 @@
         // Custom initialization
     }
     return self;
+}
+
+-(id)initWithButton:(UIButton *)button1 button2:(UIButton *)button2 button3:(UIButton *)button3 button4:(UIButton *)button4 question:(UILabel *)question
+{
+    if( self = [super init])
+    {
+        _button1 = button1;
+        _button2 = button2;
+        _button3 = button3;
+        _button4 = button4;
+        _questionLabel = question;
+    }
+    return self;
+    
 }
 
 - (void)viewDidLoad
