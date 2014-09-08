@@ -70,23 +70,6 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)ButtonPressed:(UIButton *)sender
-{
-    
-    
-    
-           
-    YCJQuestionViewController *wc = [[YCJQuestionViewController alloc]init];
-        [self presentViewController:wc animated:NO completion:NULL];
-        
-       
 
-        
-        
-   
-
-    
-    
-   }
 
 @end
