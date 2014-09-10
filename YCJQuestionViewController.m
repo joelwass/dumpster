@@ -65,8 +65,13 @@
      */
     
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
+    int random = arc4random();
+    NSLog(@"%d", random);
+    NSString *key = [NSString stringWithFormat:@"%d",random];
+    NSLog(@"%@", key);
     
-    [answerQuery getObjectInBackgroundWithId:@"zTyjQ2Qm0z" block:^(PFObject *Answers, NSError *error) {
+    [answerQuery whereKey:@"ANumber" containsString:@"1"];
+    [answerQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Answers, NSError *error){
         // Do something with the returned PFObject in the gameScore variable.
         [_button1 setTitle:Answers[@"Answer4"] forState:UIControlStateNormal];
         [_button2 setTitle:Answers[@"Answer2"] forState:UIControlStateNormal];
