@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="11" y="27"/>
         </scene>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="72i-pT-mIl">
             <objects>
-                <viewController id="cLv-Gz-vKd" sceneMemberID="viewController">
+                <viewController id="cLv-Gz-vKd" customClass="YCJQuestionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PYu-Ka-3RP"/>
                         <viewControllerLayoutGuide type="bottom" id="fd7-Qy-nyl"/>
@@ -53,48 +53,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgI-Xy-nDr">
-                                <rect key="frame" x="137" y="188" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgI-Xy-nDr">
+                                <rect key="frame" x="20" y="188" width="280" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="SRC-rw-Epm" kind="modal" id="pOx-3U-7xx"/>
+                                    <segue destination="SRC-rw-Epm" kind="modal" id="NFz-vV-DnB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ria-48-G2g">
-                                <rect key="frame" x="137" y="251" width="46" height="30"/>
+                                <rect key="frame" x="20" y="259" width="280" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="SRC-rw-Epm" kind="modal" id="WHM-Mv-V6e"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pt-dr-jDc">
-                                <rect key="frame" x="137" y="323" width="46" height="30"/>
+                                <rect key="frame" x="20" y="330" width="280" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="SRC-rw-Epm" kind="modal" id="jva-99-HPf"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbV-zx-TCn">
-                                <rect key="frame" x="137" y="420" width="46" height="30"/>
+                                <rect key="frame" x="20" y="420" width="280" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="SRC-rw-Epm" kind="modal" id="HUy-Wt-lHU"/>
-                                </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9z9-fz-eIb">
-                                <rect key="frame" x="139" y="84" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9z9-fz-eIb">
+                                <rect key="frame" x="20" y="45" width="280" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -102,15 +94,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="button1" destination="CgI-Xy-nDr" id="h34-ei-wjZ"/>
+                        <outlet property="button2" destination="ria-48-G2g" id="mmL-um-0KS"/>
+                        <outlet property="button3" destination="2Pt-dr-jDc" id="fVV-Bg-Br9"/>
+                        <outlet property="button4" destination="TbV-zx-TCn" id="bYO-jv-0pM"/>
+                        <outlet property="questionLabel" destination="9z9-fz-eIb" id="waf-xN-w3f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QZc-Wx-QBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="389" y="29"/>
         </scene>
-        <!--Question View Controller - DUMPSTER-->
+        <!--View Controller - DUMPSTER-->
         <scene sceneID="ygs-jD-yEf">
             <objects>
-                <viewController title="DUMPSTER" id="iey-62-6Tf" customClass="YCJQuestionViewController" sceneMemberID="viewController">
+                <viewController title="DUMPSTER" id="iey-62-6Tf" customClass="YCJAPViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w25-co-IZb"/>
                         <viewControllerLayoutGuide type="bottom" id="gjx-SV-dkf"/>
@@ -120,7 +119,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ip9-xh-T3Z">
-                                <rect key="frame" x="139" y="102" width="42" height="21"/>
+                                <rect key="frame" x="20" y="85" width="280" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -139,6 +138,10 @@
                     <navigationItem key="navigationItem" title="DUMPSTER" id="iPt-Lw-Q6O">
                         <barButtonItem key="backBarButtonItem" title="Back" id="SJu-7b-JqS"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerLabel" destination="ip9-xh-T3Z" id="jeg-nW-jUf"/>
+                        <outlet property="wikiScrapeLabel" destination="dxT-5H-sfg" id="ryj-my-sWa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdv-l9-GXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,7 +172,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="pOx-3U-7xx"/>
-    </inferredMetricsTieBreakers>
 </document>
