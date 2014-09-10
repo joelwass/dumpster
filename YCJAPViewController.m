@@ -33,7 +33,7 @@
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
     
     [answerQuery getObjectInBackgroundWithId:@"zTyjQ2Qm0z" block:^(PFObject *Answers, NSError *error) {
-        _answerLabel.text = Answers[@"Answer"];
+        _answerLabel.text = [@"Correct, the answer is: " stringByAppendingString:Answers[@"Answer"]];
         
     }];
 
