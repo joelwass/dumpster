@@ -22,11 +22,7 @@
 @end
 
 @implementation YCJQuestionViewController
-- (IBAction)button1:(UIButton *)sender {
 
-    
-
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,9 +36,20 @@
 
 - (void)viewDidLoad
 {
+    
+   
+    
     [super viewDidLoad];
     
-
+    
+    
+    
+    /*tried putting the pfquery before super viewdidload, turns out that sometimes the query hasn't loaded
+     yet and the view loads with nothing in the buttons and labels, so let's keept it so the pf query
+     happens after viewdidload.
+    */
+    
+    
     
     PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
     
@@ -63,6 +70,7 @@
         [_button4 setTitle:Answers[@"Answer"] forState:UIControlStateNormal];
         
     }];
+
     
 
     
