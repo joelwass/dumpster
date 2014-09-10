@@ -21,7 +21,7 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor cyanColor];
-	// Do any additional setup after loading the view, typically from a nib.
+
     
     
     
@@ -30,8 +30,14 @@
     
     
     // ***********************************************************************************************
-    // this is the animation page, the image will be a spinning image of whatever.
     
+    
+    /* this is the animation page, the image will be a spinning image of whatever.
+    AT THIS TIME WE NEED TO CALL THE PARSE METHOD FETCH ALL IN BACKGROUND TO GET A CERTAIN AMOUNT OF 
+     QUESTIONS OFF OF OUR DATABASE, WE WANT SOMETHING LIKE 100 QUESTIONS PULLED DOWN WHILE THE ANIMATION IS 
+     GOING ON, WE WANT THEM PULLED DOWN IN BACKGROUND. WORK ON THIS LATER
+     
+    */
     
 
         // Load images
@@ -70,23 +76,6 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)ButtonPressed:(UIButton *)sender
-{
-    
-    
-    
-           
-    YCJQuestionViewController *wc = [[YCJQuestionViewController alloc]init];
-        [self presentViewController:wc animated:NO completion:NULL];
-        
-       
 
-        
-        
-   
-
-    
-    
-   }
 
 @end

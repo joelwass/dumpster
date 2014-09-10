@@ -7,6 +7,7 @@
 //
 
 #import "YCJAPViewController.h"
+#import "parse/parse.h"
 
 @interface YCJAPViewController ()
 
@@ -25,8 +26,17 @@
 
 - (void)viewDidLoad
 {
+
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    
+    PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
+    
+    [answerQuery getObjectInBackgroundWithId:@"zTyjQ2Qm0z" block:^(PFObject *Answers, NSError *error) {
+        _answerLabel.text = Answers[@"Answer"];
+        
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning

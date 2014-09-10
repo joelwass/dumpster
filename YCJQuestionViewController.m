@@ -18,23 +18,11 @@
 @interface YCJQuestionViewController ()
 
 //properties for button views
-@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
-@property (weak, nonatomic) IBOutlet UIButton *button1;
-@property (weak, nonatomic) IBOutlet UIButton *button2;
-@property (weak, nonatomic) IBOutlet UIButton *button3;
-@property (weak, nonatomic) IBOutlet UIButton *button4;
 
 @end
 
 @implementation YCJQuestionViewController
-- (IBAction)button1:(UIButton *)sender {
-    
-    YCJQuestionViewController *firstVC = [[YCJQuestionViewController alloc] initWithNibName:nil bundle:nil];
-    YCJAPViewController *secondVC = [[YCJAPViewController alloc] initWithNibName:nil bundle:nil];
-    
-    NavigationController.viewControllers = [NSArray arrayWithObjects:firstVC, secondVC, nil];
-    [UINavigationController popToViewController:secondVC animated:NO];
-}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,19 +36,20 @@
 
 - (void)viewDidLoad
 {
+    
+   
+    
     [super viewDidLoad];
     
-
-    UIViewController *firstController = [[YCJQuestionViewController alloc] initWithNibName:@"MyFirstViewCon" bundle:nil];
-    UIViewController *secondController = [[YCJAPViewController alloc] initWithNibName:@"SecondViewCon" bundle:nil] ;
-    UIViewController *thirdController = [[YCJWVViewController alloc] initWithNibName:@"ThirdViewCon" bundle:nil];
     
-    UINavigationController *theNavCon = [[UINavigationController alloc] initWithRootViewController:firstController];
     
-    [theNavCon pushViewController:secondController animated:NO];
-    [theNavCon pushViewController:thirdController animated:NO];
     
-    self.window.rootViewController = theNavCon;
+    /*tried putting the pfquery before super viewdidload, turns out that sometimes the query hasn't loaded
+     yet and the view loads with nothing in the buttons and labels, so let's keept it so the pf query
+     happens after viewdidload.
+    */
+    
+    
     
     PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
     
@@ -80,7 +69,17 @@
         [_button3 setTitle:Answers[@"Answer3"] forState:UIControlStateNormal];
         [_button4 setTitle:Answers[@"Answer"] forState:UIControlStateNormal];
         
+        /*
+         need to figure out how to set the correct answer to a certain button and then
+         remember which button that one is, somehow keep track of it so we know which button
+         needs to be pressed in order to continue, also figure out how to randomize buttons that 
+         get the correct answer set to it. well i guess that randomization will be done on the parse end
+         of things so we just need to keep track of which button gets the correct answer
+         set to it
+         */
+        
     }];
+
     
 
     
