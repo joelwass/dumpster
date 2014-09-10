@@ -69,6 +69,15 @@
         [_button3 setTitle:Answers[@"Answer3"] forState:UIControlStateNormal];
         [_button4 setTitle:Answers[@"Answer"] forState:UIControlStateNormal];
         
+        /*
+         need to figure out how to set the correct answer to a certain button and then
+         remember which button that one is, somehow keep track of it so we know which button
+         needs to be pressed in order to continue, also figure out how to randomize buttons that 
+         get the correct answer set to it. well i guess that randomization will be done on the parse end
+         of things so we just need to keep track of which button gets the correct answer
+         set to it
+         */
+        
     }];
 
     

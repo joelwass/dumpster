@@ -33,11 +33,10 @@
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
     
     [answerQuery getObjectInBackgroundWithId:@"zTyjQ2Qm0z" block:^(PFObject *Answers, NSError *error) {
-        // Do something with the returned PFObject in the gameScore variable.
         _answerLabel.text = Answers[@"Answer"];
         
     }];
-    // Do any additional setup after loading the view from its nib.
+
 }
 
 - (void)didReceiveMemoryWarning
