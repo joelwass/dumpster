@@ -11,6 +11,8 @@
 
 @interface YCJAPViewController ()
 
+@property (nonatomic, retain) NSURL *urlDestination;
+
 @end
 
 @implementation YCJAPViewController
@@ -29,13 +31,27 @@
 
     [super viewDidLoad];
     
-    
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
     
     [answerQuery getObjectInBackgroundWithId:@"zTyjQ2Qm0z" block:^(PFObject *Answers, NSError *error) {
         _answerLabel.text = [@"Correct, the answer is: " stringByAppendingString:Answers[@"Answer"]];
         
     }];
+    
+    _urlDestination = [[NSURL alloc] initWithString:@"http://en.wikipedia.org/w/api.php?format=json&action=query&titles=Main%20Page&prop=revisions&rvprop=content"];
+    
+    
+    
+    //THIS IS GETTING US THE CONTENT OF WIKIPEDIAS MAIN PAGE, WE NEED TO CHANGE THE LINK TO ACCEPT
+    //A FORM OF THE ANSWER APPENDED TO THE STRING BUT THAT'S A LATER CHANGE
+    
+    
+    
+    NSMutableURLRequest *request =
+    [[NSMutableURLRequest alloc] initWithURL:
+     _urlDestination];
+    
+    
 
 }
 
