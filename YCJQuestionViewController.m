@@ -59,6 +59,10 @@
         
     }];
     
+    /*query based on specific number key, figure out how to create a random number and then
+     pass that as the getObjectWithId so that we can pull a random question and it's answers each time the 
+     user hits next 
+     */
     
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
     
