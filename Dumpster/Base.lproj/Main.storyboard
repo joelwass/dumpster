@@ -30,7 +30,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="SRC-rw-Epm" kind="modal" id="MQK-yd-xBY"/>
+                                    <segue destination="SRC-rw-Epm" kind="modal" id="MHp-Dq-bQd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -52,7 +52,8 @@
                     <view key="view" contentMode="scaleToFill" id="VFh-s6-3yR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95452008929999999" green="0.61409581810000002" blue="0.95082836989999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration" label=""/>
                     </view>
                     <navigationItem key="navigationItem" id="iPt-Lw-Q6O"/>
                 </viewController>
@@ -63,7 +64,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hu8-O6-uuF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SRC-rw-Epm" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="SRC-rw-Epm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="yXC-XR-MxS"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eDN-gu-GKJ">
