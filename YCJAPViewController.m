@@ -8,6 +8,7 @@
 
 #import "YCJAPViewController.h"
 #import "parse/parse.h"
+#import "YCJQuestionViewController.h"
 
 @interface YCJAPViewController ()
 
@@ -31,9 +32,11 @@
 
     [super viewDidLoad];
     
+    
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
     
-    [answerQuery getObjectInBackgroundWithId:@"zTyjQ2Qm0z" block:^(PFObject *Answers, NSError *error) {
+    [answerQuery whereKey:@"ANumber" containsString:key];
+    [answerQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Answers, NSError *error){
         _answerLabel.text = [@"Correct, the answer is: " stringByAppendingString:Answers[@"Answer"]];
         
     }];
@@ -51,6 +54,10 @@
     [[NSMutableURLRequest alloc] initWithURL:
      _urlDestination];
     
+    NSData *response = [NSURLConnection sendSynchronousRequest:request
+                                             returningResponse:nil error:nil];
+    NSString *json_string = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+    NSLog(@"%@",json_string);
     
 
 }
