@@ -9,6 +9,7 @@
 #import "YCJAPViewController.h"
 #import "parse/parse.h"
 #import "YCJQuestionViewController.h"
+#import "SBJSON.h"
 
 @interface YCJAPViewController ()
 
@@ -35,13 +36,13 @@
     
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
     
-    [answerQuery whereKey:@"ANumber" containsString:key];
+   // [answerQuery whereKey:@"ANumber" containsString:key];
     [answerQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Answers, NSError *error){
         _answerLabel.text = [@"Correct, the answer is: " stringByAppendingString:Answers[@"Answer"]];
         
     }];
     
-    _urlDestination = [[NSURL alloc] initWithString:@"http://en.wikipedia.org/w/api.php?format=json&action=query&titles=Main%20Page&prop=revisions&rvprop=content"];
+    _urlDestination = [[NSURL alloc] initWithString:@"http://dbpedia.org/page/The_Lord_of_the_Rings"];
     
     
     
@@ -56,9 +57,15 @@
     
     NSData *response = [NSURLConnection sendSynchronousRequest:request
                                              returningResponse:nil error:nil];
-    NSString *json_string = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-    NSLog(@"%@",json_string);
     
+    
+    NSString *json_string = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+    NSDictionary *results = [json_string JSONValue];
+    
+    NSLog(@"%@",results);
+    
+  //  NSArray *resultArray = [results valueForKeyPath:@"results.variant.product.name"];
+  //  NSLog(@"%@",resultArray);
 
 }
 
