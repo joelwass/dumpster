@@ -57,13 +57,6 @@
         [animationImageView startAnimating];
     
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [button addTarget:self
-               action:@selector(ButtonPressed:)
-     forControlEvents:UIControlEventTouchUpInside];
-    [button setTitle:@"START" forState:UIControlStateNormal];
-    button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
-    [self.view addSubview:button];
     
     
     // ****************************************************************************

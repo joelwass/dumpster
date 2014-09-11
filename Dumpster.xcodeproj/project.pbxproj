@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		791AE1CC19BDE5EF00B62D7E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 791AE1CB19BDE5EF00B62D7E /* Parse.framework */; };
-		7954A48C19BDECF700212847 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7954A48B19BDECF700212847 /* CoreLocation.framework */; };
+
+		98EA68BC5A554ED291221693 /* libPods-Dumpster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BE037ADB5546B784A581BF /* libPods-Dumpster.a */; };
+
 		EEA38DCF1991A74A002623C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DCE1991A74A002623C3 /* Foundation.framework */; };
 		EEA38DD11991A74A002623C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD01991A74A002623C3 /* CoreGraphics.framework */; };
 		EEA38DD31991A74A002623C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD21991A74A002623C3 /* UIKit.framework */; };
 		EEA38DD91991A74A002623C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEA38DD71991A74A002623C3 /* InfoPlist.strings */; };
 		EEA38DDB1991A74A002623C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA38DDA1991A74A002623C3 /* main.m */; };
 		EEA38DDF1991A74A002623C3 /* YCJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA38DDE1991A74A002623C3 /* YCJAppDelegate.m */; };
-		EEA38DE21991A74A002623C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA38DE01991A74A002623C3 /* Main.storyboard */; };
 		EEA38DE51991A74A002623C3 /* YCJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA38DE41991A74A002623C3 /* YCJViewController.m */; };
 		EEA38DE71991A74A002623C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEA38DE61991A74A002623C3 /* Images.xcassets */; };
 		EEA38DEE1991A74A002623C3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DED1991A74A002623C3 /* XCTest.framework */; };
@@ -43,6 +43,22 @@
 		EEB983F219BB9F270014D8B7 /* YCJAPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB983F019BB9F270014D8B7 /* YCJAPViewController.xib */; };
 		EEB983F619BBA9B30014D8B7 /* YCJWVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB983F419BBA9B30014D8B7 /* YCJWVViewController.m */; };
 		EEB983F719BBA9B30014D8B7 /* YCJWVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB983F519BBA9B30014D8B7 /* YCJWVViewController.xib */; };
+		EECA3A6619C2155F0050F431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA38DE01991A74A002623C3 /* Main.storyboard */; };
+		EECA3A6819C216EF0050F431 /* DumpsterTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = EEA38DEC1991A74A002623C3 /* DumpsterTests.xctest */; };
+		EECA3A8319C221930050F431 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA3A6B19C221930050F431 /* NSObject+SBJson.m */; };
+		EECA3A8419C221930050F431 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA3A6E19C221930050F431 /* SBJsonParser.m */; };
+		EECA3A8519C221930050F431 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA3A7019C221930050F431 /* SBJsonStreamParser.m */; };
+		EECA3A8619C221930050F431 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA3A7219C221930050F431 /* SBJsonStreamParserAccumulator.m */; };
+		EECA3A8719C221930050F431 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA3A7419C221930050F431 /* SBJsonStreamParserAdapter.m */; };
+		EECA3A8819C221930050F431 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA3A7619C221930050F431 /* SBJsonStreamParserState.m */; };
+		EECA3A8919C221930050F431 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA3A7819C221930050F431 /* SBJsonStreamWriter.m */; };
+		EECA3A8A19C221930050F431 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA3A7A19C221930050F431 /* SBJsonStreamWriterAccumulator.m */; };
+		EECA3A8B19C221930050F431 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA3A7C19C221930050F431 /* SBJsonStreamWriterState.m */; };
+		EECA3A8C19C221930050F431 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA3A7E19C221930050F431 /* SBJsonTokeniser.m */; };
+		EECA3A8D19C221930050F431 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA3A8019C221930050F431 /* SBJsonUTF8Stream.m */; };
+		EECA3A8E19C221930050F431 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = EECA3A8219C221930050F431 /* SBJsonWriter.m */; };
+		EECA3A9419C221C90050F431 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EECA3A9019C221C80050F431 /* InfoPlist.strings */; };
+		EECA3A9519C221C90050F431 /* SBJsonTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EECA3A9219C221C80050F431 /* SBJsonTests-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +72,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		791AE1CB19BDE5EF00B62D7E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../Downloads/parse-library-1.2.21/Parse.framework"; sourceTree = "<group>"; };
 		7954A48B19BDECF700212847 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+=======
+		8EF091AECDE54B228F26F802 /* Pods-Dumpster.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dumpster.xcconfig"; path = "Pods/Pods-Dumpster.xcconfig"; sourceTree = "<group>"; };
+		C5BE037ADB5546B784A581BF /* libPods-Dumpster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dumpster.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+>>>>>>> 8900107fe22264396c2ce0d7c902b0e88d18b72d
 		EEA38DCB1991A74A002623C3 /* Dumpster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dumpster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA38DCE1991A74A002623C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEA38DD01991A74A002623C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -102,6 +123,34 @@
 		EEB983F319BBA9B30014D8B7 /* YCJWVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCJWVViewController.h; sourceTree = "<group>"; };
 		EEB983F419BBA9B30014D8B7 /* YCJWVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCJWVViewController.m; sourceTree = "<group>"; };
 		EEB983F519BBA9B30014D8B7 /* YCJWVViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCJWVViewController.xib; sourceTree = "<group>"; };
+		EECA3A6A19C221930050F431 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
+		EECA3A6B19C221930050F431 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
+		EECA3A6C19C221930050F431 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
+		EECA3A6D19C221930050F431 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		EECA3A6E19C221930050F431 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		EECA3A6F19C221930050F431 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		EECA3A7019C221930050F431 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		EECA3A7119C221930050F431 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		EECA3A7219C221930050F431 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		EECA3A7319C221930050F431 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		EECA3A7419C221930050F431 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		EECA3A7519C221930050F431 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		EECA3A7619C221930050F431 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		EECA3A7719C221930050F431 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		EECA3A7819C221930050F431 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		EECA3A7919C221930050F431 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		EECA3A7A19C221930050F431 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		EECA3A7B19C221930050F431 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		EECA3A7C19C221930050F431 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		EECA3A7D19C221930050F431 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		EECA3A7E19C221930050F431 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
+		EECA3A7F19C221930050F431 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
+		EECA3A8019C221930050F431 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
+		EECA3A8119C221930050F431 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		EECA3A8219C221930050F431 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		EECA3A9119C221C80050F431 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EECA3A9219C221C80050F431 /* SBJsonTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SBJsonTests-Info.plist"; sourceTree = "<group>"; };
+		EECA3A9319C221C80050F431 /* SBJsonTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SBJsonTests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +171,11 @@
 				EEA38E071991A80E002623C3 /* AudioToolbox.framework in Frameworks */,
 				EEA38DD31991A74A002623C3 /* UIKit.framework in Frameworks */,
 				EEA38DCF1991A74A002623C3 /* Foundation.framework in Frameworks */,
+<<<<<<< HEAD
 				791AE1CC19BDE5EF00B62D7E /* Parse.framework in Frameworks */,
+=======
+				98EA68BC5A554ED291221693 /* libPods-Dumpster.a in Frameworks */,
+>>>>>>> 8900107fe22264396c2ce0d7c902b0e88d18b72d
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,12 +195,15 @@
 		EEA38DC21991A74A002623C3 = {
 			isa = PBXGroup;
 			children = (
+				EECA3A8F19C221C80050F431 /* SBJsonTests */,
+				EECA3A6919C221930050F431 /* Classes */,
 				EEB0BF28199F2B81006D7B3D /* Views */,
 				EEA38E031991A753002623C3 /* Models */,
 				EEA38DD41991A74A002623C3 /* Dumpster */,
 				EEA38DF31991A74A002623C3 /* DumpsterTests */,
 				EEA38DCD1991A74A002623C3 /* Frameworks */,
 				EEA38DCC1991A74A002623C3 /* Products */,
+				8EF091AECDE54B228F26F802 /* Pods-Dumpster.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,6 +234,7 @@
 				EEA38DD01991A74A002623C3 /* CoreGraphics.framework */,
 				EEA38DD21991A74A002623C3 /* UIKit.framework */,
 				EEA38DED1991A74A002623C3 /* XCTest.framework */,
+				C5BE037ADB5546B784A581BF /* libPods-Dumpster.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -255,6 +312,48 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		EECA3A6919C221930050F431 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EECA3A6A19C221930050F431 /* NSObject+SBJson.h */,
+				EECA3A6B19C221930050F431 /* NSObject+SBJson.m */,
+				EECA3A6C19C221930050F431 /* SBJson.h */,
+				EECA3A6D19C221930050F431 /* SBJsonParser.h */,
+				EECA3A6E19C221930050F431 /* SBJsonParser.m */,
+				EECA3A6F19C221930050F431 /* SBJsonStreamParser.h */,
+				EECA3A7019C221930050F431 /* SBJsonStreamParser.m */,
+				EECA3A7119C221930050F431 /* SBJsonStreamParserAccumulator.h */,
+				EECA3A7219C221930050F431 /* SBJsonStreamParserAccumulator.m */,
+				EECA3A7319C221930050F431 /* SBJsonStreamParserAdapter.h */,
+				EECA3A7419C221930050F431 /* SBJsonStreamParserAdapter.m */,
+				EECA3A7519C221930050F431 /* SBJsonStreamParserState.h */,
+				EECA3A7619C221930050F431 /* SBJsonStreamParserState.m */,
+				EECA3A7719C221930050F431 /* SBJsonStreamWriter.h */,
+				EECA3A7819C221930050F431 /* SBJsonStreamWriter.m */,
+				EECA3A7919C221930050F431 /* SBJsonStreamWriterAccumulator.h */,
+				EECA3A7A19C221930050F431 /* SBJsonStreamWriterAccumulator.m */,
+				EECA3A7B19C221930050F431 /* SBJsonStreamWriterState.h */,
+				EECA3A7C19C221930050F431 /* SBJsonStreamWriterState.m */,
+				EECA3A7D19C221930050F431 /* SBJsonTokeniser.h */,
+				EECA3A7E19C221930050F431 /* SBJsonTokeniser.m */,
+				EECA3A7F19C221930050F431 /* SBJsonUTF8Stream.h */,
+				EECA3A8019C221930050F431 /* SBJsonUTF8Stream.m */,
+				EECA3A8119C221930050F431 /* SBJsonWriter.h */,
+				EECA3A8219C221930050F431 /* SBJsonWriter.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EECA3A8F19C221C80050F431 /* SBJsonTests */ = {
+			isa = PBXGroup;
+			children = (
+				EECA3A9019C221C80050F431 /* InfoPlist.strings */,
+				EECA3A9219C221C80050F431 /* SBJsonTests-Info.plist */,
+				EECA3A9319C221C80050F431 /* SBJsonTests-Prefix.pch */,
+			);
+			path = SBJsonTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,9 +361,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEA38DFD1991A74A002623C3 /* Build configuration list for PBXNativeTarget "Dumpster" */;
 			buildPhases = (
+				2F5D554229FB405DBC746DD3 /* Check Pods Manifest.lock */,
 				EEA38DC71991A74A002623C3 /* Sources */,
 				EEA38DC81991A74A002623C3 /* Frameworks */,
 				EEA38DC91991A74A002623C3 /* Resources */,
+				EBECA90ECFA147FE8E54A52A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -332,15 +433,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EECA3A6619C2155F0050F431 /* Main.storyboard in Resources */,
 				EEA38DE71991A74A002623C3 /* Images.xcassets in Resources */,
 				EEB0BF3919A4CB31006D7B3D /* logo90.png in Resources */,
 				EEA38DD91991A74A002623C3 /* InfoPlist.strings in Resources */,
 				EEB0BF3819A4CB31006D7B3D /* logo180.png in Resources */,
-				EEA38DE21991A74A002623C3 /* Main.storyboard in Resources */,
 				EEB0BF30199F2C61006D7B3D /* YCJQuestionViewController.xib in Resources */,
+				EECA3A9519C221C90050F431 /* SBJsonTests-Info.plist in Resources */,
 				EEB983F219BB9F270014D8B7 /* YCJAPViewController.xib in Resources */,
 				EEB0BF3719A4CB31006D7B3D /* logo270.png in Resources */,
 				EEB983F719BBA9B30014D8B7 /* YCJWVViewController.xib in Resources */,
+				EECA3A9419C221C90050F431 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,25 +451,71 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EECA3A6819C216EF0050F431 /* DumpsterTests.xctest in Resources */,
 				EEA38DF81991A74A002623C3 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2F5D554229FB405DBC746DD3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EBECA90ECFA147FE8E54A52A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Dumpster-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EEA38DC71991A74A002623C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EECA3A8B19C221930050F431 /* SBJsonStreamWriterState.m in Sources */,
+				EECA3A8E19C221930050F431 /* SBJsonWriter.m in Sources */,
 				EEA38DE51991A74A002623C3 /* YCJViewController.m in Sources */,
 				EEB0BF2B199F2BA8006D7B3D /* YCJQuestions.m in Sources */,
+				EECA3A8A19C221930050F431 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				EECA3A8619C221930050F431 /* SBJsonStreamParserAccumulator.m in Sources */,
 				EEB983F619BBA9B30014D8B7 /* YCJWVViewController.m in Sources */,
+				EECA3A8419C221930050F431 /* SBJsonParser.m in Sources */,
 				EEA38DDB1991A74A002623C3 /* main.m in Sources */,
 				EEA38DDF1991A74A002623C3 /* YCJAppDelegate.m in Sources */,
 				EEB983F119BB9F270014D8B7 /* YCJAPViewController.m in Sources */,
 				EEB0BF33199F2CF9006D7B3D /* YCJAnswers.m in Sources */,
+				EECA3A8D19C221930050F431 /* SBJsonUTF8Stream.m in Sources */,
+				EECA3A8C19C221930050F431 /* SBJsonTokeniser.m in Sources */,
+				EECA3A8819C221930050F431 /* SBJsonStreamParserState.m in Sources */,
+				EECA3A8719C221930050F431 /* SBJsonStreamParserAdapter.m in Sources */,
+				EECA3A8319C221930050F431 /* NSObject+SBJson.m in Sources */,
 				EEB0BF2F199F2C61006D7B3D /* YCJQuestionViewController.m in Sources */,
+				EECA3A8919C221930050F431 /* SBJsonStreamWriter.m in Sources */,
+				EECA3A8519C221930050F431 /* SBJsonStreamParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +558,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				EEA38DF71991A74A002623C3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EECA3A9019C221C80050F431 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EECA3A9119C221C80050F431 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -488,6 +645,7 @@
 		};
 		EEA38DFE1991A74A002623C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EF091AECDE54B228F26F802 /* Pods-Dumpster.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -499,7 +657,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dumpster/Dumpster-Prefix.pch";
 				INFOPLIST_FILE = "Dumpster/Dumpster-Info.plist";
+<<<<<<< HEAD
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+=======
+				MACH_O_TYPE = mh_execute;
+				OTHER_LDFLAGS = "";
+>>>>>>> 8900107fe22264396c2ce0d7c902b0e88d18b72d
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -508,6 +671,7 @@
 		};
 		EEA38DFF1991A74A002623C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EF091AECDE54B228F26F802 /* Pods-Dumpster.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -519,7 +683,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dumpster/Dumpster-Prefix.pch";
 				INFOPLIST_FILE = "Dumpster/Dumpster-Info.plist";
+<<<<<<< HEAD
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+=======
+				MACH_O_TYPE = mh_execute;
+				OTHER_LDFLAGS = "";
+>>>>>>> 8900107fe22264396c2ce0d7c902b0e88d18b72d
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
