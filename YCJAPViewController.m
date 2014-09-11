@@ -42,7 +42,7 @@
         
     }];
     
-    _urlDestination = [[NSURL alloc] initWithString:@"http://dbpedia.org/page/The_Lord_of_the_Rings"];
+    _urlDestination = [[NSURL alloc] initWithString:@"http://en.wikipedia.org/w/api.php?format=json&action=query&titles=Germany&prop=revisions&rvprop=content"];
     
     
     
@@ -62,10 +62,10 @@
     NSString *json_string = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
     NSDictionary *results = [json_string JSONValue];
     
-    NSLog(@"%@",results);
+    //NSLog(@"%@",results);
     
-  //  NSArray *resultArray = [results valueForKeyPath:@"results.variant.product.name"];
-  //  NSLog(@"%@",resultArray);
+    NSArray *resultArray = [results valueForKeyPath:@"query.pages.11867.revisions.*"];
+    NSLog(@"%@",resultArray);
 
 }
 
