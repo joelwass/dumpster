@@ -9,6 +9,7 @@
 #import "YCJAPViewController.h"
 #import "parse/parse.h"
 #import "YCJQuestionViewController.h"
+#import "SBJSON.h"
 
 @interface YCJAPViewController ()
 
@@ -59,11 +60,11 @@
     
     
     NSString *json_string = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-  //  NSDictionary *results = [json_string JSONValue];
+    NSDictionary *results = [json_string JSONValue];
     
-    NSLog(@"%@",json_string);
+    NSLog(@"%@",results);
     
- //   NSArray *resultArray = [results valueForKeyPath:@"results.variant.product.name"];
+  //  NSArray *resultArray = [results valueForKeyPath:@"results.variant.product.name"];
   //  NSLog(@"%@",resultArray);
 
 }
