@@ -36,9 +36,9 @@
     
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
     
-   // [answerQuery whereKey:@"ANumber" containsString:key];
+    [answerQuery whereKey:@"ANumber" containsString:self.answerKey];
     [answerQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Answers, NSError *error){
-        _answerLabel.text = [@"Correct, the answer is: " stringByAppendingString:Answers[@"Answer"]];
+        _answerLabel.text = [@"Correct, the answer is: " stringByAppendingString:Answers[@"Answer3"]];
         
     }];
     

@@ -52,9 +52,10 @@
     
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
     int random = arc4random_uniform(2);
-    NSLog(@"%d", random);
+  
     NSString *key = [NSString stringWithFormat:@"%d",random];
-    NSLog(@"%@", key);
+    self.key = key;
+  
 
     
     PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
@@ -95,6 +96,13 @@
    
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"showAnswerSegue"]){
+        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+        YCJAPViewController *controller = (YCJAPViewController *)navController.topViewController;
+        controller.answerKey = self.key;
+    }
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
