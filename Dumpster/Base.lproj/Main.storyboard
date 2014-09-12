@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - home-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="YCJViewController" sceneMemberID="viewController">
+                <viewController title="home" id="vXZ-lx-hvc" customClass="YCJViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -30,7 +30,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cLv-Gz-vKd" kind="modal" modalTransitionStyle="crossDissolve" id="Hnk-rZ-f3N"/>
+                                    <segue destination="7xw-WA-3jp" kind="modal" modalTransitionStyle="crossDissolve" id="Hnk-rZ-f3N"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="11" y="27"/>
         </scene>
-        <!--Question View Controller-->
+        <!--Question View Controller - question-->
         <scene sceneID="72i-pT-mIl">
             <objects>
-                <viewController id="cLv-Gz-vKd" customClass="YCJQuestionViewController" sceneMemberID="viewController">
+                <viewController title="question" id="cLv-Gz-vKd" customClass="YCJQuestionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PYu-Ka-3RP"/>
                         <viewControllerLayoutGuide type="bottom" id="fd7-Qy-nyl"/>
@@ -60,7 +60,7 @@
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="cLv-Gz-vKd" eventType="touchUpInside" id="9xy-tB-h5Z"/>
+                                    <action selector="buttonPressed:" destination="cLv-Gz-vKd" eventType="touchUpInside" id="Ucq-1M-Cbh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ria-48-G2g">
@@ -90,6 +90,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="cLv-Gz-vKd" eventType="touchUpInside" id="fXN-5o-9ew"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9z9-fz-eIb">
                                 <rect key="frame" x="20" y="45" width="280" height="123"/>
@@ -100,18 +103,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Lym-vK-t0r"/>
                     <connections>
                         <outlet property="button1" destination="CgI-Xy-nDr" id="h34-ei-wjZ"/>
                         <outlet property="button2" destination="ria-48-G2g" id="mmL-um-0KS"/>
                         <outlet property="button3" destination="2Pt-dr-jDc" id="fVV-Bg-Br9"/>
                         <outlet property="button4" destination="TbV-zx-TCn" id="bYO-jv-0pM"/>
                         <outlet property="questionLabel" destination="9z9-fz-eIb" id="waf-xN-w3f"/>
-                        <segue destination="SRC-rw-Epm" kind="modal" identifier="showAnswerSegue" id="HgX-lj-7KI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QZc-Wx-QBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="389" y="29"/>
+            <point key="canvasLocation" x="915" y="29"/>
         </scene>
         <!--View Controller - DUMPSTER-->
         <scene sceneID="ygs-jD-yEf">
@@ -138,6 +141,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="gY9-d3-GES" kind="push" id="nyM-FB-6Iy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95452008929999999" green="0.61409581810000002" blue="0.95082836989999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -154,26 +160,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdv-l9-GXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191" y="27"/>
+            <point key="canvasLocation" x="1309" y="29"/>
+        </scene>
+        <!--View Controller - DUMPSTER-->
+        <scene sceneID="cla-qR-YMM">
+            <objects>
+                <viewController id="gY9-d3-GES" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vgf-8e-gTR"/>
+                        <viewControllerLayoutGuide type="bottom" id="ybF-VT-2Ky"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3EZ-zT-s5M">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IW5-K4-zhK">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="DUMPSTER" id="BTO-0Q-TUM">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Ao8-bw-Bzr"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJs-V1-tMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1683" y="27"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="hu8-O6-uuF">
+        <scene sceneID="Hcd-3t-F9A">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="SRC-rw-Epm" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7xw-WA-3jp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="yXC-XR-MxS"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eDN-gu-GKJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CDR-2W-HJ3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="iey-62-6Tf" kind="relationship" relationship="rootViewController" id="uK4-fi-FvQ"/>
+                        <segue destination="cLv-Gz-vKd" kind="relationship" relationship="rootViewController" id="iJ1-Fk-KNH"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wv1-oS-IgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AEl-s9-nQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="773" y="27"/>
+            <point key="canvasLocation" x="389" y="29"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
