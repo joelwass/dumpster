@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *button3;
 @property (weak, nonatomic) IBOutlet UIButton *button4;
 @property (strong, nonatomic) NSString *key;
+@property NSString *correctAnswer;
 
 @end

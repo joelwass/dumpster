@@ -73,6 +73,7 @@
         // initialize array of buttons and possible answer texts
         NSArray *buttonArray = [NSArray arrayWithObjects:_button1, _button2, _button3, _button4, nil];
         NSMutableArray *answerArray = [NSMutableArray arrayWithObjects:@"Answer",@"Answer2", @"Answer3", @"Answer4", nil];
+        self.correctAnswer = Answers[@"Answer"];
         
         //randomize which button gets which answer text
         for(int i = 0; i<4; i++){
@@ -100,6 +101,14 @@
 
     
    
+}
+
+- (IBAction)buttonPressed:(UIButton *)sender {
+    if(sender.currentTitle == self.correctAnswer){
+    [self performSegueWithIdentifier:@"showAnswerSegue" sender:sender];
+    }else{
+        NSLog(@"incorrect button");
+    }
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
