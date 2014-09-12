@@ -66,18 +66,24 @@
         
     }];
     
-    /*query based on specific number key, figure out how to create a random number and then
-     pass that as the getObjectWithId so that we can pull a random question and it's answers each time the 
-     user hits next 
-     */
+    /*query based on specific number key, */
     
     [answerQuery whereKey:@"ANumber" containsString:key];
     [answerQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Answers, NSError *error){
-        // Do something with the returned PFObject in the gameScore variable.
-        [_button1 setTitle:Answers[@"Answer4"] forState:UIControlStateNormal];
-        [_button2 setTitle:Answers[@"Answer2"] forState:UIControlStateNormal];
-        [_button3 setTitle:Answers[@"Answer3"] forState:UIControlStateNormal];
-        [_button4 setTitle:Answers[@"Answer"] forState:UIControlStateNormal];
+        // initialize array of buttons and possible answer texts
+        NSArray *buttonArray = [NSArray arrayWithObjects:_button1, _button2, _button3, _button4, nil];
+        NSMutableArray *answerArray = [NSMutableArray arrayWithObjects:@"Answer",@"Answer2", @"Answer3", @"Answer4", nil];
+        
+        //randomize which button gets which answer text
+        for(int i = 0; i<4; i++){
+            int randomAnswer = (arc4random() % answerArray.count);
+            
+            
+            [buttonArray[i] setTitle:Answers[answerArray[randomAnswer]] forState:UIControlStateNormal];
+            [answerArray removeObjectAtIndex:randomAnswer];
+            
+            
+        }
         
         /*
          need to figure out how to set the correct answer to a certain button and then
