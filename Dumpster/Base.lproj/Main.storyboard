@@ -60,7 +60,7 @@
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="SRC-rw-Epm" kind="modal" identifier="showAnswerSegue" id="NFz-vV-DnB"/>
+                                    <action selector="buttonPressed:" destination="cLv-Gz-vKd" eventType="touchUpInside" id="9xy-tB-h5Z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ria-48-G2g">
@@ -70,6 +70,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="cLv-Gz-vKd" eventType="touchUpInside" id="5oW-u4-15g"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pt-dr-jDc">
                                 <rect key="frame" x="20" y="330" width="280" height="50"/>
@@ -77,6 +80,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="cLv-Gz-vKd" eventType="touchUpInside" id="YYr-Dw-Y7T"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbV-zx-TCn">
                                 <rect key="frame" x="20" y="420" width="280" height="50"/>
@@ -100,6 +106,7 @@
                         <outlet property="button3" destination="2Pt-dr-jDc" id="fVV-Bg-Br9"/>
                         <outlet property="button4" destination="TbV-zx-TCn" id="bYO-jv-0pM"/>
                         <outlet property="questionLabel" destination="9z9-fz-eIb" id="waf-xN-w3f"/>
+                        <segue destination="SRC-rw-Epm" kind="modal" identifier="showAnswerSegue" id="HgX-lj-7KI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QZc-Wx-QBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
