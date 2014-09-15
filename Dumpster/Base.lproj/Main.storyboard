@@ -30,7 +30,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7xw-WA-3jp" kind="modal" modalTransitionStyle="crossDissolve" id="Hnk-rZ-f3N"/>
+                                    <segue destination="7xw-WA-3jp" kind="modal" id="BT1-RU-HsL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -110,6 +110,7 @@
                         <outlet property="button3" destination="2Pt-dr-jDc" id="fVV-Bg-Br9"/>
                         <outlet property="button4" destination="TbV-zx-TCn" id="bYO-jv-0pM"/>
                         <outlet property="questionLabel" destination="9z9-fz-eIb" id="waf-xN-w3f"/>
+                        <segue destination="iey-62-6Tf" kind="push" identifier="showAnswerSegue" id="5Ko-pw-Re3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QZc-Wx-QBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -119,7 +120,7 @@
         <!--View Controller - DUMPSTER-->
         <scene sceneID="ygs-jD-yEf">
             <objects>
-                <viewController title="DUMPSTER" id="iey-62-6Tf" customClass="YCJAPViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="showAnswerSegue" title="DUMPSTER" id="iey-62-6Tf" customClass="YCJAPViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w25-co-IZb"/>
                         <viewControllerLayoutGuide type="bottom" id="gjx-SV-dkf"/>
