@@ -114,8 +114,8 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"showAnswerSegue"]){
-        YCJAPViewController *controller = [[YCJAPViewController alloc] initWithNibName:nil bundle:nil];
-        [self.navigationController pushViewController:controller animated:YES];
+        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+        YCJAPViewController *controller = (YCJAPViewController *)navController.topViewController;
         controller.answerKey = self.key;
     }
 }
