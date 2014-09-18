@@ -71,7 +71,7 @@
     if([segue.identifier isEqualToString:@"showQuestionSegue"]){
         UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
         YCJQuestionViewController *controller = (YCJQuestionViewController *)navController.topViewController;
-        [self presentViewController:controller animated:YES completion:NULL];
+        [self presentViewController:controller animated:NO completion:NULL];
     }
 }
 
