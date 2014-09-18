@@ -63,6 +63,18 @@
     
     }
 
+- (IBAction)buttonPressed:(UIButton *)sender {
+        [self performSegueWithIdentifier:@"showQuestionSegue" sender:sender];
+        
+    }
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"showQuestionSegue"]){
+        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+        YCJQuestionViewController *controller = (YCJQuestionViewController *)navController.topViewController;
+        [self presentViewController:controller animated:NO completion:NULL];
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
