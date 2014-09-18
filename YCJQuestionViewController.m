@@ -112,13 +112,13 @@
     }
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"showAnswerSegue"]){
-        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
-        YCJAPViewController *controller = (YCJAPViewController *)navController.topViewController;
-        controller.answerKey = self.key;
-    }
-}
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//    if([segue.identifier isEqualToString:@"showAnswerSegue"]){
+//        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+//        YCJAPViewController *controller = (YCJAPViewController *)navController.topViewController;
+//        controller.answerKey = self.key;
+//    }
+//}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
