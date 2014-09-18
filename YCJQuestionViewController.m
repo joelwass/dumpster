@@ -51,7 +51,7 @@
     
     
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
-    int random = arc4random_uniform(2);
+    int random = arc4random_uniform(3);
   
     NSString *key = [NSString stringWithFormat:@"%d",random];
     self.key = key;
@@ -108,7 +108,7 @@
     if(sender.currentTitle == self.correctAnswer){
     [self performSegueWithIdentifier:@"showAnswerSegue" sender:sender];
     }else{
-        NSLog(@"incorrect button");
+        
     }
 }
 
