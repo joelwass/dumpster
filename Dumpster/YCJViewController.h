@@ -10,4 +10,5 @@
 
 @interface YCJViewController : UIViewController
 
+@property (strong, nonatomic)UINavigationController *navCon;
 @end

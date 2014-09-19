@@ -10,6 +10,7 @@
 #import "YCJAPViewController.h"
 #import "YCJWVViewController.h"
 #import "YCJQuestions.h"
+#import "YCJViewController.h"
 #import "Parse/Parse.h"
 
 
@@ -111,12 +112,13 @@
         
     }
 }
+- (IBAction)nextQuestion:(UIButton *)sender {
+}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"showAnswerSegue"]){
-       // UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
-        //YCJAPViewController *controller = (YCJAPViewController *)navController.topViewController;
-        YCJAPViewController *controller = [[YCJAPViewController alloc] initWithNibName:nil bundle:nil];
+        YCJAPViewController *controller = (YCJAPViewController *)segue.destinationViewController;
+       // YCJAPViewController *controller = [[YCJAPViewController alloc] initWithNibName:nil bundle:nil];
         controller.answerKey = self.key;
     }
 }
