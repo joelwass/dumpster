@@ -7,6 +7,7 @@
 //
 
 #import "YCJAPViewController.h"
+#import "YCJViewController.h"
 #import "parse/parse.h"
 #import "YCJQuestionViewController.h"
 #import "SBJSON.h"
@@ -26,6 +27,12 @@
         // Custom initialization
     }
     return self;
+}
+- (IBAction)nextQuestion:(UIButton *)sender {
+    NSArray *viewControllers = self.navigationController.viewControllers;
+    YCJQuestionViewController *back = [viewControllers objectAtIndex:0];
+    [back populateQuestions];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad
@@ -47,7 +54,7 @@
     
     
     //THIS IS GETTING US THE CONTENT OF WIKIPEDIAS MAIN PAGE, WE NEED TO CHANGE THE LINK TO ACCEPT
-    //A FORM OF THE ANSWER APPENDED TO THE STRING 
+    //A FORM OF THE ANSWER APPENDED TO THE STRING
     
     
     
