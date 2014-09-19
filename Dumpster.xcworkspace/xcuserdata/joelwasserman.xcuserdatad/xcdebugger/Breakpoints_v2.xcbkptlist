@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YCJAPViewController.m"
-            timestampString = "432858884.724953"
+            timestampString = "432861094.380673"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12">
+            startingLineNumber = "13"
+            endingLineNumber = "13">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -54,11 +54,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YCJAPViewController.m"
-            timestampString = "432859707.242467"
+            timestampString = "432861094.380673"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>

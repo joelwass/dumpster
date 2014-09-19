@@ -186,7 +186,7 @@
         <!--View Controller - DUMPSTER-->
         <scene sceneID="cla-qR-YMM">
             <objects>
-                <viewController id="gY9-d3-GES" sceneMemberID="viewController">
+                <viewController id="gY9-d3-GES" customClass="YCJWVViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vgf-8e-gTR"/>
                         <viewControllerLayoutGuide type="bottom" id="ybF-VT-2Ky"/>
@@ -206,6 +206,9 @@
                     <navigationItem key="navigationItem" title="DUMPSTER" id="BTO-0Q-TUM">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Ao8-bw-Bzr"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="learnMoreWebView" destination="IW5-K4-zhK" id="sHr-2g-Hai"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJs-V1-tMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

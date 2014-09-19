@@ -10,6 +10,7 @@
 
 @interface YCJWVViewController ()
 
+
 @end
 
 @implementation YCJWVViewController
@@ -26,6 +27,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSArray *answerWithoutSpaces = [_keyWord componentsSeparatedByString:@" "];
+    NSString *answer = @"";
+    for (int i = 0; i < [answerWithoutSpaces count]; i++)
+    {
+        answer = [answer stringByAppendingString:answerWithoutSpaces[i]];
+    }
+    
+    NSString *partialURL = @"https://en.wikipedia.org/wiki/";
+    NSString *fullURL = [partialURL stringByAppendingString:answer];
+    NSURL *url = [NSURL URLWithString:fullURL];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [_learnMoreWebView loadRequest:request];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
