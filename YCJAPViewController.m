@@ -60,21 +60,11 @@
     
     
     
-    NSMutableURLRequest *request =
-    [[NSMutableURLRequest alloc] initWithURL:
-     _urlDestination];
+
     
-    NSData *response = [NSURLConnection sendSynchronousRequest:request
-                                             returningResponse:nil error:nil];
+
     
-    
-    NSString *json_string = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-    NSDictionary *results = [json_string JSONValue];
-    
-    //NSLog(@"%@",results);
-    
-    NSArray *resultArray = [results valueForKeyPath:@"query.pages.11867.revisions.*"];
-    //NSLog(@"%@",resultArray);
+
 
 }
 

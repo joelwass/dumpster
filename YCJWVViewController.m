@@ -29,11 +29,12 @@
     [super viewDidLoad];
     
     NSArray *answerWithoutSpaces = [_keyWord componentsSeparatedByString:@" "];
-    NSString *answer = @"";
-    for (int i = 0; i < [answerWithoutSpaces count]; i++)
+    NSString *answer = answerWithoutSpaces[0];
+    for (int i = 1; i < [answerWithoutSpaces count]; i++)
     {
-        answer = [answer stringByAppendingString:answerWithoutSpaces[i]];
+        answer = [[answer stringByAppendingString:@"_"] stringByAppendingString:answerWithoutSpaces[i]];
     }
+    NSLog(@"%@", answer);
     
     NSString *partialURL = @"https://en.wikipedia.org/wiki/";
     NSString *fullURL = [partialURL stringByAppendingString:answer];
