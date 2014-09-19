@@ -113,7 +113,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Lym-vK-t0r"/>
+                    <navigationItem key="navigationItem" title="DUMPSTER" id="Lym-vK-t0r"/>
                     <connections>
                         <outlet property="button1" destination="CgI-Xy-nDr" id="h34-ei-wjZ"/>
                         <outlet property="button2" destination="ria-48-G2g" id="mmL-um-0KS"/>
@@ -154,6 +154,16 @@
                                 </state>
                                 <connections>
                                     <segue destination="gY9-d3-GES" kind="push" id="nyM-FB-6Iy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EH-pK-HfR">
+                                <rect key="frame" x="141" y="443" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextQuestion:" destination="iey-62-6Tf" eventType="touchUpInside" id="LF0-7d-Ao1"/>
                                 </connections>
                             </button>
                         </subviews>
