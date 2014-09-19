@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface YCJWVViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIWebView *learnMoreWebView;
+@property (strong, nonatomic)NSString *keyWord;
 
 @end
