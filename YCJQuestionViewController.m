@@ -38,7 +38,7 @@
 {
     
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
-    int random = arc4random_uniform(3);
+    int random = arc4random_uniform(4);
     
     NSString *key = [NSString stringWithFormat:@"%d",random];
     self.key = key;
