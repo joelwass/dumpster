@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.navigationController.navigationBar.translucent = NO;
     NSArray *answerWithoutSpaces = [_keyWord componentsSeparatedByString:@" "];
     NSString *answer = answerWithoutSpaces[0];
     for (int i = 1; i < [answerWithoutSpaces count]; i++)

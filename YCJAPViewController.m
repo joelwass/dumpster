@@ -40,7 +40,7 @@
 {
 
     [super viewDidLoad];
-    
+    self.navigationController.navigationBar.translucent = NO;
     
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
     

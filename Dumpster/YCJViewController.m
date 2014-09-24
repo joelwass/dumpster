@@ -72,6 +72,7 @@
         UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
         YCJQuestionViewController *controller = (YCJQuestionViewController *)navController.topViewController;
         self.navCon = navController;
+        self.navigationController.navigationBar.translucent = NO;
         [self presentViewController:controller animated:NO completion:NULL];
     }
 }
