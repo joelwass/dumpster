@@ -3,7 +3,6 @@
 
 target "Dumpster" do
 
-pod 'SBJson', '~> 4.0.0'
 
 end
 
