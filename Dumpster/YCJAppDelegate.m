@@ -18,7 +18,10 @@
     [Parse setApplicationId:@"cps9plEsIoTBlqLqhqAocp8PBU7iuJNNucRxn7z2"
                   clientKey:@"NumQirLXh0D8O4d9oSh8tRX8fPG0GUkGtZ3Npef7"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    
+    int cacheSizeMemory = 4*1024*1024; // 4MB
+    int cacheSizeDisk = 32*1024*1024; // 32MB
+    NSURLCache *sharedCache = [[[NSURLCache alloc] initWithMemoryCapacity:cacheSizeMemory diskCapacity:cacheSizeDisk diskPath:@"nsurlcache"] autorelease];
+    [NSURLCache setSharedURLCache:sharedCache];
 //    YCJQuestions *questionList = [[YCJQuestions alloc]init];
 //    [questionList buildQuestions];
     
@@ -51,6 +54,9 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
 }
 
 @end

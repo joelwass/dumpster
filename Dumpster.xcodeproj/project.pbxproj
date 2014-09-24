@@ -13,7 +13,7 @@
 		EEA38DD31991A74A002623C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD21991A74A002623C3 /* UIKit.framework */; };
 		EEA38DD91991A74A002623C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEA38DD71991A74A002623C3 /* InfoPlist.strings */; };
 		EEA38DDB1991A74A002623C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA38DDA1991A74A002623C3 /* main.m */; };
-		EEA38DDF1991A74A002623C3 /* YCJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA38DDE1991A74A002623C3 /* YCJAppDelegate.m */; };
+		EEA38DDF1991A74A002623C3 /* YCJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA38DDE1991A74A002623C3 /* YCJAppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EEA38DE51991A74A002623C3 /* YCJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA38DE41991A74A002623C3 /* YCJViewController.m */; };
 		EEA38DE71991A74A002623C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEA38DE61991A74A002623C3 /* Images.xcassets */; };
 		EEA38DEE1991A74A002623C3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DED1991A74A002623C3 /* XCTest.framework */; };

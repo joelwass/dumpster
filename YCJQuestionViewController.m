@@ -123,7 +123,7 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"showAnswerSegue"]){
-        YCJAPViewController *controller = [(YCJAPViewController *)segue.destinationViewController animated:NO];
+        YCJAPViewController *controller = (YCJAPViewController *)segue.destinationViewController;
        // YCJAPViewController *controller = [[YCJAPViewController alloc] initWithNibName:nil bundle:nil];
         controller.answerKey = self.key;
     }
