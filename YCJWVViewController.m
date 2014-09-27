@@ -7,6 +7,7 @@
 //
 
 #import "YCJWVViewController.h"
+#import "UIWebView+Clean.h"
 
 @interface YCJWVViewController ()
 
@@ -55,7 +56,8 @@
 -(void) viewWillDisappear:(BOOL)animated {
     // Your Code
     // going to add memory leak dealloc
-    
+    [self.learnMoreWebView cleanForDealloc];
+    self.learnMoreWebView = nil;
     [super viewWillDisappear:YES];
 }
 
