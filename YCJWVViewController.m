@@ -52,4 +52,11 @@
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
 }
 
+-(void) viewWillDisappear:(BOOL)animated {
+    // Your Code
+    // going to add memory leak dealloc
+    
+    [super viewWillDisappear:YES];
+}
+
 @end
