@@ -11,7 +11,6 @@
 #import "YCJWVViewController.h"
 #import "parse/parse.h"
 #import "YCJQuestionViewController.h"
-#import "SBJSON.h"
 
 @interface YCJAPViewController ()
 
@@ -78,6 +77,7 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
 }
 
 @end

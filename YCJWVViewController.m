@@ -7,6 +7,7 @@
 //
 
 #import "YCJWVViewController.h"
+#import "UIWebView+Clean.h"
 
 @interface YCJWVViewController ()
 
@@ -49,6 +50,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+}
+
+-(void) viewWillDisappear:(BOOL)animated {
+    // Your Code
+    // going to add memory leak dealloc
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    [self.learnMoreWebView cleanForDealloc];
+    self.learnMoreWebView = nil;
+    [super viewWillDisappear:YES];
 }
 
 @end

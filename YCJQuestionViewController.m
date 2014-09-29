@@ -95,6 +95,13 @@
    
     
     [super viewDidLoad];
+    [_button1.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+   [_button2.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    [_button3.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    [_button4.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    [_skipButton.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+        [_questionLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    
     self.navigationController.navigationBar.translucent = NO;
     [self populateQuestions];
     
@@ -132,6 +139,7 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
 }
 
 
