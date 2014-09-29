@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *button4;
 @property (weak, nonatomic) IBOutlet UIButton *skipButton;
 @property (strong, nonatomic) NSString *key;
-@property NSString *correctAnswer;
+@property (strong, nonatomic) NSString *correctAnswer;
 - (void)populateQuestions;
 
 @end

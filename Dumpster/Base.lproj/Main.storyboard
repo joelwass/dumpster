@@ -136,7 +136,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="DUMPSTER" id="Lym-vK-t0r">
                         <barButtonItem key="backBarButtonItem" title="Back" id="u6n-um-N7Q"/>
@@ -200,7 +199,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="0.63" colorSpace="calibratedRGB"/>
                         <accessibility key="accessibilityConfiguration" label=""/>
                     </view>
                     <navigationItem key="navigationItem" title="Answer" id="iPt-Lw-Q6O">
