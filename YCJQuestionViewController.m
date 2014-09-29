@@ -49,7 +49,8 @@
     [questionQuery whereKey:@"QNumber" containsString:key];
     [questionQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Questions, NSError *error) {
         // Do something with the returned PFObject in the gameScore variable.
-        _questionLabel.text = Questions[@"Question"];
+        _questionLabel.text = [Questions[@"Question"] stringByAppendingString:@"?"];
+        
         
     }];
     
@@ -95,9 +96,18 @@
    
     
     [super viewDidLoad];
+    _button1.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    _button1.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view setBackgroundColor: [self colorWithHexString:@"68C3A3"]];
     [_button1.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    _button2.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    _button2.titleLabel.textAlignment = NSTextAlignmentCenter;
    [_button2.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    _button3.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    _button3.titleLabel.textAlignment = NSTextAlignmentCenter;
     [_button3.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    _button4.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    _button4.titleLabel.textAlignment = NSTextAlignmentCenter;
     [_button4.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
     [_skipButton.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
         [_questionLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
@@ -140,6 +150,42 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
+}
+
+-(UIColor*)colorWithHexString:(NSString*)hex
+{
+    NSString *cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
+    
+    // String should be 6 or 8 characters
+    if ([cString length] < 6) return [UIColor grayColor];
+    
+    // strip 0X if it appears
+    if ([cString hasPrefix:@"0X"]) cString = [cString substringFromIndex:2];
+    
+    if ([cString length] != 6) return  [UIColor grayColor];
+    
+    // Separate into r, g, b substrings
+    NSRange range;
+    range.location = 0;
+    range.length = 2;
+    NSString *rString = [cString substringWithRange:range];
+    
+    range.location = 2;
+    NSString *gString = [cString substringWithRange:range];
+    
+    range.location = 4;
+    NSString *bString = [cString substringWithRange:range];
+    
+    // Scan values
+    unsigned int r, g, b;
+    [[NSScanner scannerWithString:rString] scanHexInt:&r];
+    [[NSScanner scannerWithString:gString] scanHexInt:&g];
+    [[NSScanner scannerWithString:bString] scanHexInt:&b];
+    
+    return [UIColor colorWithRed:((float) r / 255.0f)
+                           green:((float) g / 255.0f)
+                            blue:((float) b / 255.0f)
+                           alpha:1.0f];
 }
 
 
