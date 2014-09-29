@@ -12,6 +12,7 @@
 		EE61B67F19D8EA940054D77D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B67C19D8EA940054D77D /* Bolts.framework */; };
 		EE61B68019D8EA940054D77D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B67D19D8EA940054D77D /* Parse.framework */; };
 		EE61B68119D8EA940054D77D /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B67E19D8EA940054D77D /* ParseFacebookUtils.framework */; };
+		EE61B68319D8EE780054D77D /* Chalkduster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE61B68219D8EE780054D77D /* Chalkduster.ttf */; };
 		EEA38DCF1991A74A002623C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DCE1991A74A002623C3 /* Foundation.framework */; };
 		EEA38DD11991A74A002623C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD01991A74A002623C3 /* CoreGraphics.framework */; };
 		EEA38DD31991A74A002623C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD21991A74A002623C3 /* UIKit.framework */; };
@@ -68,6 +69,7 @@
 		EE61B67C19D8EA940054D77D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		EE61B67D19D8EA940054D77D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		EE61B67E19D8EA940054D77D /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		EE61B68219D8EE780054D77D /* Chalkduster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chalkduster.ttf; sourceTree = "<group>"; };
 		EEA38DCB1991A74A002623C3 /* Dumpster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dumpster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA38DCE1991A74A002623C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEA38DD01991A74A002623C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -232,6 +234,7 @@
 				EEB0BF3619A4CB31006D7B3D /* logo90.png */,
 				EEA38DD61991A74A002623C3 /* Dumpster-Info.plist */,
 				EEA38DD71991A74A002623C3 /* InfoPlist.strings */,
+				EE61B68219D8EE780054D77D /* Chalkduster.ttf */,
 				EEA38DDA1991A74A002623C3 /* main.m */,
 				EEA38DDC1991A74A002623C3 /* Dumpster-Prefix.pch */,
 			);
@@ -369,6 +372,7 @@
 				EEB0BF3819A4CB31006D7B3D /* logo180.png in Resources */,
 				EEB0BF30199F2C61006D7B3D /* YCJQuestionViewController.xib in Resources */,
 				EEB983F219BB9F270014D8B7 /* YCJAPViewController.xib in Resources */,
+				EE61B68319D8EE780054D77D /* Chalkduster.ttf in Resources */,
 				EEB0BF3719A4CB31006D7B3D /* logo270.png in Resources */,
 				EEB983F719BBA9B30014D8B7 /* YCJWVViewController.xib in Resources */,
 			);
