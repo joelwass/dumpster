@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		98EA68BC5A554ED291221693 /* libPods-Dumpster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BE037ADB5546B784A581BF /* libPods-Dumpster.a */; };
 		EE61B67A19D72ABD0054D77D /* UIWebView+Clean.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61B67819D72ABD0054D77D /* UIWebView+Clean.m */; };
+		EE61B67F19D8EA940054D77D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B67C19D8EA940054D77D /* Bolts.framework */; };
+		EE61B68019D8EA940054D77D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B67D19D8EA940054D77D /* Parse.framework */; };
+		EE61B68119D8EA940054D77D /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B67E19D8EA940054D77D /* ParseFacebookUtils.framework */; };
 		EEA38DCF1991A74A002623C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DCE1991A74A002623C3 /* Foundation.framework */; };
 		EEA38DD11991A74A002623C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD01991A74A002623C3 /* CoreGraphics.framework */; };
 		EEA38DD31991A74A002623C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD21991A74A002623C3 /* UIKit.framework */; };
@@ -62,6 +65,9 @@
 		C5BE037ADB5546B784A581BF /* libPods-Dumpster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dumpster.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE61B67819D72ABD0054D77D /* UIWebView+Clean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Clean.m"; sourceTree = "<group>"; };
 		EE61B67919D72ABD0054D77D /* UIWebView+Clean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Clean.h"; sourceTree = "<group>"; };
+		EE61B67C19D8EA940054D77D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		EE61B67D19D8EA940054D77D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		EE61B67E19D8EA940054D77D /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		EEA38DCB1991A74A002623C3 /* Dumpster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dumpster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA38DCE1991A74A002623C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEA38DD01991A74A002623C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,11 +120,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE61B67F19D8EA940054D77D /* Bolts.framework in Frameworks */,
 				EEA38E151991A843002623C3 /* SystemConfiguration.framework in Frameworks */,
 				EEA38E131991A83C002623C3 /* StoreKit.framework in Frameworks */,
 				EEA38E111991A836002623C3 /* Security.framework in Frameworks */,
 				EEA38E0F1991A82C002623C3 /* QuartzCore.framework in Frameworks */,
+				EE61B68119D8EA940054D77D /* ParseFacebookUtils.framework in Frameworks */,
 				EEA38E0D1991A826002623C3 /* MobileCoreServices.framework in Frameworks */,
+				EE61B68019D8EA940054D77D /* Parse.framework in Frameworks */,
 				EEA38E0B1991A821002623C3 /* libz.dylib in Frameworks */,
 				EEA38DD11991A74A002623C3 /* CoreGraphics.framework in Frameworks */,
 				EEB983ED19B7600E0014D8B7 /* Bolts.framework in Frameworks */,
@@ -144,9 +153,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE61B67B19D8EA940054D77D /* parse-library-1.4.1 */ = {
+			isa = PBXGroup;
+			children = (
+				EE61B67C19D8EA940054D77D /* Bolts.framework */,
+				EE61B67D19D8EA940054D77D /* Parse.framework */,
+				EE61B67E19D8EA940054D77D /* ParseFacebookUtils.framework */,
+			);
+			path = "parse-library-1.4.1";
+			sourceTree = "<group>";
+		};
 		EEA38DC21991A74A002623C3 = {
 			isa = PBXGroup;
 			children = (
+				EE61B67B19D8EA940054D77D /* parse-library-1.4.1 */,
 				EEB0BF28199F2B81006D7B3D /* Views */,
 				EEA38E031991A753002623C3 /* Models */,
 				EEA38DD41991A74A002623C3 /* Dumpster */,
@@ -541,6 +561,7 @@
 					"$(inherited)",
 					/Users/joelwasserman/Downloads,
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/parse-library-1.4.1",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dumpster/Dumpster-Prefix.pch";
@@ -562,6 +583,7 @@
 					"$(inherited)",
 					/Users/joelwasserman/Downloads,
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/parse-library-1.4.1",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dumpster/Dumpster-Prefix.pch";

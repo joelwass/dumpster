@@ -56,6 +56,7 @@
 -(void) viewWillDisappear:(BOOL)animated {
     // Your Code
     // going to add memory leak dealloc
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
     [self.learnMoreWebView cleanForDealloc];
     self.learnMoreWebView = nil;
     [super viewWillDisappear:YES];
