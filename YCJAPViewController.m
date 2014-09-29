@@ -39,6 +39,9 @@
 {
 
     [super viewDidLoad];
+    [_answerLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    [_learnMoreButton.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    [_nextButton.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
     self.navigationController.navigationBar.translucent = NO;
     
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
