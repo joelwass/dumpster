@@ -110,7 +110,8 @@
     _button4.titleLabel.textAlignment = NSTextAlignmentCenter;
     [_button4.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
     [_skipButton.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
-        [_questionLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+        [_questionLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18
+                                 ]];
     
     self.navigationController.navigationBar.translucent = NO;
     [self populateQuestions];
