@@ -49,7 +49,7 @@
     [questionQuery whereKey:@"QNumber" containsString:key];
     [questionQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Questions, NSError *error) {
         // Do something with the returned PFObject in the gameScore variable.
-        _questionLabel.text = [Questions[@"Question"] stringByAppendingString:@"?"];
+        _questionLabel.text = Questions[@"Question"];
         
         
     }];
