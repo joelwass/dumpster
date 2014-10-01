@@ -10,6 +10,7 @@
 #import "Parse/parse.h"
 #import "YCJQuestionViewController.h"
 #import "YCJQuestions.h"
+#import "UIImage+animatedGIF.h"
 
 @interface YCJViewController ()
 
@@ -21,9 +22,28 @@
 {
     [super viewDidLoad];
     [self.view setBackgroundColor: [self colorWithHexString:@"68C3A3"]];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"ezgif.com-gif-maker" ofType:@"gif"];
+    NSData *gif = [NSData dataWithContentsOfFile:filePath];
+    UIWebView *webViewBG = [[UIWebView alloc] initWithFrame:CGRectMake(15, 100, 265, 400)];
+    webViewBG.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
+    webViewBG.opaque = NO;
+    [webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
+    webViewBG.userInteractionEnabled = NO;
+    [self.view addSubview:webViewBG];
+//    
+//    UIView *filter = [[UIView alloc] initWithFrame:self.view.frame];
+//    filter.backgroundColor = [UIColor blackColor];
+//    filter.alpha = 0.05;
+//    [self.view addSubview:filter];
+    
 
     
-    
+//    _animationString = @"DumpsterLoadAni.gif";
+//    _animationURL = [NSURL URLWithString:_animationString];
+//    _animationView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"DumpsterLoadAni.gif"]];
+//    UIImage *image = _animationView.image;
+//    image = [UIImage animatedImageWithAnimatedGIFURL:_animationURL];
+   
     
     
     
@@ -41,20 +61,20 @@
     
 
         // Load images
-        NSArray *imageNames = @[@"logo90.png", @"logo180.png", @"logo270.png"];
-        
-        NSMutableArray *images = [[NSMutableArray alloc] init];
-        for (int i = 0; i < imageNames.count; i++) {
-            [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
-        }
-        
-        // Normal Animation
-        UIImageView *animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 160, 120, 120)];
-        animationImageView.animationImages = images;
-        animationImageView.animationDuration = 1.5;
-        
-        [self.view addSubview:animationImageView];
-        [animationImageView startAnimating];
+//        NSArray *imageNames = @[@"logo90.png", @"logo180.png", @"logo270.png"];
+//        
+//        NSMutableArray *images = [[NSMutableArray alloc] init];
+//        for (int i = 0; i < imageNames.count; i++) {
+//            [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
+//        }
+//        
+//        // Normal Animation
+//        UIImageView *animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 160, 120, 120)];
+//        animationImageView.animationImages = images;
+//        animationImageView.animationDuration = 1.5;
+//        
+//        [self.view addSubview:animationImageView];
+//        [animationImageView startAnimating];
     
     
     

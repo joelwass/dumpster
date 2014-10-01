@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DUMPSTER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCn-Ae-3gv">
-                                <rect key="frame" x="58" y="84" width="204" height="31"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="DUMPSTER." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCn-Ae-3gv">
+                                <rect key="frame" x="45" y="87" width="230" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="dEp-pA-7kW"/>
                                 </constraints>
@@ -27,28 +27,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jZ-kJ-oWR">
-                                <rect key="frame" x="137" y="344" width="39" height="30"/>
-                                <state key="normal" title="NEXT">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="7xw-WA-3jp" kind="modal" animates="NO" id="qKL-hw-N0c"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="tCn-Ae-3gv" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="3St-Kx-q13"/>
-                            <constraint firstItem="8jZ-kJ-oWR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="137" id="eKs-tE-Ec7"/>
-                            <constraint firstItem="tCn-Ae-3gv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="42" id="gwi-Sz-Aq7"/>
+                            <constraint firstItem="tCn-Ae-3gv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="38" id="gwi-Sz-Aq7"/>
                             <constraint firstItem="tCn-Ae-3gv" firstAttribute="top" secondItem="6sI-zN-Igq" secondAttribute="bottom" constant="64" id="k5Q-zL-N7Z"/>
-                            <constraint firstItem="MVL-lp-nAB" firstAttribute="top" secondItem="8jZ-kJ-oWR" secondAttribute="bottom" constant="194" id="qrD-tm-owh"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11" y="27"/>
+            <point key="canvasLocation" x="-53" y="-361"/>
         </scene>
         <!--question-->
         <scene sceneID="72i-pT-mIl">
@@ -184,7 +173,7 @@
                             <constraint firstItem="xCd-kT-Wza" firstAttribute="top" secondItem="9oK-qb-muD" secondAttribute="bottom" constant="20" id="tEF-si-rwb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DUMPSTER" id="Lym-vK-t0r">
+                    <navigationItem key="navigationItem" title="DUMPSTER." id="Lym-vK-t0r">
                         <barButtonItem key="backBarButtonItem" title="Back" id="u6n-um-N7Q"/>
                     </navigationItem>
                     <connections>
@@ -248,7 +237,7 @@
                         </subviews>
                         <accessibility key="accessibilityConfiguration" label=""/>
                     </view>
-                    <navigationItem key="navigationItem" title="Answer" id="iPt-Lw-Q6O">
+                    <navigationItem key="navigationItem" title="DUMPSTER." id="iPt-Lw-Q6O">
                         <barButtonItem key="backBarButtonItem" title="Back" id="SJu-7b-JqS">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
@@ -263,7 +252,7 @@
             </objects>
             <point key="canvasLocation" x="1309" y="29"/>
         </scene>
-        <!--DUMPSTER-->
+        <!--DUMPSTER.-->
         <scene sceneID="cla-qR-YMM">
             <objects>
                 <viewController id="gY9-d3-GES" customClass="YCJWVViewController" sceneMemberID="viewController">
@@ -282,7 +271,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="DUMPSTER" id="BTO-0Q-TUM">
+                    <navigationItem key="navigationItem" title="DUMPSTER." id="BTO-0Q-TUM">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Ao8-bw-Bzr"/>
                     </navigationItem>
                     <connections>
