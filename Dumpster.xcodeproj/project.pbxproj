@@ -13,6 +13,10 @@
 		EE61B68019D8EA940054D77D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B67D19D8EA940054D77D /* Parse.framework */; };
 		EE61B68119D8EA940054D77D /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B67E19D8EA940054D77D /* ParseFacebookUtils.framework */; };
 		EE61B68319D8EE780054D77D /* Chalkduster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE61B68219D8EE780054D77D /* Chalkduster.ttf */; };
+		EE61B68519DB68200054D77D /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61B68419DB68200054D77D /* UIImage+animatedGIF.m */; };
+		EE61B68919DB694E0054D77D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B68819DB694E0054D77D /* ImageIO.framework */; };
+		EE61B68B19DB6B160054D77D /* DumpsterLoadAni.gif in Resources */ = {isa = PBXBuildFile; fileRef = EE61B68A19DB6B160054D77D /* DumpsterLoadAni.gif */; };
+		EE61B68D19DB78D90054D77D /* ezgif.com-gif-maker.gif in Resources */ = {isa = PBXBuildFile; fileRef = EE61B68C19DB78D90054D77D /* ezgif.com-gif-maker.gif */; };
 		EEA38DCF1991A74A002623C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DCE1991A74A002623C3 /* Foundation.framework */; };
 		EEA38DD11991A74A002623C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD01991A74A002623C3 /* CoreGraphics.framework */; };
 		EEA38DD31991A74A002623C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD21991A74A002623C3 /* UIKit.framework */; };
@@ -70,6 +74,11 @@
 		EE61B67D19D8EA940054D77D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		EE61B67E19D8EA940054D77D /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		EE61B68219D8EE780054D77D /* Chalkduster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chalkduster.ttf; sourceTree = "<group>"; };
+		EE61B68419DB68200054D77D /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		EE61B68619DB68B20054D77D /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		EE61B68819DB694E0054D77D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		EE61B68A19DB6B160054D77D /* DumpsterLoadAni.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = DumpsterLoadAni.gif; sourceTree = "<group>"; };
+		EE61B68C19DB78D90054D77D /* ezgif.com-gif-maker.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ezgif.com-gif-maker.gif"; sourceTree = "<group>"; };
 		EEA38DCB1991A74A002623C3 /* Dumpster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dumpster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA38DCE1991A74A002623C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEA38DD01991A74A002623C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE61B68919DB694E0054D77D /* ImageIO.framework in Frameworks */,
 				EE61B67F19D8EA940054D77D /* Bolts.framework in Frameworks */,
 				EEA38E151991A843002623C3 /* SystemConfiguration.framework in Frameworks */,
 				EEA38E131991A83C002623C3 /* StoreKit.framework in Frameworks */,
@@ -191,6 +201,7 @@
 		EEA38DCD1991A74A002623C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE61B68819DB694E0054D77D /* ImageIO.framework */,
 				EEB983EC19B7600E0014D8B7 /* Bolts.framework */,
 				EEA38E161991A8E7002623C3 /* Parse.framework */,
 				EEA38E141991A843002623C3 /* SystemConfiguration.framework */,
@@ -227,6 +238,8 @@
 		EEA38DD51991A74A002623C3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EE61B68C19DB78D90054D77D /* ezgif.com-gif-maker.gif */,
+				EE61B68A19DB6B160054D77D /* DumpsterLoadAni.gif */,
 				EE61B67819D72ABD0054D77D /* UIWebView+Clean.m */,
 				EE61B67919D72ABD0054D77D /* UIWebView+Clean.h */,
 				EEB0BF3419A4CB31006D7B3D /* logo270.png */,
@@ -237,6 +250,8 @@
 				EE61B68219D8EE780054D77D /* Chalkduster.ttf */,
 				EEA38DDA1991A74A002623C3 /* main.m */,
 				EEA38DDC1991A74A002623C3 /* Dumpster-Prefix.pch */,
+				EE61B68419DB68200054D77D /* UIImage+animatedGIF.m */,
+				EE61B68619DB68B20054D77D /* UIImage+animatedGIF.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -336,6 +351,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = JoelWass;
 				TargetAttributes = {
+					EEA38DCA1991A74A002623C3 = {
+						DevelopmentTeam = 23NT8R7X24;
+					};
 					EEA38DEB1991A74A002623C3 = {
 						TestTargetID = EEA38DCA1991A74A002623C3;
 					};
@@ -366,6 +384,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EECA3A6619C2155F0050F431 /* Main.storyboard in Resources */,
+				EE61B68D19DB78D90054D77D /* ezgif.com-gif-maker.gif in Resources */,
+				EE61B68B19DB6B160054D77D /* DumpsterLoadAni.gif in Resources */,
 				EEA38DE71991A74A002623C3 /* Images.xcassets in Resources */,
 				EEB0BF3919A4CB31006D7B3D /* logo90.png in Resources */,
 				EEA38DD91991A74A002623C3 /* InfoPlist.strings in Resources */,
@@ -430,6 +450,7 @@
 				EEA38DE51991A74A002623C3 /* YCJViewController.m in Sources */,
 				EE61B67A19D72ABD0054D77D /* UIWebView+Clean.m in Sources */,
 				EEB0BF2B199F2BA8006D7B3D /* YCJQuestions.m in Sources */,
+				EE61B68519DB68200054D77D /* UIImage+animatedGIF.m in Sources */,
 				EEB983F619BBA9B30014D8B7 /* YCJWVViewController.m in Sources */,
 				EEA38DDB1991A74A002623C3 /* main.m in Sources */,
 				EEA38DDF1991A74A002623C3 /* YCJAppDelegate.m in Sources */,
@@ -561,6 +582,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/joelwasserman/Downloads,
@@ -573,6 +596,7 @@
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -583,6 +607,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/joelwasserman/Downloads,
@@ -595,6 +621,7 @@
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

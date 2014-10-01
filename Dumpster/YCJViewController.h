@@ -10,5 +10,10 @@
 
 @interface YCJViewController : UIViewController
 
+@property (weak, nonatomic)NSString *animationString;
+@property (weak, nonatomic)NSURL *animationURL;
+@property (weak, nonatomic) IBOutlet UIImageView *animationView;
 @property (weak, nonatomic)UINavigationController *navCon;
 @end
+
+
