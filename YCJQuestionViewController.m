@@ -37,7 +37,7 @@
 - (void)populateQuestions
 {
     
-    PFQuery *answerQuery = [PFQuery queryWithClassName:@"answers"];
+    PFQuery *answerQuery = [PFQuery queryWithClassName:@"questions"];
     int random = arc4random_uniform(4);
     
     NSString *key = [NSString stringWithFormat:@"%d",random];
@@ -45,8 +45,8 @@
     
     
     
-    PFQuery *questionQuery = [PFQuery queryWithClassName:@"questions"];
-    [questionQuery whereKey:@"QNumber" containsString:key];
+    PFQuery *questionQuery = [PFQuery queryWithClassName:@"answers"];
+    [questionQuery whereKey:@"Parse_1" containsString:key];
     [questionQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Questions, NSError *error) {
         // Do something with the returned PFObject in the gameScore variable.
         _questionLabel.text = Questions[@"Question"];
@@ -56,7 +56,7 @@
     
     /*query based on specific number key, */
     
-    [answerQuery whereKey:@"ANumber" containsString:key];
+    [answerQuery whereKey:@"Parse_1" containsString:key];
     [answerQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Answers, NSError *error){
         // initialize array of buttons and possible answer texts
         NSArray *buttonArray = [NSArray arrayWithObjects:_button1, _button2, _button3, _button4, nil];
