@@ -37,7 +37,7 @@
 - (void)populateQuestions
 {
     
-    PFQuery *answerQuery = [PFQuery queryWithClassName:@"questions"];
+    PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
     int random = arc4random_uniform(4);
     
     NSString *key = [NSString stringWithFormat:@"%d",random];
@@ -45,8 +45,8 @@
     
     
     
-    PFQuery *questionQuery = [PFQuery queryWithClassName:@"answers"];
-    [questionQuery whereKey:@"Parse_1" containsString:key];
+    PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
+    [questionQuery whereKey:@"QNumber" containsString:key];
     [questionQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Questions, NSError *error) {
         // Do something with the returned PFObject in the gameScore variable.
         _questionLabel.text = Questions[@"Question"];
@@ -56,7 +56,7 @@
     
     /*query based on specific number key, */
     
-    [answerQuery whereKey:@"Parse_1" containsString:key];
+    [answerQuery whereKey:@"ANumber" containsString:key];
     [answerQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Answers, NSError *error){
         // initialize array of buttons and possible answer texts
         NSArray *buttonArray = [NSArray arrayWithObjects:_button1, _button2, _button3, _button4, nil];
@@ -99,13 +99,16 @@
     _button1.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     _button1.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.view setBackgroundColor: [self colorWithHexString:@"68C3A3"]];
+    
     [_button1.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
     _button2.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     _button2.titleLabel.textAlignment = NSTextAlignmentCenter;
    [_button2.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    
     _button3.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     _button3.titleLabel.textAlignment = NSTextAlignmentCenter;
     [_button3.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+   
     _button4.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     _button4.titleLabel.textAlignment = NSTextAlignmentCenter;
     [_button4.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
