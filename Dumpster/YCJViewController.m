@@ -89,15 +89,16 @@
         [self performSegueWithIdentifier:@"showQuestionSegue" sender:sender];
         
     }
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"showQuestionSegue"]){
-        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
-        YCJQuestionViewController *controller = (YCJQuestionViewController *)navController.topViewController;
-        self.navCon = navController;
-        self.navigationController.navigationBar.translucent = NO;
-        [self presentViewController:controller animated:NO completion:NULL];
-    }
-}
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//    if([segue.identifier isEqualToString:@"showQuestionSegue"]){
+//        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+//        YCJQuestionViewController *controller = (YCJQuestionViewController *)navController.topViewController;
+//        
+//        self.navCon = navController;
+//        self.navigationController.navigationBar.translucent = NO;
+//        [self presentViewController:controller animated:NO completion:NULL];
+//    }
+//}
 
 - (void)didReceiveMemoryWarning
 {
