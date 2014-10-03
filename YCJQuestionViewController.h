@@ -18,6 +18,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *skipButton;
 @property (strong, nonatomic) NSString *key;
 @property (strong, nonatomic) NSString *correctAnswer;
+
+@property (weak, nonatomic) NSMutableArray *answerArray;
+@property (weak, nonatomic) NSMutableArray *questionArray;
+
+
 - (void)populateQuestions;
 
 @end

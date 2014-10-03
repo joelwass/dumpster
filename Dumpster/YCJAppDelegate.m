@@ -22,9 +22,7 @@
     int cacheSizeDisk = 32*1024*1024; // 32MB
     NSURLCache *sharedCache = [[[NSURLCache alloc] initWithMemoryCapacity:cacheSizeMemory diskCapacity:cacheSizeDisk diskPath:@"nsurlcache"] autorelease];
     [NSURLCache setSharedURLCache:sharedCache];
-//    YCJQuestions *questionList = [[YCJQuestions alloc]init];
-//    [questionList buildQuestions];
-    
+
     // Override point for customization after application launch.
     return YES;
 }
