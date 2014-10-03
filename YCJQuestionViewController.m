@@ -27,6 +27,7 @@
 
 
 @implementation YCJQuestionViewController
+@synthesize randomKey;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -40,26 +41,28 @@
 
 - (void)populateQuestions{
     
-    int random = arc4random_uniform(2);
+     randomKey = arc4random_uniform(_questionArray.count);
+    
     
     //    NSString *key = [NSString stringWithFormat:@"%d",random];
     //    self.key = key;
-    NSLog(@"%@", [_answerArray[random] valueForKey:@"Answer"]);
+    NSLog(@"%@", [_answerArray[randomKey] valueForKey:@"Answer"]);
     
     
     NSArray *buttonArray = [NSArray arrayWithObjects:_button1, _button2, _button3, _button4, nil];
-    NSMutableArray *answerLabelArray = [NSMutableArray arrayWithObjects:[_answerArray[random] valueForKey:@"Answer"], [_answerArray[random] valueForKey:@"IncAnswer2"], [_answerArray[random] valueForKey:@"IncAnswer3"], [_answerArray[random] valueForKey:@"incAnswer1"], nil];
+    NSMutableArray *answerLabelArray = [NSMutableArray arrayWithObjects:[_answerArray[randomKey] valueForKey:@"Answer"], [_answerArray[randomKey] valueForKey:@"IncAnswer2"], [_answerArray[randomKey] valueForKey:@"IncAnswer3"], [_answerArray[randomKey] valueForKey:@"incAnswer1"], nil];
     
     NSLog(@"%@", answerLabelArray[0]);
     
+    _questionLabel.text = [_questionArray[randomKey] valueForKey:@"Question"];
+    self.correctAnswer = [_answerArray[randomKey] valueForKey:@"Answer"];
+    
     for(int i = 0; i<4; i++){
+        int randomLabel = (arc4random() % answerLabelArray.count);
+        [buttonArray[i] setTitle:answerLabelArray[randomLabel] forState:UIControlStateNormal];
         
-        [buttonArray[i] setTitle:answerLabelArray[i] forState:UIControlStateNormal];
         
-        //        int randomAnswer = (arc4random() % i);
-        //
-        //        [buttonArray[i] setTitle:answerLabelArray[randomAnswer] forState:UIControlStateNormal];
-        //        [answerLabelArray removeObjectAtIndex:randomAnswer];
+        [answerLabelArray removeObjectAtIndex:randomLabel];
         
         
     }
@@ -145,6 +148,7 @@
 
 - (IBAction)buttonPressed:(UIButton *)sender {
     if(sender.currentTitle == self.correctAnswer){
+        
         [self performSegueWithIdentifier:@"showAnswerSegue" sender:sender];
     }else{
         
@@ -158,10 +162,11 @@
     if([segue.identifier isEqualToString:@"showAnswerSegue"]){
         YCJAPViewController *controller = (YCJAPViewController *)segue.destinationViewController;
         // YCJAPViewController *controller = [[YCJAPViewController alloc] initWithNibName:nil bundle:nil];
-        controller.answerKey = self.key;
+        controller.correctAnswer = self.correctAnswer;
         
-        
-        // FIXME: send string of answer instead of key, save on data
+        [_answerArray removeObjectAtIndex:randomKey];
+        [_questionArray removeObjectAtIndex:randomKey];
+    
     }
 }
 - (void)didReceiveMemoryWarning
