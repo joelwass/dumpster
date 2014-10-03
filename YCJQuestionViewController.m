@@ -99,13 +99,16 @@
     _button1.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     _button1.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.view setBackgroundColor: [self colorWithHexString:@"68C3A3"]];
+    
     [_button1.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
     _button2.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     _button2.titleLabel.textAlignment = NSTextAlignmentCenter;
    [_button2.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    
     _button3.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     _button3.titleLabel.textAlignment = NSTextAlignmentCenter;
     [_button3.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+   
     _button4.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     _button4.titleLabel.textAlignment = NSTextAlignmentCenter;
     [_button4.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];

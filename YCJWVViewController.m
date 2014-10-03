@@ -35,7 +35,7 @@
     {
         answer = [[answer stringByAppendingString:@"_"] stringByAppendingString:answerWithoutSpaces[i]];
     }
-    NSLog(@"%@", answer);
+   
     
     NSString *partialURL = @"https://en.wikipedia.org/wiki/";
     NSString *fullURL = [partialURL stringByAppendingString:answer];

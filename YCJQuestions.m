@@ -16,7 +16,7 @@
 - (void)buildQuestions{
     
    
-    PFQuery *query = [PFQuery queryWithClassName:@"Questions"];
+    PFQuery *query = [PFQuery queryWithClassName:@"questions"];
     
     [query getObjectInBackgroundWithId:@"DIJTUwrtPo" block:^(PFObject *Questions, NSError *error) {
         // Do something with the returned PFObject in the gameScore variable.
