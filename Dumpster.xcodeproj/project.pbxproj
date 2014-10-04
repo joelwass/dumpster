@@ -55,6 +55,8 @@
 		EEB983F719BBA9B30014D8B7 /* YCJWVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB983F519BBA9B30014D8B7 /* YCJWVViewController.xib */; };
 		EECA3A6619C2155F0050F431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA38DE01991A74A002623C3 /* Main.storyboard */; };
 		EECA3A6819C216EF0050F431 /* DumpsterTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = EEA38DEC1991A74A002623C3 /* DumpsterTests.xctest */; };
+		EEFE478119E05B730054AA25 /* Reachability.h in Sources */ = {isa = PBXBuildFile; fileRef = EEFE478019E05B730054AA25 /* Reachability.h */; };
+		EEFE478319E05BA00054AA25 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFE478219E05BA00054AA25 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +130,8 @@
 		EEB983F319BBA9B30014D8B7 /* YCJWVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCJWVViewController.h; sourceTree = "<group>"; };
 		EEB983F419BBA9B30014D8B7 /* YCJWVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCJWVViewController.m; sourceTree = "<group>"; };
 		EEB983F519BBA9B30014D8B7 /* YCJWVViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCJWVViewController.xib; sourceTree = "<group>"; };
+		EEFE478019E05B730054AA25 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		EEFE478219E05BA00054AA25 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +270,8 @@
 				EEA38DDC1991A74A002623C3 /* Dumpster-Prefix.pch */,
 				EE61B68419DB68200054D77D /* UIImage+animatedGIF.m */,
 				EE61B68619DB68B20054D77D /* UIImage+animatedGIF.h */,
+				EEFE478019E05B730054AA25 /* Reachability.h */,
+				EEFE478219E05BA00054AA25 /* Reachability.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -466,12 +472,14 @@
 				EEA38DE51991A74A002623C3 /* YCJViewController.m in Sources */,
 				EE61B67A19D72ABD0054D77D /* UIWebView+Clean.m in Sources */,
 				EEB0BF2B199F2BA8006D7B3D /* YCJQuestions.m in Sources */,
+				EEFE478119E05B730054AA25 /* Reachability.h in Sources */,
 				EE61B68519DB68200054D77D /* UIImage+animatedGIF.m in Sources */,
 				EEB983F619BBA9B30014D8B7 /* YCJWVViewController.m in Sources */,
 				EEA38DDB1991A74A002623C3 /* main.m in Sources */,
 				EEA38DDF1991A74A002623C3 /* YCJAppDelegate.m in Sources */,
 				EEB983F119BB9F270014D8B7 /* YCJAPViewController.m in Sources */,
 				EEB0BF33199F2CF9006D7B3D /* YCJAnswers.m in Sources */,
+				EEFE478319E05BA00054AA25 /* Reachability.m in Sources */,
 				EEB0BF2F199F2C61006D7B3D /* YCJQuestionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

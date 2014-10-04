@@ -11,9 +11,12 @@
 #import "YCJQuestionViewController.h"
 #import "YCJQuestions.h"
 #import "UIImage+animatedGIF.h"
+#import "Reachability.h"
 
 @interface YCJViewController ()
-
+{
+    Reachability *internetReachableFoo;
+}
 @end
 
 @implementation YCJViewController
@@ -26,35 +29,74 @@
     
     
     [super viewDidLoad];
+
+    
     [self.view setBackgroundColor: [self colorWithHexString:@"68C3A3"]];
     
     
-    
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DumpLoopTrans2" ofType:@"gif"];
-        NSData *gif = [NSData dataWithContentsOfFile:filePath];
-    //
-        UIWebView *webViewBG = [[UIWebView alloc] initWithFrame:CGRectMake(14, 104, 265, 400)];
-        webViewBG.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
-    
-        webViewBG.opaque = NO;
-    
-        [webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
-        webViewBG.userInteractionEnabled = NO;
-    
-        [self.view addSubview:webViewBG];
-    
-        UIView *filter = [[UIView alloc] initWithFrame:self.view.frame];
-        filter.backgroundColor = [UIColor blackColor];
-        filter.alpha = 0.05;
-        [self.view addSubview:filter];
-        [self.view sendSubviewToBack:filter];
+    //following code is all animation gif
     
     
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DumpLoopTrans2" ofType:@"gif"];
+    NSData *gif = [NSData dataWithContentsOfFile:filePath];
     
+    UIWebView *webViewBG = [[UIWebView alloc] initWithFrame:CGRectMake(14, 104, 265, 400)];
+    webViewBG.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
+    
+    webViewBG.opaque = NO;
+    
+    [webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
+    webViewBG.userInteractionEnabled = NO;
+    [self.view addSubview:webViewBG];
+    
+    UIView *filter = [[UIView alloc] initWithFrame:self.view.frame];
+    filter.backgroundColor = [UIColor blackColor];
+    filter.alpha = 0.05;
+    [self.view addSubview:filter];
+    [self.view sendSubviewToBack:filter];
+    
+
+    [self testInternetConnection];
+    
+     //tests to see if we have an internet connection
     
     //create mutable array of PFObjects for use in question data
     [self makeQuestions];
     
+}
+
+- (void)testInternetConnection
+{
+    internetReachableFoo = [Reachability reachabilityWithHostname:@"www.google.com"];
+    
+    // Internet is reachable
+    internetReachableFoo.reachableBlock = ^(Reachability*reach)
+    {
+        // Update the UI on the main thread
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"Yayyy, we have the interwebs!");
+        });
+    };
+    
+    // Internet is not reachable
+    internetReachableFoo.unreachableBlock = ^(Reachability*reach)
+    {
+        // Update the UI on the main thread
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"No :("
+                                                              message:@"Unfortunately you need an internet connection to use Dumpster."
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles:nil];
+            
+            [message show];
+            NSLog(@"Someone broke the internet :(");
+        });
+    };
+    
+    [internetReachableFoo startNotifier];
 }
 
 -(void)makeQuestions{
@@ -112,6 +154,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 -(UIColor*)colorWithHexString:(NSString*)hex
 {
