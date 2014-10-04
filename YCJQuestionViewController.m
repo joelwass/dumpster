@@ -46,13 +46,13 @@
     
     //    NSString *key = [NSString stringWithFormat:@"%d",random];
     //    self.key = key;
-    NSLog(@"%@", [_answerArray[randomKey] valueForKey:@"Answer"]);
+    //NSLog(@"%@", [_answerArray[randomKey] valueForKey:@"Answer"]);
     
     
     NSArray *buttonArray = [NSArray arrayWithObjects:_button1, _button2, _button3, _button4, nil];
     NSMutableArray *answerLabelArray = [NSMutableArray arrayWithObjects:[_answerArray[randomKey] valueForKey:@"Answer"], [_answerArray[randomKey] valueForKey:@"IncAnswer2"], [_answerArray[randomKey] valueForKey:@"IncAnswer3"], [_answerArray[randomKey] valueForKey:@"incAnswer1"], nil];
     
-    NSLog(@"%@", answerLabelArray[0]);
+    //NSLog(@"%@", answerLabelArray[0]);
     
     _questionLabel.text = [_questionArray[randomKey] valueForKey:@"Question"];
     self.correctAnswer = [_answerArray[randomKey] valueForKey:@"Answer"];

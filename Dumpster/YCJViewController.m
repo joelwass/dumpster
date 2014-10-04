@@ -87,14 +87,14 @@ Reachability *internetReachableFoo;
         // Update the UI on the main thread
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"Yayyy, we have the interwebs!");
+           
         });
     };
     
     // Internet is not reachable
     internetReachableFoo.unreachableBlock = ^(Reachability*reach)
     {
-        // Update the UI on the main thread
+        
 
         dispatch_async(dispatch_get_main_queue(), ^{
             UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"No :("
@@ -104,7 +104,7 @@ Reachability *internetReachableFoo;
                                                     otherButtonTitles:nil];
             
             [message show];
-            NSLog(@"Someone broke the internet :(");
+            
         });
     };
     
@@ -139,7 +139,7 @@ Reachability *internetReachableFoo;
             
             
             questionArray = [objects mutableCopy];
-            NSLog(@"%@", [questionArray[1] valueForKey:@"Question"]);
+           // NSLog(@"%@", [questionArray[1] valueForKey:@"Question"]);
             
             
         }else{
@@ -154,7 +154,7 @@ Reachability *internetReachableFoo;
             
             
             answerArray = [objects mutableCopy];
-            NSLog(@"%@", [answerArray[1] valueForKey:@"Answer"]);
+           // NSLog(@"%@", [answerArray[1] valueForKey:@"Answer"]);
             
             
         }else{
