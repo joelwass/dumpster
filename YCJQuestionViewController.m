@@ -67,39 +67,7 @@
         
     }
     
-    
-    //    PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
-    //
-    //    PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
-    //    [questionQuery whereKey:@"qNumber" containsString:key];
-    //    [questionQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Questions, NSError *error) {
-    //        // Do something with the returned PFObject in the gameScore variable.
-    //        _questionLabel.text = Questions[@"Question"];
-    //
-    //
-    //    }];
-    //
-    //    /*query based on specific number key, */
-    //
-    //    [answerQuery whereKey:@"qNumber" containsString:key];
-    //    [answerQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Answers, NSError *error){
-    //        // initialize array of buttons and possible answer texts
-    //        NSArray *buttonArray = [NSArray arrayWithObjects:_button1, _button2, _button3, _button4, nil];
-    //        NSMutableArray *answerArray = [NSMutableArray arrayWithObjects:@"Answer",@"IncAnswer2", @"IncAnswer3", @"incAnswer1", nil];
-    //
-    //        self.correctAnswer = Answers[@"Answer"];
-    //
-    //        //randomize which button gets which answer text
-    //        for(int i = 0; i<4; i++){
-    //            int randomAnswer = (arc4random() % answerArray.count);
-    //
-    //
-    //            [buttonArray[i] setTitle:Answers[answerArray[randomAnswer]] forState:UIControlStateNormal];
-    //            [answerArray removeObjectAtIndex:randomAnswer];
-    //
-    //
-    //        }
-    //    }];
+
     
     
 }
@@ -109,6 +77,10 @@
 {
     
     
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIFont fontWithName:@"Chalkduster" size:21],
+      NSFontAttributeName, nil]];
     
     [super viewDidLoad];
     _button1.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;

@@ -39,8 +39,8 @@ Reachability *internetReachableFoo;
 
     
     [self.view setBackgroundColor: [self colorWithHexString:@"68C3A3"]];
-    
-    
+    [nextButton.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    [_titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:33]];
     //following code is all animation gif
     
 
@@ -72,7 +72,7 @@ Reachability *internetReachableFoo;
     //create mutable array of PFObjects for use in question data
     
     [self makeQuestions];
-    [self performSelector:@selector(makeButtonVisible) withObject:self afterDelay:5.0];
+    [self performSelector:@selector(makeButtonVisible) withObject:self afterDelay:3.72];
     
 }
 
@@ -99,7 +99,7 @@ Reachability *internetReachableFoo;
         dispatch_async(dispatch_get_main_queue(), ^{
             UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"No :("
                                                               message:@"Unfortunately you need an internet connection to use Dumpster."
-                                                             delegate:nil
+                                                             delegate:self
                                                     cancelButtonTitle:@"OK"
                                                     otherButtonTitles:nil];
             
@@ -113,6 +113,18 @@ Reachability *internetReachableFoo;
 -(void)makeButtonVisible{
     nextButton.hidden = false;
 
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    // the user clicked one of the OK/Cancel buttons
+    if (buttonIndex == 0)
+    {
+        exit(1);
+    }
+    else
+    {
+        NSLog(@"cancel");
+    }
 }
 
 -(void)makeQuestions{
@@ -154,7 +166,7 @@ Reachability *internetReachableFoo;
 
 - (IBAction)buttonPressed:(UIButton *)sender {
     [self performSegueWithIdentifier:@"showQuestionSegue" sender:sender];
- //   [_gifImage release];
+
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

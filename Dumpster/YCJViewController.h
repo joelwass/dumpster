@@ -19,6 +19,7 @@
 @property (strong, nonatomic)NSMutableArray *answerArray;
 @property BOOL internet;
 @property (strong, nonatomic)UIWebView *gifImage;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 -(void)makeQuestions;
 -(UIColor*)colorWithHexString:(NSString*)hex;
