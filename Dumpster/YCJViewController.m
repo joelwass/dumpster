@@ -139,11 +139,7 @@ Reachability *internetReachableFoo;
             
             
             questionArray = [objects mutableCopy];
-<<<<<<< HEAD
-           // NSLog(@"%@", [questionArray[1] valueForKey:@"Question"]);
-=======
-           
->>>>>>> 2bc1016d4c39ac1eaaeb938893a2e2a7753e2df9
+
             
             
         }else{

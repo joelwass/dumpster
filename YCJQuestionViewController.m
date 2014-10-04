@@ -75,7 +75,7 @@
         [self makeQuestions:((_skips*10)+10)];
     }
 
-    NSLog(@"%d", _questionArray.count);
+   
     
    
     
