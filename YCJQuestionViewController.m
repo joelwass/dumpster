@@ -22,7 +22,12 @@
 
 @end
 
+
+
+
+
 @implementation YCJQuestionViewController
+@synthesize randomKey;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -34,84 +39,97 @@
     return self;
 }
 
-- (void)populateQuestions
-{
+- (void)populateQuestions{
     
-    PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
-    int random = arc4random_uniform(4);
-    
-    NSString *key = [NSString stringWithFormat:@"%d",random];
-    self.key = key;
+     randomKey = arc4random_uniform(_questionArray.count);
     
     
+    //    NSString *key = [NSString stringWithFormat:@"%d",random];
+    //    self.key = key;
+    NSLog(@"%@", [_answerArray[randomKey] valueForKey:@"Answer"]);
     
-    PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
-    [questionQuery whereKey:@"QNumber" containsString:key];
-    [questionQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Questions, NSError *error) {
-        // Do something with the returned PFObject in the gameScore variable.
-        _questionLabel.text = Questions[@"Question"];
+    
+    NSArray *buttonArray = [NSArray arrayWithObjects:_button1, _button2, _button3, _button4, nil];
+    NSMutableArray *answerLabelArray = [NSMutableArray arrayWithObjects:[_answerArray[randomKey] valueForKey:@"Answer"], [_answerArray[randomKey] valueForKey:@"IncAnswer2"], [_answerArray[randomKey] valueForKey:@"IncAnswer3"], [_answerArray[randomKey] valueForKey:@"incAnswer1"], nil];
+    
+    NSLog(@"%@", answerLabelArray[0]);
+    
+    _questionLabel.text = [_questionArray[randomKey] valueForKey:@"Question"];
+    self.correctAnswer = [_answerArray[randomKey] valueForKey:@"Answer"];
+    
+    for(int i = 0; i<4; i++){
+        int randomLabel = (arc4random() % answerLabelArray.count);
+        [buttonArray[i] setTitle:answerLabelArray[randomLabel] forState:UIControlStateNormal];
         
         
-    }];
+        [answerLabelArray removeObjectAtIndex:randomLabel];
+        
+        
+    }
     
-    /*query based on specific number key, */
     
-    [answerQuery whereKey:@"ANumber" containsString:key];
-    [answerQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Answers, NSError *error){
-        // initialize array of buttons and possible answer texts
-        NSArray *buttonArray = [NSArray arrayWithObjects:_button1, _button2, _button3, _button4, nil];
-        NSMutableArray *answerArray = [NSMutableArray arrayWithObjects:@"Answer",@"Answer2", @"Answer3", @"Answer4", nil];
-        self.correctAnswer = Answers[@"Answer"];
-        
-        //randomize which button gets which answer text
-        for(int i = 0; i<4; i++){
-            int randomAnswer = (arc4random() % answerArray.count);
-            
-            
-            [buttonArray[i] setTitle:Answers[answerArray[randomAnswer]] forState:UIControlStateNormal];
-            [answerArray removeObjectAtIndex:randomAnswer];
-            
-            
-        }
-        
-        
-        /*
-         need to figure out how to set the correct answer to a certain button and then
-         remember which button that one is, somehow keep track of it so we know which button
-         needs to be pressed in order to continue, also figure out how to randomize buttons that
-         get the correct answer set to it. well i guess that randomization will be done on the parse end
-         of things so we just need to keep track of which button gets the correct answer
-         set to it
-         */
-        
-    }];
+    //    PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
+    //
+    //    PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
+    //    [questionQuery whereKey:@"qNumber" containsString:key];
+    //    [questionQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Questions, NSError *error) {
+    //        // Do something with the returned PFObject in the gameScore variable.
+    //        _questionLabel.text = Questions[@"Question"];
+    //
+    //
+    //    }];
+    //
+    //    /*query based on specific number key, */
+    //
+    //    [answerQuery whereKey:@"qNumber" containsString:key];
+    //    [answerQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Answers, NSError *error){
+    //        // initialize array of buttons and possible answer texts
+    //        NSArray *buttonArray = [NSArray arrayWithObjects:_button1, _button2, _button3, _button4, nil];
+    //        NSMutableArray *answerArray = [NSMutableArray arrayWithObjects:@"Answer",@"IncAnswer2", @"IncAnswer3", @"incAnswer1", nil];
+    //
+    //        self.correctAnswer = Answers[@"Answer"];
+    //
+    //        //randomize which button gets which answer text
+    //        for(int i = 0; i<4; i++){
+    //            int randomAnswer = (arc4random() % answerArray.count);
+    //
+    //
+    //            [buttonArray[i] setTitle:Answers[answerArray[randomAnswer]] forState:UIControlStateNormal];
+    //            [answerArray removeObjectAtIndex:randomAnswer];
+    //
+    //
+    //        }
+    //    }];
     
-
+    
 }
 
 
 - (void)viewDidLoad
 {
     
-   
+    
     
     [super viewDidLoad];
     _button1.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     _button1.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.view setBackgroundColor: [self colorWithHexString:@"68C3A3"]];
+    
     [_button1.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
     _button2.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     _button2.titleLabel.textAlignment = NSTextAlignmentCenter;
-   [_button2.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    [_button2.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    
     _button3.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     _button3.titleLabel.textAlignment = NSTextAlignmentCenter;
     [_button3.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    
     _button4.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     _button4.titleLabel.textAlignment = NSTextAlignmentCenter;
     [_button4.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
     [_skipButton.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
-        [_questionLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18
-                                 ]];
+    [_questionLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18
+                             ]];
     
     self.navigationController.navigationBar.translucent = NO;
     [self populateQuestions];
@@ -120,17 +138,18 @@
     /*tried putting the pfquery before super viewdidload, turns out that sometimes the query hasn't loaded
      yet and the view loads with nothing in the buttons and labels, so let's keept it so the pf query
      happens after viewdidload.
-    */
+     */
     
     
-
     
-   
+    
+    
 }
 
 - (IBAction)buttonPressed:(UIButton *)sender {
     if(sender.currentTitle == self.correctAnswer){
-    [self performSegueWithIdentifier:@"showAnswerSegue" sender:sender];
+        
+        [self performSegueWithIdentifier:@"showAnswerSegue" sender:sender];
     }else{
         
     }
@@ -142,8 +161,12 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"showAnswerSegue"]){
         YCJAPViewController *controller = (YCJAPViewController *)segue.destinationViewController;
-       // YCJAPViewController *controller = [[YCJAPViewController alloc] initWithNibName:nil bundle:nil];
-        controller.answerKey = self.key;
+        // YCJAPViewController *controller = [[YCJAPViewController alloc] initWithNibName:nil bundle:nil];
+        controller.correctAnswer = self.correctAnswer;
+        
+        [_answerArray removeObjectAtIndex:randomKey];
+        [_questionArray removeObjectAtIndex:randomKey];
+    
     }
 }
 - (void)didReceiveMemoryWarning

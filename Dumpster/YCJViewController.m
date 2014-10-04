@@ -10,71 +10,101 @@
 #import "Parse/parse.h"
 #import "YCJQuestionViewController.h"
 #import "YCJQuestions.h"
+#import "UIImage+animatedGIF.h"
 
 @interface YCJViewController ()
 
 @end
 
 @implementation YCJViewController
+@synthesize answerArray;
+@synthesize questionArray;
 
 - (void)viewDidLoad
 {
+    
+    
+    
     [super viewDidLoad];
     [self.view setBackgroundColor: [self colorWithHexString:@"68C3A3"]];
+    
+    
+    
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DumpLoopTrans2" ofType:@"gif"];
+        NSData *gif = [NSData dataWithContentsOfFile:filePath];
+    //
+        UIWebView *webViewBG = [[UIWebView alloc] initWithFrame:CGRectMake(14, 104, 265, 400)];
+        webViewBG.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
+    
+        webViewBG.opaque = NO;
+    
+        [webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
+        webViewBG.userInteractionEnabled = NO;
+    
+        [self.view addSubview:webViewBG];
+    
+        UIView *filter = [[UIView alloc] initWithFrame:self.view.frame];
+        filter.backgroundColor = [UIColor blackColor];
+        filter.alpha = 0.05;
+        [self.view addSubview:filter];
+        [self.view sendSubviewToBack:filter];
+    
+    
+    
+    
+    //create mutable array of PFObjects for use in question data
+    [self makeQuestions];
+    
+}
 
-    
-    
-    
-    
-    
-    
-    
-    // ***********************************************************************************************
-    
-    
-    /* this is the animation page, the image will be a spinning image of whatever.
-    AT THIS TIME WE NEED TO CALL THE PARSE METHOD FETCH ALL IN BACKGROUND TO GET A CERTAIN AMOUNT OF 
-     QUESTIONS OFF OF OUR DATABASE, WE WANT SOMETHING LIKE 100 QUESTIONS PULLED DOWN WHILE THE ANIMATION IS 
-     GOING ON, WE WANT THEM PULLED DOWN IN BACKGROUND. WORK ON THIS LATER
-     
-    */
-    
-
-        // Load images
-        NSArray *imageNames = @[@"logo90.png", @"logo180.png", @"logo270.png"];
-        
-        NSMutableArray *images = [[NSMutableArray alloc] init];
-        for (int i = 0; i < imageNames.count; i++) {
-            [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
+-(void)makeQuestions{
+    PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
+    [questionQuery setLimit:50];
+    [questionQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded. Add the returned objects to allObjects
+            
+            
+            
+            questionArray = [objects mutableCopy];
+            NSLog(@"%@", [questionArray[1] valueForKey:@"Question"]);
+            
+            
+        }else{
+            
         }
-        
-        // Normal Animation
-        UIImageView *animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 160, 120, 120)];
-        animationImageView.animationImages = images;
-        animationImageView.animationDuration = 1.5;
-        
-        [self.view addSubview:animationImageView];
-        [animationImageView startAnimating];
+    }];
     
+    PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
+    [answerQuery setLimit:50];
+    [answerQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            
+            
+            answerArray = [objects mutableCopy];
+            NSLog(@"%@", [answerArray[1] valueForKey:@"Answer"]);
+            
+            
+        }else{
+            
+        }
+    }];
     
-    
-    
-    // ****************************************************************************
-    
-    }
+}
 
 - (IBAction)buttonPressed:(UIButton *)sender {
-        [self performSegueWithIdentifier:@"showQuestionSegue" sender:sender];
-        
-    }
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    [self performSegueWithIdentifier:@"showQuestionSegue" sender:sender];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"showQuestionSegue"]){
         UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
         YCJQuestionViewController *controller = (YCJQuestionViewController *)navController.topViewController;
-        self.navCon = navController;
-        self.navigationController.navigationBar.translucent = NO;
-        [self presentViewController:controller animated:NO completion:NULL];
+        controller.answerArray = answerArray;
+        controller.questionArray = questionArray;
+        
     }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -102,7 +132,7 @@
     NSString *rString = [cString substringWithRange:range];
     
     range.location = 2;
-    NSString *gString = [cString substringWithRange:range];
+    NSString *gString = [cString substringWithRange:range]; //ooh baby, check out the range on that gstring
     
     range.location = 4;
     NSString *bString = [cString substringWithRange:range];

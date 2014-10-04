@@ -13,6 +13,15 @@
 		EE61B68019D8EA940054D77D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B67D19D8EA940054D77D /* Parse.framework */; };
 		EE61B68119D8EA940054D77D /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B67E19D8EA940054D77D /* ParseFacebookUtils.framework */; };
 		EE61B68319D8EE780054D77D /* Chalkduster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE61B68219D8EE780054D77D /* Chalkduster.ttf */; };
+		EE61B68519DB68200054D77D /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61B68419DB68200054D77D /* UIImage+animatedGIF.m */; };
+		EE61B68919DB694E0054D77D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B68819DB694E0054D77D /* ImageIO.framework */; };
+		EE65F35619DDE237006EBEF1 /* DumpLoopTrans2.gif in Resources */ = {isa = PBXBuildFile; fileRef = EE65F35519DDE237006EBEF1 /* DumpLoopTrans2.gif */; };
+		EE65F35D19DDE49B006EBEF1 /* DumpsterLogo76.png in Resources */ = {isa = PBXBuildFile; fileRef = EE65F35719DDE49B006EBEF1 /* DumpsterLogo76.png */; };
+		EE65F35E19DDE49B006EBEF1 /* DumpsterLogo120.png in Resources */ = {isa = PBXBuildFile; fileRef = EE65F35819DDE49B006EBEF1 /* DumpsterLogo120.png */; };
+		EE65F35F19DDE49B006EBEF1 /* DumpsterLogo152.png in Resources */ = {isa = PBXBuildFile; fileRef = EE65F35919DDE49B006EBEF1 /* DumpsterLogo152.png */; };
+		EE65F36019DDE49B006EBEF1 /* DumpsterLogo180.png in Resources */ = {isa = PBXBuildFile; fileRef = EE65F35A19DDE49B006EBEF1 /* DumpsterLogo180.png */; };
+		EE65F36119DDE49B006EBEF1 /* DumpsterLogoStore.png in Resources */ = {isa = PBXBuildFile; fileRef = EE65F35B19DDE49B006EBEF1 /* DumpsterLogoStore.png */; };
+		EE65F36219DDE49B006EBEF1 /* DumpsterLogo.psd in Resources */ = {isa = PBXBuildFile; fileRef = EE65F35C19DDE49B006EBEF1 /* DumpsterLogo.psd */; };
 		EEA38DCF1991A74A002623C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DCE1991A74A002623C3 /* Foundation.framework */; };
 		EEA38DD11991A74A002623C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD01991A74A002623C3 /* CoreGraphics.framework */; };
 		EEA38DD31991A74A002623C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD21991A74A002623C3 /* UIKit.framework */; };
@@ -39,9 +48,6 @@
 		EEB0BF2F199F2C61006D7B3D /* YCJQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB0BF2D199F2C61006D7B3D /* YCJQuestionViewController.m */; };
 		EEB0BF30199F2C61006D7B3D /* YCJQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB0BF2E199F2C61006D7B3D /* YCJQuestionViewController.xib */; };
 		EEB0BF33199F2CF9006D7B3D /* YCJAnswers.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB0BF32199F2CF9006D7B3D /* YCJAnswers.m */; };
-		EEB0BF3719A4CB31006D7B3D /* logo270.png in Resources */ = {isa = PBXBuildFile; fileRef = EEB0BF3419A4CB31006D7B3D /* logo270.png */; };
-		EEB0BF3819A4CB31006D7B3D /* logo180.png in Resources */ = {isa = PBXBuildFile; fileRef = EEB0BF3519A4CB31006D7B3D /* logo180.png */; };
-		EEB0BF3919A4CB31006D7B3D /* logo90.png in Resources */ = {isa = PBXBuildFile; fileRef = EEB0BF3619A4CB31006D7B3D /* logo90.png */; };
 		EEB983ED19B7600E0014D8B7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB983EC19B7600E0014D8B7 /* Bolts.framework */; };
 		EEB983F119BB9F270014D8B7 /* YCJAPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB983EF19BB9F270014D8B7 /* YCJAPViewController.m */; };
 		EEB983F219BB9F270014D8B7 /* YCJAPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB983F019BB9F270014D8B7 /* YCJAPViewController.xib */; };
@@ -70,6 +76,16 @@
 		EE61B67D19D8EA940054D77D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		EE61B67E19D8EA940054D77D /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		EE61B68219D8EE780054D77D /* Chalkduster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chalkduster.ttf; sourceTree = "<group>"; };
+		EE61B68419DB68200054D77D /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		EE61B68619DB68B20054D77D /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		EE61B68819DB694E0054D77D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		EE65F35519DDE237006EBEF1 /* DumpLoopTrans2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = DumpLoopTrans2.gif; sourceTree = "<group>"; };
+		EE65F35719DDE49B006EBEF1 /* DumpsterLogo76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo76.png; sourceTree = "<group>"; };
+		EE65F35819DDE49B006EBEF1 /* DumpsterLogo120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo120.png; sourceTree = "<group>"; };
+		EE65F35919DDE49B006EBEF1 /* DumpsterLogo152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo152.png; sourceTree = "<group>"; };
+		EE65F35A19DDE49B006EBEF1 /* DumpsterLogo180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo180.png; sourceTree = "<group>"; };
+		EE65F35B19DDE49B006EBEF1 /* DumpsterLogoStore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogoStore.png; sourceTree = "<group>"; };
+		EE65F35C19DDE49B006EBEF1 /* DumpsterLogo.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = DumpsterLogo.psd; sourceTree = "<group>"; };
 		EEA38DCB1991A74A002623C3 /* Dumpster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dumpster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA38DCE1991A74A002623C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEA38DD01991A74A002623C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -105,9 +121,6 @@
 		EEB0BF2E199F2C61006D7B3D /* YCJQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCJQuestionViewController.xib; sourceTree = "<group>"; };
 		EEB0BF31199F2CF9006D7B3D /* YCJAnswers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCJAnswers.h; sourceTree = "<group>"; };
 		EEB0BF32199F2CF9006D7B3D /* YCJAnswers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCJAnswers.m; sourceTree = "<group>"; };
-		EEB0BF3419A4CB31006D7B3D /* logo270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo270.png; sourceTree = "<group>"; };
-		EEB0BF3519A4CB31006D7B3D /* logo180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo180.png; sourceTree = "<group>"; };
-		EEB0BF3619A4CB31006D7B3D /* logo90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo90.png; sourceTree = "<group>"; };
 		EEB983EC19B7600E0014D8B7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		EEB983EE19BB9F270014D8B7 /* YCJAPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCJAPViewController.h; sourceTree = "<group>"; };
 		EEB983EF19BB9F270014D8B7 /* YCJAPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCJAPViewController.m; sourceTree = "<group>"; };
@@ -122,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE61B68919DB694E0054D77D /* ImageIO.framework in Frameworks */,
 				EE61B67F19D8EA940054D77D /* Bolts.framework in Frameworks */,
 				EEA38E151991A843002623C3 /* SystemConfiguration.framework in Frameworks */,
 				EEA38E131991A83C002623C3 /* StoreKit.framework in Frameworks */,
@@ -165,6 +179,13 @@
 			path = "parse-library-1.4.1";
 			sourceTree = "<group>";
 		};
+		EE61B70419DB97D10054D77D /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		EEA38DC21991A74A002623C3 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +212,7 @@
 		EEA38DCD1991A74A002623C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE61B68819DB694E0054D77D /* ImageIO.framework */,
 				EEB983EC19B7600E0014D8B7 /* Bolts.framework */,
 				EEA38E161991A8E7002623C3 /* Parse.framework */,
 				EEA38E141991A843002623C3 /* SystemConfiguration.framework */,
@@ -227,16 +249,23 @@
 		EEA38DD51991A74A002623C3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EE61B70419DB97D10054D77D /* Animation */,
 				EE61B67819D72ABD0054D77D /* UIWebView+Clean.m */,
+				EE65F35519DDE237006EBEF1 /* DumpLoopTrans2.gif */,
 				EE61B67919D72ABD0054D77D /* UIWebView+Clean.h */,
-				EEB0BF3419A4CB31006D7B3D /* logo270.png */,
-				EEB0BF3519A4CB31006D7B3D /* logo180.png */,
-				EEB0BF3619A4CB31006D7B3D /* logo90.png */,
 				EEA38DD61991A74A002623C3 /* Dumpster-Info.plist */,
 				EEA38DD71991A74A002623C3 /* InfoPlist.strings */,
 				EE61B68219D8EE780054D77D /* Chalkduster.ttf */,
 				EEA38DDA1991A74A002623C3 /* main.m */,
+				EE65F35719DDE49B006EBEF1 /* DumpsterLogo76.png */,
+				EE65F35819DDE49B006EBEF1 /* DumpsterLogo120.png */,
+				EE65F35919DDE49B006EBEF1 /* DumpsterLogo152.png */,
+				EE65F35A19DDE49B006EBEF1 /* DumpsterLogo180.png */,
+				EE65F35B19DDE49B006EBEF1 /* DumpsterLogoStore.png */,
+				EE65F35C19DDE49B006EBEF1 /* DumpsterLogo.psd */,
 				EEA38DDC1991A74A002623C3 /* Dumpster-Prefix.pch */,
+				EE61B68419DB68200054D77D /* UIImage+animatedGIF.m */,
+				EE61B68619DB68B20054D77D /* UIImage+animatedGIF.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -368,15 +397,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE65F35F19DDE49B006EBEF1 /* DumpsterLogo152.png in Resources */,
 				EECA3A6619C2155F0050F431 /* Main.storyboard in Resources */,
+				EE65F35619DDE237006EBEF1 /* DumpLoopTrans2.gif in Resources */,
 				EEA38DE71991A74A002623C3 /* Images.xcassets in Resources */,
-				EEB0BF3919A4CB31006D7B3D /* logo90.png in Resources */,
+				EE65F36019DDE49B006EBEF1 /* DumpsterLogo180.png in Resources */,
 				EEA38DD91991A74A002623C3 /* InfoPlist.strings in Resources */,
-				EEB0BF3819A4CB31006D7B3D /* logo180.png in Resources */,
+				EE65F35E19DDE49B006EBEF1 /* DumpsterLogo120.png in Resources */,
+				EE65F35D19DDE49B006EBEF1 /* DumpsterLogo76.png in Resources */,
 				EEB0BF30199F2C61006D7B3D /* YCJQuestionViewController.xib in Resources */,
 				EEB983F219BB9F270014D8B7 /* YCJAPViewController.xib in Resources */,
+				EE65F36219DDE49B006EBEF1 /* DumpsterLogo.psd in Resources */,
 				EE61B68319D8EE780054D77D /* Chalkduster.ttf in Resources */,
-				EEB0BF3719A4CB31006D7B3D /* logo270.png in Resources */,
+				EE65F36119DDE49B006EBEF1 /* DumpsterLogoStore.png in Resources */,
 				EEB983F719BBA9B30014D8B7 /* YCJWVViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +466,7 @@
 				EEA38DE51991A74A002623C3 /* YCJViewController.m in Sources */,
 				EE61B67A19D72ABD0054D77D /* UIWebView+Clean.m in Sources */,
 				EEB0BF2B199F2BA8006D7B3D /* YCJQuestions.m in Sources */,
+				EE61B68519DB68200054D77D /* UIImage+animatedGIF.m in Sources */,
 				EEB983F619BBA9B30014D8B7 /* YCJWVViewController.m in Sources */,
 				EEA38DDB1991A74A002623C3 /* main.m in Sources */,
 				EEA38DDF1991A74A002623C3 /* YCJAppDelegate.m in Sources */,

@@ -12,7 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *wikiScrapeLabel;
-@property (weak, nonatomic) NSString *answerKey;
+@property (weak, nonatomic) NSString *correctAnswer;
+
 @property (weak, nonatomic) IBOutlet UIButton *learnMoreButton;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
