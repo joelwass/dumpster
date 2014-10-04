@@ -18,6 +18,7 @@
 @property (strong, nonatomic)NSMutableArray *questionArray;
 @property (strong, nonatomic)NSMutableArray *answerArray;
 @property BOOL internet;
+@property (strong, nonatomic)UIWebView *gifImage;
 
 -(void)makeQuestions;
 -(UIColor*)colorWithHexString:(NSString*)hex;

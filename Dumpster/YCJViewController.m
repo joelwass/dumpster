@@ -48,14 +48,14 @@ Reachability *internetReachableFoo;
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DumpLoopTrans2" ofType:@"gif"];
     NSData *gif = [NSData dataWithContentsOfFile:filePath];
     
-    UIWebView *webViewBG = [[UIWebView alloc] initWithFrame:CGRectMake(14, 104, 265, 400)];
-    webViewBG.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
+    _gifImage = [[UIWebView alloc] initWithFrame:CGRectMake(14, 104, 265, 400)];
+    _gifImage.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
     
-    webViewBG.opaque = NO;
+    _gifImage.opaque = NO;
     
-    [webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
-    webViewBG.userInteractionEnabled = NO;
-    [self.view addSubview:webViewBG];
+    [_gifImage loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
+    _gifImage.userInteractionEnabled = NO;
+    [self.view addSubview:_gifImage];
     
     UIView *filter = [[UIView alloc] initWithFrame:self.view.frame];
     filter.backgroundColor = [UIColor blackColor];
@@ -154,6 +154,7 @@ Reachability *internetReachableFoo;
 
 - (IBAction)buttonPressed:(UIButton *)sender {
     [self performSegueWithIdentifier:@"showQuestionSegue" sender:sender];
+ //   [_gifImage release];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
