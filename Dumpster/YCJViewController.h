@@ -19,6 +19,10 @@
 @property (strong, nonatomic)NSMutableArray *answerArray;
 @property BOOL internet;
 
+-(void)makeQuestions;
+-(UIColor*)colorWithHexString:(NSString*)hex;
+
+
 @end
 
 

@@ -15,13 +15,20 @@
 
 @interface YCJViewController ()
 {
-    Reachability *internetReachableFoo;
+Reachability *internetReachableFoo;
 }
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+
+
+
+
 @end
 
 @implementation YCJViewController
+
 @synthesize answerArray;
 @synthesize questionArray;
+@synthesize nextButton;
 
 - (void)viewDidLoad
 {
@@ -36,6 +43,7 @@
     
     //following code is all animation gif
     
+
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DumpLoopTrans2" ofType:@"gif"];
     NSData *gif = [NSData dataWithContentsOfFile:filePath];
@@ -54,16 +62,20 @@
     filter.alpha = 0.05;
     [self.view addSubview:filter];
     [self.view sendSubviewToBack:filter];
-    
+    nextButton.hidden = true;
 
     [self testInternetConnection];
     
      //tests to see if we have an internet connection
+
     
     //create mutable array of PFObjects for use in question data
+    
     [self makeQuestions];
+    [self performSelector:@selector(makeButtonVisible) withObject:self afterDelay:5.0];
     
 }
+
 
 - (void)testInternetConnection
 {
@@ -98,8 +110,14 @@
     
     [internetReachableFoo startNotifier];
 }
+-(void)makeButtonVisible{
+    nextButton.hidden = false;
+
+}
 
 -(void)makeQuestions{
+    
+    
     PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
     [questionQuery setLimit:50];
     [questionQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
