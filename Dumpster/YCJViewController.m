@@ -13,12 +13,14 @@
 #import "UIImage+animatedGIF.h"
 
 @interface YCJViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
 @end
 
 @implementation YCJViewController
 @synthesize answerArray;
 @synthesize questionArray;
+@synthesize nextButton;
 
 - (void)viewDidLoad
 {
@@ -30,33 +32,41 @@
     
     
     
-    ////    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DumpLoopTrans2" ofType:@"gif"];
-    ////    NSData *gif = [NSData dataWithContentsOfFile:filePath];
-    ////
-    //    UIWebView *webViewBG = [[UIWebView alloc] initWithFrame:CGRectMake(14, 104, 265, 400)];
-    //    webViewBG.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
-    //
-    //    webViewBG.opaque = NO;
-    //
-    //    [webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
-    //    webViewBG.userInteractionEnabled = NO;
-    //
-    //    [self.view addSubview:webViewBG];
-    //
-    //    UIView *filter = [[UIView alloc] initWithFrame:self.view.frame];
-    //    filter.backgroundColor = [UIColor blackColor];
-    //    filter.alpha = 0.05;
-    //    [self.view addSubview:filter];
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DumpLoopTrans2" ofType:@"gif"];
+        NSData *gif = [NSData dataWithContentsOfFile:filePath];
     
+        UIWebView *webViewBG = [[UIWebView alloc] initWithFrame:CGRectMake(14, 104, 265, 400)];
+        webViewBG.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
     
+        webViewBG.opaque = NO;
     
+        [webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
+        webViewBG.userInteractionEnabled = NO;
+    
+        [self.view addSubview:webViewBG];
+    
+        UIView *filter = [[UIView alloc] initWithFrame:self.view.frame];
+        filter.backgroundColor = [UIColor blackColor];
+        filter.alpha = 0.05;
+        [self.view addSubview:filter];
+    [self.view sendSubviewToBack:filter];
+
+    nextButton.hidden = true;
     
     //create mutable array of PFObjects for use in question data
+    
     [self makeQuestions];
+    [self performSelector:@selector(makeButtonVisible) withObject:self afterDelay:5.0];
     
 }
 
+-(void)makeButtonVisible{
+    nextButton.hidden = false;
+}
+
 -(void)makeQuestions{
+    
+    
     PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
     [questionQuery setLimit:50];
     [questionQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {

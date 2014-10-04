@@ -18,6 +18,7 @@
 @property (strong, nonatomic)NSMutableArray *questionArray;
 @property (strong, nonatomic)NSMutableArray *answerArray;
 
+
 @end
 
 
