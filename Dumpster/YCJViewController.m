@@ -131,7 +131,7 @@ Reachability *internetReachableFoo;
     
     
     PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
-    [questionQuery setLimit:50];
+    [questionQuery setLimit:10];
     [questionQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded. Add the returned objects to allObjects
@@ -139,7 +139,11 @@ Reachability *internetReachableFoo;
             
             
             questionArray = [objects mutableCopy];
+<<<<<<< HEAD
            // NSLog(@"%@", [questionArray[1] valueForKey:@"Question"]);
+=======
+           
+>>>>>>> 2bc1016d4c39ac1eaaeb938893a2e2a7753e2df9
             
             
         }else{
@@ -148,13 +152,13 @@ Reachability *internetReachableFoo;
     }];
     
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
-    [answerQuery setLimit:50];
+    [answerQuery setLimit:10];
     [answerQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             
             
             answerArray = [objects mutableCopy];
-           // NSLog(@"%@", [answerArray[1] valueForKey:@"Answer"]);
+
             
             
         }else{

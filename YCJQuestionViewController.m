@@ -41,18 +41,20 @@
 
 - (void)populateQuestions{
     
+    
+    
      randomKey = arc4random_uniform(_questionArray.count);
     
     
     //    NSString *key = [NSString stringWithFormat:@"%d",random];
     //    self.key = key;
-    //NSLog(@"%@", [_answerArray[randomKey] valueForKey:@"Answer"]);
+
     
     
     NSArray *buttonArray = [NSArray arrayWithObjects:_button1, _button2, _button3, _button4, nil];
     NSMutableArray *answerLabelArray = [NSMutableArray arrayWithObjects:[_answerArray[randomKey] valueForKey:@"Answer"], [_answerArray[randomKey] valueForKey:@"IncAnswer2"], [_answerArray[randomKey] valueForKey:@"IncAnswer3"], [_answerArray[randomKey] valueForKey:@"incAnswer1"], nil];
     
-    //NSLog(@"%@", answerLabelArray[0]);
+
     
     _questionLabel.text = [_questionArray[randomKey] valueForKey:@"Question"];
     self.correctAnswer = [_answerArray[randomKey] valueForKey:@"Answer"];
@@ -67,16 +69,66 @@
         
     }
     
+    [_answerArray removeObjectAtIndex:randomKey];
+    [_questionArray removeObjectAtIndex:randomKey];
+    if(_questionArray.count == 0){
+        [self makeQuestions:((_skips*10)+10)];
+    }
+
+    NSLog(@"%d", _questionArray.count);
+    
+   
+    
 
     
     
 }
 
+-(void)makeQuestions:(int)skipNum{
+    
+    _skips++;
+    
+    PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
+    [questionQuery setLimit:10];
+    [questionQuery setSkip:skipNum];
+    [questionQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded. Add the returned objects to allObjects
+            
+            
+            
+            _questionArray = [objects mutableCopy];
+            
+            
+            
+        }else{
+            
+        }
+    }];
+    
+    PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
+    [answerQuery setLimit:10];
+    [answerQuery setSkip:skipNum];
+    [answerQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            
+            
+            _answerArray = [objects mutableCopy];
+            
+            
+        }else{
+            
+        }
+    }];
+    
+}
+
+
 
 - (void)viewDidLoad
 {
     
-    
+    _skips = 0;
     [self.navigationController.navigationBar setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
       [UIFont fontWithName:@"Chalkduster" size:21],
@@ -136,9 +188,7 @@
         
         controller.correctAnswer = self.correctAnswer;
         
-        [_answerArray removeObjectAtIndex:randomKey];
-        [_questionArray removeObjectAtIndex:randomKey];
-    
+        
     }
 }
 - (void)didReceiveMemoryWarning
