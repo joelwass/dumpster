@@ -41,6 +41,8 @@
 
 - (void)populateQuestions{
     
+    
+    
      randomKey = arc4random_uniform(_questionArray.count);
     
     
@@ -66,12 +68,16 @@
         
         
     }
+    
     [_answerArray removeObjectAtIndex:randomKey];
     [_questionArray removeObjectAtIndex:randomKey];
-    
     if(_questionArray.count == 0){
-        [self makeQuestions:((_skips*50)+50)];
+        [self makeQuestions:((_skips*3)+3)];
     }
+
+    NSLog(@"%d", _questionArray.count);
+    
+   
     
 
     
@@ -80,9 +86,10 @@
 
 -(void)makeQuestions:(int)skipNum{
     
+    _skips++;
     
     PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
-    [questionQuery setLimit:50];
+    [questionQuery setLimit:3];
     [questionQuery setSkip:skipNum];
     [questionQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -100,7 +107,7 @@
     }];
     
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
-    [answerQuery setLimit:50];
+    [answerQuery setLimit:3];
     [answerQuery setSkip:skipNum];
     [answerQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -181,9 +188,7 @@
         
         controller.correctAnswer = self.correctAnswer;
         
-        [_answerArray removeObjectAtIndex:randomKey];
-        [_questionArray removeObjectAtIndex:randomKey];
-    
+        
     }
 }
 - (void)didReceiveMemoryWarning
