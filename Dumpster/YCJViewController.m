@@ -131,7 +131,7 @@ Reachability *internetReachableFoo;
     
     
     PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
-    [questionQuery setLimit:3];
+    [questionQuery setLimit:10];
     [questionQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded. Add the returned objects to allObjects
@@ -148,7 +148,7 @@ Reachability *internetReachableFoo;
     }];
     
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
-    [answerQuery setLimit:3];
+    [answerQuery setLimit:10];
     [answerQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             

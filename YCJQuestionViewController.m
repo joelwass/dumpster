@@ -72,7 +72,7 @@
     [_answerArray removeObjectAtIndex:randomKey];
     [_questionArray removeObjectAtIndex:randomKey];
     if(_questionArray.count == 0){
-        [self makeQuestions:((_skips*3)+3)];
+        [self makeQuestions:((_skips*10)+10)];
     }
 
     NSLog(@"%d", _questionArray.count);
@@ -89,7 +89,7 @@
     _skips++;
     
     PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
-    [questionQuery setLimit:3];
+    [questionQuery setLimit:10];
     [questionQuery setSkip:skipNum];
     [questionQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -107,7 +107,7 @@
     }];
     
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
-    [answerQuery setLimit:3];
+    [answerQuery setLimit:10];
     [answerQuery setSkip:skipNum];
     [answerQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
