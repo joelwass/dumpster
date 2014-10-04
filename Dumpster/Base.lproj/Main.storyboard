@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="DUMPSTER." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCn-Ae-3gv">
-                                <rect key="frame" x="45" y="87" width="230" height="35"/>
+                                <rect key="frame" x="45" y="46" width="230" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="dEp-pA-7kW"/>
                                 </constraints>
@@ -29,8 +29,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qT0-34-kAr">
                                 <rect key="frame" x="123" y="508" width="75" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="DQ1-FR-JDK"/>
-                                    <constraint firstAttribute="height" constant="40" id="d1x-Mb-WB3"/>
+                                    <constraint firstAttribute="width" constant="75" id="34a-V7-fyr"/>
+                                    <constraint firstAttribute="height" constant="40" id="3Zp-Vp-D3D"/>
                                 </constraints>
                                 <state key="normal" title="START">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -40,16 +40,25 @@
                                     <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3ou-e2-U3D"/>
                                 </connections>
                             </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lEY-gT-VZ1">
+                                <rect key="frame" x="17" y="60" width="287" height="448"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="tCn-Ae-3gv" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="3St-Kx-q13"/>
-                            <constraint firstAttribute="bottom" secondItem="qT0-34-kAr" secondAttribute="bottom" constant="20" symbolic="YES" id="Roh-H5-Dxa"/>
+                            <constraint firstItem="lEY-gT-VZ1" firstAttribute="centerX" secondItem="qT0-34-kAr" secondAttribute="centerX" id="4b4-UO-B3p"/>
+                            <constraint firstItem="lEY-gT-VZ1" firstAttribute="centerX" secondItem="tCn-Ae-3gv" secondAttribute="centerX" id="5Uj-Gh-Rfu"/>
+                            <constraint firstAttribute="bottom" secondItem="qT0-34-kAr" secondAttribute="bottom" constant="20" symbolic="YES" id="7jJ-eP-z7L"/>
+                            <constraint firstItem="lEY-gT-VZ1" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Gxo-AZ-Y87"/>
+                            <constraint firstItem="lEY-gT-VZ1" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="KrR-GU-RRx"/>
+                            <constraint firstItem="lEY-gT-VZ1" firstAttribute="top" secondItem="6sI-zN-Igq" secondAttribute="bottom" constant="40" id="est-gk-DlB"/>
                             <constraint firstItem="tCn-Ae-3gv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="38" id="gwi-Sz-Aq7"/>
                             <constraint firstItem="tCn-Ae-3gv" firstAttribute="top" secondItem="6sI-zN-Igq" secondAttribute="bottom" constant="64" id="k5Q-zL-N7Z"/>
-                            <constraint firstItem="qT0-34-kAr" firstAttribute="centerX" secondItem="tCn-Ae-3gv" secondAttribute="centerX" id="pgV-ld-7Ds"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gifImage" destination="lEY-gT-VZ1" id="j4N-SZ-7qB"/>
                         <outlet property="nextButton" destination="qT0-34-kAr" id="0qb-pJ-ufD"/>
                         <outlet property="titleLabel" destination="tCn-Ae-3gv" id="h1Z-C3-Keq"/>
                         <segue destination="7xw-WA-3jp" kind="modal" identifier="showQuestionSegue" id="6T0-de-D8z"/>
@@ -57,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-53" y="-361"/>
+            <point key="canvasLocation" x="-82" y="-485"/>
         </scene>
         <!--question-->
         <scene sceneID="72i-pT-mIl">

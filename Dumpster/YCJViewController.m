@@ -48,7 +48,7 @@ Reachability *internetReachableFoo;
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DumpLoopTrans2" ofType:@"gif"];
     NSData *gif = [NSData dataWithContentsOfFile:filePath];
     
-    _gifImage = [[UIWebView alloc] initWithFrame:CGRectMake(14, 104, 265, 400)];
+    //_gifImage = [[UIWebView alloc] initWithFrame:CGRectMake(14, 104, 265, 400)];
     _gifImage.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
     
     _gifImage.opaque = NO;
