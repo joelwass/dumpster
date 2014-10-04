@@ -30,23 +30,24 @@
     
     
     
-    ////    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DumpLoopTrans2" ofType:@"gif"];
-    ////    NSData *gif = [NSData dataWithContentsOfFile:filePath];
-    ////
-    //    UIWebView *webViewBG = [[UIWebView alloc] initWithFrame:CGRectMake(14, 104, 265, 400)];
-    //    webViewBG.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DumpLoopTrans2" ofType:@"gif"];
+        NSData *gif = [NSData dataWithContentsOfFile:filePath];
     //
-    //    webViewBG.opaque = NO;
-    //
-    //    [webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
-    //    webViewBG.userInteractionEnabled = NO;
-    //
-    //    [self.view addSubview:webViewBG];
-    //
-    //    UIView *filter = [[UIView alloc] initWithFrame:self.view.frame];
-    //    filter.backgroundColor = [UIColor blackColor];
-    //    filter.alpha = 0.05;
-    //    [self.view addSubview:filter];
+        UIWebView *webViewBG = [[UIWebView alloc] initWithFrame:CGRectMake(14, 104, 265, 400)];
+        webViewBG.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
+    
+        webViewBG.opaque = NO;
+    
+        [webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
+        webViewBG.userInteractionEnabled = NO;
+    
+        [self.view addSubview:webViewBG];
+    
+        UIView *filter = [[UIView alloc] initWithFrame:self.view.frame];
+        filter.backgroundColor = [UIColor blackColor];
+        filter.alpha = 0.05;
+        [self.view addSubview:filter];
+        [self.view sendSubviewToBack:filter];
     
     
     
