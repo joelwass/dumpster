@@ -71,7 +71,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     YCJWVViewController *controller = (YCJWVViewController *)segue.destinationViewController;
-    controller.keyWord = self.keyWord;
+    controller.keyWord = self.correctAnswer;
 }
 
 - (void)didReceiveMemoryWarning
