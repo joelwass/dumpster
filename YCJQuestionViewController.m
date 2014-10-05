@@ -84,6 +84,12 @@
     
 }
 
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+
 -(void)makeQuestions:(int)skipNum{
     
     _skips++;

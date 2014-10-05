@@ -77,6 +77,12 @@ Reachability *internetReachableFoo;
 }
 
 
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+
 - (void)testInternetConnection
 {
     internetReachableFoo = [Reachability reachabilityWithHostname:@"www.google.com"];
