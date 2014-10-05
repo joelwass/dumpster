@@ -129,7 +129,13 @@
     
 }
 
+- (void)setAnswerBlack:(UIButton *)sender {
+    [sender setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+}
 
+- (void)setAnswerRed:(UIButton *)sender {
+    [sender setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+}
 
 - (void)viewDidLoad
 {
@@ -181,7 +187,14 @@
         
         [self performSegueWithIdentifier:@"showAnswerSegue" sender:sender];
     }else{
-        
+//        [self setAnswerRed:sender];
+        [UIView animateWithDuration:.2 animations:^{
+            sender.backgroundColor = [UIColor redColor];
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:.2 animations:^{
+                sender.backgroundColor = [UIColor whiteColor];
+            } completion:nil];
+        }];
     }
 }
 - (IBAction)nextQuestion:(UIButton *)sender {

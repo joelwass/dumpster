@@ -26,5 +26,8 @@
 
 
 - (void)populateQuestions;
+- (void)setAnswerRed;
+- (void)setAnswerBlack;
+
 
 @end

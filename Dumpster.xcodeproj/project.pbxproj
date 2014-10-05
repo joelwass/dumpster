@@ -37,7 +37,6 @@
 		EEA38E0D1991A826002623C3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E0C1991A826002623C3 /* MobileCoreServices.framework */; };
 		EEA38E0F1991A82C002623C3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E0E1991A82C002623C3 /* QuartzCore.framework */; };
 		EEA38E111991A836002623C3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E101991A836002623C3 /* Security.framework */; };
-		EEA38E131991A83C002623C3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E121991A83C002623C3 /* StoreKit.framework */; };
 		EEA38E151991A843002623C3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E141991A843002623C3 /* SystemConfiguration.framework */; };
 		EEA38E171991A8E7002623C3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E161991A8E7002623C3 /* Parse.framework */; };
 		EEB0BF2B199F2BA8006D7B3D /* YCJQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB0BF2A199F2BA8006D7B3D /* YCJQuestions.m */; };
@@ -115,7 +114,6 @@
 		EEA38E0C1991A826002623C3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		EEA38E0E1991A82C002623C3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EEA38E101991A836002623C3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		EEA38E121991A83C002623C3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EEA38E141991A843002623C3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EEA38E161991A8E7002623C3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../../../Downloads/Parse.framework; sourceTree = "<group>"; };
 		EEB0BF29199F2BA8006D7B3D /* YCJQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCJQuestions.h; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 				EE61B68919DB694E0054D77D /* ImageIO.framework in Frameworks */,
 				EE61B67F19D8EA940054D77D /* Bolts.framework in Frameworks */,
 				EEA38E151991A843002623C3 /* SystemConfiguration.framework in Frameworks */,
-				EEA38E131991A83C002623C3 /* StoreKit.framework in Frameworks */,
 				EEA38E111991A836002623C3 /* Security.framework in Frameworks */,
 				EEA38E0F1991A82C002623C3 /* QuartzCore.framework in Frameworks */,
 				EE61B68119D8EA940054D77D /* ParseFacebookUtils.framework in Frameworks */,
@@ -232,7 +229,6 @@
 				EEB983EC19B7600E0014D8B7 /* Bolts.framework */,
 				EEA38E161991A8E7002623C3 /* Parse.framework */,
 				EEA38E141991A843002623C3 /* SystemConfiguration.framework */,
-				EEA38E121991A83C002623C3 /* StoreKit.framework */,
 				EEA38E101991A836002623C3 /* Security.framework */,
 				EEA38E0E1991A82C002623C3 /* QuartzCore.framework */,
 				EEA38E0C1991A826002623C3 /* MobileCoreServices.framework */,
@@ -394,6 +390,11 @@
 				TargetAttributes = {
 					EEA38DCA1991A74A002623C3 = {
 						DevelopmentTeam = 23NT8R7X24;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					EEA38DEB1991A74A002623C3 = {
 						TestTargetID = EEA38DCA1991A74A002623C3;
@@ -645,7 +646,7 @@
 				INFOPLIST_FILE = "Dumpster/Dumpster-Info.plist";
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Dumpster;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -670,7 +671,7 @@
 				INFOPLIST_FILE = "Dumpster/Dumpster-Info.plist";
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Dumpster;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
