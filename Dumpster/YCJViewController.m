@@ -39,8 +39,8 @@ Reachability *internetReachableFoo;
 
     
     [self.view setBackgroundColor: [self colorWithHexString:@"68C3A3"]];
-    
-    
+    [nextButton.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    [_titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:33]];
     //following code is all animation gif
     
 
@@ -48,14 +48,14 @@ Reachability *internetReachableFoo;
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DumpLoopTrans2" ofType:@"gif"];
     NSData *gif = [NSData dataWithContentsOfFile:filePath];
     
-    UIWebView *webViewBG = [[UIWebView alloc] initWithFrame:CGRectMake(14, 104, 265, 400)];
-    webViewBG.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
+    //_gifImage = [[UIWebView alloc] initWithFrame:CGRectMake(14, 104, 265, 400)];
+    _gifImage.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
     
-    webViewBG.opaque = NO;
+    _gifImage.opaque = NO;
     
-    [webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
-    webViewBG.userInteractionEnabled = NO;
-    [self.view addSubview:webViewBG];
+    [_gifImage loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
+    _gifImage.userInteractionEnabled = NO;
+    [self.view addSubview:_gifImage];
     
     UIView *filter = [[UIView alloc] initWithFrame:self.view.frame];
     filter.backgroundColor = [UIColor blackColor];
@@ -72,8 +72,14 @@ Reachability *internetReachableFoo;
     //create mutable array of PFObjects for use in question data
     
     [self makeQuestions];
-    [self performSelector:@selector(makeButtonVisible) withObject:self afterDelay:5.0];
+    [self performSelector:@selector(makeButtonVisible) withObject:self afterDelay:3.72];
     
+}
+
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 
@@ -87,24 +93,24 @@ Reachability *internetReachableFoo;
         // Update the UI on the main thread
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"Yayyy, we have the interwebs!");
+           
         });
     };
     
     // Internet is not reachable
     internetReachableFoo.unreachableBlock = ^(Reachability*reach)
     {
-        // Update the UI on the main thread
+        
 
         dispatch_async(dispatch_get_main_queue(), ^{
             UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"No :("
                                                               message:@"Unfortunately you need an internet connection to use Dumpster."
-                                                             delegate:nil
+                                                             delegate:self
                                                     cancelButtonTitle:@"OK"
                                                     otherButtonTitles:nil];
             
             [message show];
-            NSLog(@"Someone broke the internet :(");
+            
         });
     };
     
@@ -115,11 +121,23 @@ Reachability *internetReachableFoo;
 
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    // the user clicked one of the OK/Cancel buttons
+    if (buttonIndex == 0)
+    {
+        exit(1);
+    }
+    else
+    {
+        NSLog(@"cancel");
+    }
+}
+
 -(void)makeQuestions{
     
     
     PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
-    [questionQuery setLimit:50];
+    [questionQuery setLimit:10];
     [questionQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded. Add the returned objects to allObjects
@@ -127,7 +145,7 @@ Reachability *internetReachableFoo;
             
             
             questionArray = [objects mutableCopy];
-            NSLog(@"%@", [questionArray[1] valueForKey:@"Question"]);
+
             
             
         }else{
@@ -136,13 +154,13 @@ Reachability *internetReachableFoo;
     }];
     
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
-    [answerQuery setLimit:50];
+    [answerQuery setLimit:10];
     [answerQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             
             
             answerArray = [objects mutableCopy];
-            NSLog(@"%@", [answerArray[1] valueForKey:@"Answer"]);
+
             
             
         }else{
@@ -154,6 +172,7 @@ Reachability *internetReachableFoo;
 
 - (IBAction)buttonPressed:(UIButton *)sender {
     [self performSegueWithIdentifier:@"showQuestionSegue" sender:sender];
+
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

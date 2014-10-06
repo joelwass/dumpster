@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		98EA68BC5A554ED291221693 /* libPods-Dumpster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BE037ADB5546B784A581BF /* libPods-Dumpster.a */; };
+		EE0B940C19E1F539002B474C /* DumpsterLaunch960.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0B940A19E1F539002B474C /* DumpsterLaunch960.png */; };
+		EE0B940D19E1F539002B474C /* DumpsterLaunch1136.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0B940B19E1F539002B474C /* DumpsterLaunch1136.png */; };
 		EE61B67A19D72ABD0054D77D /* UIWebView+Clean.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61B67819D72ABD0054D77D /* UIWebView+Clean.m */; };
 		EE61B67F19D8EA940054D77D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B67C19D8EA940054D77D /* Bolts.framework */; };
 		EE61B68019D8EA940054D77D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B67D19D8EA940054D77D /* Parse.framework */; };
@@ -19,9 +20,6 @@
 		EE65F35D19DDE49B006EBEF1 /* DumpsterLogo76.png in Resources */ = {isa = PBXBuildFile; fileRef = EE65F35719DDE49B006EBEF1 /* DumpsterLogo76.png */; };
 		EE65F35E19DDE49B006EBEF1 /* DumpsterLogo120.png in Resources */ = {isa = PBXBuildFile; fileRef = EE65F35819DDE49B006EBEF1 /* DumpsterLogo120.png */; };
 		EE65F35F19DDE49B006EBEF1 /* DumpsterLogo152.png in Resources */ = {isa = PBXBuildFile; fileRef = EE65F35919DDE49B006EBEF1 /* DumpsterLogo152.png */; };
-		EE65F36019DDE49B006EBEF1 /* DumpsterLogo180.png in Resources */ = {isa = PBXBuildFile; fileRef = EE65F35A19DDE49B006EBEF1 /* DumpsterLogo180.png */; };
-		EE65F36119DDE49B006EBEF1 /* DumpsterLogoStore.png in Resources */ = {isa = PBXBuildFile; fileRef = EE65F35B19DDE49B006EBEF1 /* DumpsterLogoStore.png */; };
-		EE65F36219DDE49B006EBEF1 /* DumpsterLogo.psd in Resources */ = {isa = PBXBuildFile; fileRef = EE65F35C19DDE49B006EBEF1 /* DumpsterLogo.psd */; };
 		EEA38DCF1991A74A002623C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DCE1991A74A002623C3 /* Foundation.framework */; };
 		EEA38DD11991A74A002623C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD01991A74A002623C3 /* CoreGraphics.framework */; };
 		EEA38DD31991A74A002623C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD21991A74A002623C3 /* UIKit.framework */; };
@@ -41,7 +39,6 @@
 		EEA38E0D1991A826002623C3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E0C1991A826002623C3 /* MobileCoreServices.framework */; };
 		EEA38E0F1991A82C002623C3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E0E1991A82C002623C3 /* QuartzCore.framework */; };
 		EEA38E111991A836002623C3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E101991A836002623C3 /* Security.framework */; };
-		EEA38E131991A83C002623C3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E121991A83C002623C3 /* StoreKit.framework */; };
 		EEA38E151991A843002623C3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E141991A843002623C3 /* SystemConfiguration.framework */; };
 		EEA38E171991A8E7002623C3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38E161991A8E7002623C3 /* Parse.framework */; };
 		EEB0BF2B199F2BA8006D7B3D /* YCJQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB0BF2A199F2BA8006D7B3D /* YCJQuestions.m */; };
@@ -57,6 +54,12 @@
 		EECA3A6819C216EF0050F431 /* DumpsterTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = EEA38DEC1991A74A002623C3 /* DumpsterTests.xctest */; };
 		EEFE478119E05B730054AA25 /* Reachability.h in Sources */ = {isa = PBXBuildFile; fileRef = EEFE478019E05B730054AA25 /* Reachability.h */; };
 		EEFE478319E05BA00054AA25 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFE478219E05BA00054AA25 /* Reachability.m */; };
+		EEFE478D19E078F10054AA25 /* DumpsterLogo29.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFE478419E078F10054AA25 /* DumpsterLogo29.png */; };
+		EEFE478E19E078F10054AA25 /* DumpsterLogo58.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFE478519E078F10054AA25 /* DumpsterLogo58.png */; };
+		EEFE479019E078F10054AA25 /* DumpsterLogo80.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFE478719E078F10054AA25 /* DumpsterLogo80.png */; };
+		EEFE479119E078F10054AA25 /* DumpsterLogo87.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFE478819E078F10054AA25 /* DumpsterLogo87.png */; };
+		EEFE479419E078F10054AA25 /* DumpsterLogo180.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFE478B19E078F10054AA25 /* DumpsterLogo180.png */; };
+		EEFE479519E078F10054AA25 /* DumpsterLogo1024.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFE478C19E078F10054AA25 /* DumpsterLogo1024.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,8 @@
 /* Begin PBXFileReference section */
 		8EF091AECDE54B228F26F802 /* Pods-Dumpster.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dumpster.xcconfig"; path = "Pods/Pods-Dumpster.xcconfig"; sourceTree = "<group>"; };
 		C5BE037ADB5546B784A581BF /* libPods-Dumpster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dumpster.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE0B940A19E1F539002B474C /* DumpsterLaunch960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLaunch960.png; sourceTree = "<group>"; };
+		EE0B940B19E1F539002B474C /* DumpsterLaunch1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLaunch1136.png; sourceTree = "<group>"; };
 		EE61B67819D72ABD0054D77D /* UIWebView+Clean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Clean.m"; sourceTree = "<group>"; };
 		EE61B67919D72ABD0054D77D /* UIWebView+Clean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Clean.h"; sourceTree = "<group>"; };
 		EE61B67C19D8EA940054D77D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -86,8 +91,6 @@
 		EE65F35819DDE49B006EBEF1 /* DumpsterLogo120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo120.png; sourceTree = "<group>"; };
 		EE65F35919DDE49B006EBEF1 /* DumpsterLogo152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo152.png; sourceTree = "<group>"; };
 		EE65F35A19DDE49B006EBEF1 /* DumpsterLogo180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo180.png; sourceTree = "<group>"; };
-		EE65F35B19DDE49B006EBEF1 /* DumpsterLogoStore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogoStore.png; sourceTree = "<group>"; };
-		EE65F35C19DDE49B006EBEF1 /* DumpsterLogo.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = DumpsterLogo.psd; sourceTree = "<group>"; };
 		EEA38DCB1991A74A002623C3 /* Dumpster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dumpster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA38DCE1991A74A002623C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEA38DD01991A74A002623C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -113,7 +116,6 @@
 		EEA38E0C1991A826002623C3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		EEA38E0E1991A82C002623C3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EEA38E101991A836002623C3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		EEA38E121991A83C002623C3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EEA38E141991A843002623C3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EEA38E161991A8E7002623C3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../../../Downloads/Parse.framework; sourceTree = "<group>"; };
 		EEB0BF29199F2BA8006D7B3D /* YCJQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCJQuestions.h; sourceTree = "<group>"; };
@@ -132,6 +134,15 @@
 		EEB983F519BBA9B30014D8B7 /* YCJWVViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YCJWVViewController.xib; sourceTree = "<group>"; };
 		EEFE478019E05B730054AA25 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		EEFE478219E05BA00054AA25 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		EEFE478419E078F10054AA25 /* DumpsterLogo29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo29.png; sourceTree = "<group>"; };
+		EEFE478519E078F10054AA25 /* DumpsterLogo58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo58.png; sourceTree = "<group>"; };
+		EEFE478619E078F10054AA25 /* DumpsterLogo76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo76.png; sourceTree = "<group>"; };
+		EEFE478719E078F10054AA25 /* DumpsterLogo80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo80.png; sourceTree = "<group>"; };
+		EEFE478819E078F10054AA25 /* DumpsterLogo87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo87.png; sourceTree = "<group>"; };
+		EEFE478919E078F10054AA25 /* DumpsterLogo120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo120.png; sourceTree = "<group>"; };
+		EEFE478A19E078F10054AA25 /* DumpsterLogo152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo152.png; sourceTree = "<group>"; };
+		EEFE478B19E078F10054AA25 /* DumpsterLogo180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo180.png; sourceTree = "<group>"; };
+		EEFE478C19E078F10054AA25 /* DumpsterLogo1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo1024.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +153,6 @@
 				EE61B68919DB694E0054D77D /* ImageIO.framework in Frameworks */,
 				EE61B67F19D8EA940054D77D /* Bolts.framework in Frameworks */,
 				EEA38E151991A843002623C3 /* SystemConfiguration.framework in Frameworks */,
-				EEA38E131991A83C002623C3 /* StoreKit.framework in Frameworks */,
 				EEA38E111991A836002623C3 /* Security.framework in Frameworks */,
 				EEA38E0F1991A82C002623C3 /* QuartzCore.framework in Frameworks */,
 				EE61B68119D8EA940054D77D /* ParseFacebookUtils.framework in Frameworks */,
@@ -156,7 +166,6 @@
 				EEA38DD31991A74A002623C3 /* UIKit.framework in Frameworks */,
 				EEA38E171991A8E7002623C3 /* Parse.framework in Frameworks */,
 				EEA38DCF1991A74A002623C3 /* Foundation.framework in Frameworks */,
-				98EA68BC5A554ED291221693 /* libPods-Dumpster.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +229,6 @@
 				EEB983EC19B7600E0014D8B7 /* Bolts.framework */,
 				EEA38E161991A8E7002623C3 /* Parse.framework */,
 				EEA38E141991A843002623C3 /* SystemConfiguration.framework */,
-				EEA38E121991A83C002623C3 /* StoreKit.framework */,
 				EEA38E101991A836002623C3 /* Security.framework */,
 				EEA38E0E1991A82C002623C3 /* QuartzCore.framework */,
 				EEA38E0C1991A826002623C3 /* MobileCoreServices.framework */,
@@ -255,6 +263,17 @@
 			children = (
 				EE61B70419DB97D10054D77D /* Animation */,
 				EE61B67819D72ABD0054D77D /* UIWebView+Clean.m */,
+				EE0B940A19E1F539002B474C /* DumpsterLaunch960.png */,
+				EE0B940B19E1F539002B474C /* DumpsterLaunch1136.png */,
+				EEFE478419E078F10054AA25 /* DumpsterLogo29.png */,
+				EEFE478519E078F10054AA25 /* DumpsterLogo58.png */,
+				EEFE478619E078F10054AA25 /* DumpsterLogo76.png */,
+				EEFE478719E078F10054AA25 /* DumpsterLogo80.png */,
+				EEFE478819E078F10054AA25 /* DumpsterLogo87.png */,
+				EEFE478919E078F10054AA25 /* DumpsterLogo120.png */,
+				EEFE478A19E078F10054AA25 /* DumpsterLogo152.png */,
+				EEFE478B19E078F10054AA25 /* DumpsterLogo180.png */,
+				EEFE478C19E078F10054AA25 /* DumpsterLogo1024.png */,
 				EE65F35519DDE237006EBEF1 /* DumpLoopTrans2.gif */,
 				EE61B67919D72ABD0054D77D /* UIWebView+Clean.h */,
 				EEA38DD61991A74A002623C3 /* Dumpster-Info.plist */,
@@ -265,8 +284,6 @@
 				EE65F35819DDE49B006EBEF1 /* DumpsterLogo120.png */,
 				EE65F35919DDE49B006EBEF1 /* DumpsterLogo152.png */,
 				EE65F35A19DDE49B006EBEF1 /* DumpsterLogo180.png */,
-				EE65F35B19DDE49B006EBEF1 /* DumpsterLogoStore.png */,
-				EE65F35C19DDE49B006EBEF1 /* DumpsterLogo.psd */,
 				EEA38DDC1991A74A002623C3 /* Dumpster-Prefix.pch */,
 				EE61B68419DB68200054D77D /* UIImage+animatedGIF.m */,
 				EE61B68619DB68B20054D77D /* UIImage+animatedGIF.h */,
@@ -373,6 +390,11 @@
 				TargetAttributes = {
 					EEA38DCA1991A74A002623C3 = {
 						DevelopmentTeam = 23NT8R7X24;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					EEA38DEB1991A74A002623C3 = {
 						TestTargetID = EEA38DCA1991A74A002623C3;
@@ -407,16 +429,21 @@
 				EECA3A6619C2155F0050F431 /* Main.storyboard in Resources */,
 				EE65F35619DDE237006EBEF1 /* DumpLoopTrans2.gif in Resources */,
 				EEA38DE71991A74A002623C3 /* Images.xcassets in Resources */,
-				EE65F36019DDE49B006EBEF1 /* DumpsterLogo180.png in Resources */,
+				EEFE479119E078F10054AA25 /* DumpsterLogo87.png in Resources */,
+				EEFE479519E078F10054AA25 /* DumpsterLogo1024.png in Resources */,
+				EE0B940D19E1F539002B474C /* DumpsterLaunch1136.png in Resources */,
 				EEA38DD91991A74A002623C3 /* InfoPlist.strings in Resources */,
 				EE65F35E19DDE49B006EBEF1 /* DumpsterLogo120.png in Resources */,
+				EEFE478E19E078F10054AA25 /* DumpsterLogo58.png in Resources */,
 				EE65F35D19DDE49B006EBEF1 /* DumpsterLogo76.png in Resources */,
+				EEFE479419E078F10054AA25 /* DumpsterLogo180.png in Resources */,
 				EEB0BF30199F2C61006D7B3D /* YCJQuestionViewController.xib in Resources */,
 				EEB983F219BB9F270014D8B7 /* YCJAPViewController.xib in Resources */,
-				EE65F36219DDE49B006EBEF1 /* DumpsterLogo.psd in Resources */,
 				EE61B68319D8EE780054D77D /* Chalkduster.ttf in Resources */,
-				EE65F36119DDE49B006EBEF1 /* DumpsterLogoStore.png in Resources */,
+				EE0B940C19E1F539002B474C /* DumpsterLaunch960.png in Resources */,
+				EEFE479019E078F10054AA25 /* DumpsterLogo80.png in Resources */,
 				EEB983F719BBA9B30014D8B7 /* YCJWVViewController.xib in Resources */,
+				EEFE478D19E078F10054AA25 /* DumpsterLogo29.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,7 +646,7 @@
 				INFOPLIST_FILE = "Dumpster/Dumpster-Info.plist";
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Dumpster;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -644,7 +671,7 @@
 				INFOPLIST_FILE = "Dumpster/Dumpster-Info.plist";
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Dumpster;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};

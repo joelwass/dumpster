@@ -71,7 +71,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     YCJWVViewController *controller = (YCJWVViewController *)segue.destinationViewController;
-    controller.keyWord = self.keyWord;
+    controller.keyWord = self.correctAnswer;
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,6 +80,12 @@
     // Dispose of any resources that can be recreated.
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
 }
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 
 -(UIColor*)colorWithHexString:(NSString*)hex
 {

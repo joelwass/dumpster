@@ -41,18 +41,20 @@
 
 - (void)populateQuestions{
     
+    
+    
      randomKey = arc4random_uniform(_questionArray.count);
     
     
     //    NSString *key = [NSString stringWithFormat:@"%d",random];
     //    self.key = key;
-    NSLog(@"%@", [_answerArray[randomKey] valueForKey:@"Answer"]);
+
     
     
     NSArray *buttonArray = [NSArray arrayWithObjects:_button1, _button2, _button3, _button4, nil];
     NSMutableArray *answerLabelArray = [NSMutableArray arrayWithObjects:[_answerArray[randomKey] valueForKey:@"Answer"], [_answerArray[randomKey] valueForKey:@"IncAnswer2"], [_answerArray[randomKey] valueForKey:@"IncAnswer3"], [_answerArray[randomKey] valueForKey:@"incAnswer1"], nil];
     
-    NSLog(@"%@", answerLabelArray[0]);
+
     
     _questionLabel.text = [_questionArray[randomKey] valueForKey:@"Question"];
     self.correctAnswer = [_answerArray[randomKey] valueForKey:@"Answer"];
@@ -67,48 +69,82 @@
         
     }
     
+    [_answerArray removeObjectAtIndex:randomKey];
+    [_questionArray removeObjectAtIndex:randomKey];
+    if(_questionArray.count == 0){
+        [self makeQuestions:((_skips*10)+10)];
+    }
+
+   
     
-    //    PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
-    //
-    //    PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
-    //    [questionQuery whereKey:@"qNumber" containsString:key];
-    //    [questionQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Questions, NSError *error) {
-    //        // Do something with the returned PFObject in the gameScore variable.
-    //        _questionLabel.text = Questions[@"Question"];
-    //
-    //
-    //    }];
-    //
-    //    /*query based on specific number key, */
-    //
-    //    [answerQuery whereKey:@"qNumber" containsString:key];
-    //    [answerQuery getFirstObjectInBackgroundWithBlock:^(PFObject *Answers, NSError *error){
-    //        // initialize array of buttons and possible answer texts
-    //        NSArray *buttonArray = [NSArray arrayWithObjects:_button1, _button2, _button3, _button4, nil];
-    //        NSMutableArray *answerArray = [NSMutableArray arrayWithObjects:@"Answer",@"IncAnswer2", @"IncAnswer3", @"incAnswer1", nil];
-    //
-    //        self.correctAnswer = Answers[@"Answer"];
-    //
-    //        //randomize which button gets which answer text
-    //        for(int i = 0; i<4; i++){
-    //            int randomAnswer = (arc4random() % answerArray.count);
-    //
-    //
-    //            [buttonArray[i] setTitle:Answers[answerArray[randomAnswer]] forState:UIControlStateNormal];
-    //            [answerArray removeObjectAtIndex:randomAnswer];
-    //
-    //
-    //        }
-    //    }];
+   
+    
+
     
     
 }
 
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+
+-(void)makeQuestions:(int)skipNum{
+    
+    _skips++;
+    
+    PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
+    [questionQuery setLimit:10];
+    [questionQuery setSkip:skipNum];
+    [questionQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded. Add the returned objects to allObjects
+            
+            
+            
+            _questionArray = [objects mutableCopy];
+            
+            
+            
+        }else{
+            
+        }
+    }];
+    
+    PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
+    [answerQuery setLimit:10];
+    [answerQuery setSkip:skipNum];
+    [answerQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            
+            
+            _answerArray = [objects mutableCopy];
+            
+            
+        }else{
+            
+        }
+    }];
+    
+}
+
+- (void)setAnswerBlack:(UIButton *)sender {
+    [sender setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+}
+
+- (void)setAnswerRed:(UIButton *)sender {
+    [sender setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+}
 
 - (void)viewDidLoad
 {
     
-    
+    _skips = 0;
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIFont fontWithName:@"Chalkduster" size:21],
+      NSFontAttributeName, nil]];
     
     [super viewDidLoad];
     _button1.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -151,7 +187,14 @@
         
         [self performSegueWithIdentifier:@"showAnswerSegue" sender:sender];
     }else{
-        
+//        [self setAnswerRed:sender];
+        [UIView animateWithDuration:.2 animations:^{
+            sender.backgroundColor = [UIColor redColor];
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:.2 animations:^{
+                sender.backgroundColor = [UIColor whiteColor];
+            } completion:nil];
+        }];
     }
 }
 - (IBAction)nextQuestion:(UIButton *)sender {
@@ -164,9 +207,7 @@
         
         controller.correctAnswer = self.correctAnswer;
         
-        [_answerArray removeObjectAtIndex:randomKey];
-        [_questionArray removeObjectAtIndex:randomKey];
-    
+        
     }
 }
 - (void)didReceiveMemoryWarning
