@@ -43,7 +43,7 @@
     
     
     
-     randomKey = arc4random_uniform(_questionArray.count);
+    randomKey = arc4random_uniform(_questionArray.count);
     
     
     //    NSString *key = [NSString stringWithFormat:@"%d",random];
@@ -90,11 +90,11 @@
 }
 
 
--(void)makeQuestions:(int)skipNum{
+-(void)makeQuestions:(long)skipNum{
     
     _skips++;
-    
     PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
+    skipNum = arc4random_uniform([questionQuery countObjects]-10);
     [questionQuery setLimit:10];
     [questionQuery setSkip:skipNum];
     [questionQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -114,6 +114,8 @@
     
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
     [answerQuery setLimit:10];
+    
+    
     [answerQuery setSkip:skipNum];
     [answerQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -129,9 +131,7 @@
     
 }
 
-- (void)setAnswerBlack:(UIButton *)sender {
-    [sender setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-}
+
 
 - (void)setAnswerRed:(UIButton *)sender {
     [sender setTitleColor:[UIColor redColor] forState:UIControlStateNormal];

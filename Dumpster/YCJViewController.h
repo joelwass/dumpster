@@ -22,7 +22,7 @@
 //@property (strong, nonatomic)UIWebView *gifImage;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
--(void)makeQuestions;
+-(void)makeQuestions:(long)skipNum;
 -(UIColor*)colorWithHexString:(NSString*)hex;
 
 

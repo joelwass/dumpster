@@ -26,8 +26,7 @@
 
 
 - (void)populateQuestions;
-- (void)setAnswerRed;
-- (void)setAnswerBlack;
+- (void)setAnswerRed:(UIButton *)sender;
 
 
 @end
