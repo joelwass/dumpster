@@ -137,7 +137,7 @@ Reachability *internetReachableFoo;
     
     
     PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
-    skipNum = ([questionQuery countObjects]-10);
+    skipNum = arc4random_uniform([questionQuery countObjects]-10);
     [questionQuery setLimit:10];
     [questionQuery setSkip:skipNum];
     [questionQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
