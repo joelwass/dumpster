@@ -71,7 +71,7 @@ Reachability *internetReachableFoo;
     
     //create mutable array of PFObjects for use in question data
     
-    [self makeQuestions];
+    [self makeQuestions:1];
     [self performSelector:@selector(makeButtonVisible) withObject:self afterDelay:3.72];
     
 }
@@ -133,11 +133,13 @@ Reachability *internetReachableFoo;
     }
 }
 
--(void)makeQuestions{
+-(void)makeQuestions:(long)skipNum{
     
     
     PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
+    skipNum = ([questionQuery countObjects]-10);
     [questionQuery setLimit:10];
+    [questionQuery setSkip:skipNum];
     [questionQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded. Add the returned objects to allObjects
@@ -155,6 +157,7 @@ Reachability *internetReachableFoo;
     
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
     [answerQuery setLimit:10];
+    [answerQuery setSkip:skipNum];
     [answerQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             
