@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE0B940C19E1F539002B474C /* DumpsterLaunch960.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0B940A19E1F539002B474C /* DumpsterLaunch960.png */; };
 		EE0B940D19E1F539002B474C /* DumpsterLaunch1136.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0B940B19E1F539002B474C /* DumpsterLaunch1136.png */; };
+		EE4D168A19E47FEC00B03CCF /* YCJContributeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4D168919E47FEC00B03CCF /* YCJContributeViewController.m */; };
 		EE61B67A19D72ABD0054D77D /* UIWebView+Clean.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61B67819D72ABD0054D77D /* UIWebView+Clean.m */; };
 		EE61B67F19D8EA940054D77D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B67C19D8EA940054D77D /* Bolts.framework */; };
 		EE61B68019D8EA940054D77D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B67D19D8EA940054D77D /* Parse.framework */; };
@@ -52,7 +53,6 @@
 		EEB983F719BBA9B30014D8B7 /* YCJWVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB983F519BBA9B30014D8B7 /* YCJWVViewController.xib */; };
 		EECA3A6619C2155F0050F431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA38DE01991A74A002623C3 /* Main.storyboard */; };
 		EECA3A6819C216EF0050F431 /* DumpsterTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = EEA38DEC1991A74A002623C3 /* DumpsterTests.xctest */; };
-		EEFE478119E05B730054AA25 /* Reachability.h in Sources */ = {isa = PBXBuildFile; fileRef = EEFE478019E05B730054AA25 /* Reachability.h */; };
 		EEFE478319E05BA00054AA25 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFE478219E05BA00054AA25 /* Reachability.m */; };
 		EEFE478D19E078F10054AA25 /* DumpsterLogo29.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFE478419E078F10054AA25 /* DumpsterLogo29.png */; };
 		EEFE478E19E078F10054AA25 /* DumpsterLogo58.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFE478519E078F10054AA25 /* DumpsterLogo58.png */; };
@@ -77,6 +77,8 @@
 		C5BE037ADB5546B784A581BF /* libPods-Dumpster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dumpster.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0B940A19E1F539002B474C /* DumpsterLaunch960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLaunch960.png; sourceTree = "<group>"; };
 		EE0B940B19E1F539002B474C /* DumpsterLaunch1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLaunch1136.png; sourceTree = "<group>"; };
+		EE4D168719E47FB500B03CCF /* YCJContributeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCJContributeViewController.h; sourceTree = "<group>"; };
+		EE4D168919E47FEC00B03CCF /* YCJContributeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCJContributeViewController.m; sourceTree = "<group>"; };
 		EE61B67819D72ABD0054D77D /* UIWebView+Clean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Clean.m"; sourceTree = "<group>"; };
 		EE61B67919D72ABD0054D77D /* UIWebView+Clean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Clean.h"; sourceTree = "<group>"; };
 		EE61B67C19D8EA940054D77D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -334,6 +336,8 @@
 				EEB983F319BBA9B30014D8B7 /* YCJWVViewController.h */,
 				EEB983F419BBA9B30014D8B7 /* YCJWVViewController.m */,
 				EEB983F519BBA9B30014D8B7 /* YCJWVViewController.xib */,
+				EE4D168719E47FB500B03CCF /* YCJContributeViewController.h */,
+				EE4D168919E47FEC00B03CCF /* YCJContributeViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -499,7 +503,6 @@
 				EEA38DE51991A74A002623C3 /* YCJViewController.m in Sources */,
 				EE61B67A19D72ABD0054D77D /* UIWebView+Clean.m in Sources */,
 				EEB0BF2B199F2BA8006D7B3D /* YCJQuestions.m in Sources */,
-				EEFE478119E05B730054AA25 /* Reachability.h in Sources */,
 				EE61B68519DB68200054D77D /* UIImage+animatedGIF.m in Sources */,
 				EEB983F619BBA9B30014D8B7 /* YCJWVViewController.m in Sources */,
 				EEA38DDB1991A74A002623C3 /* main.m in Sources */,
@@ -507,6 +510,7 @@
 				EEB983F119BB9F270014D8B7 /* YCJAPViewController.m in Sources */,
 				EEB0BF33199F2CF9006D7B3D /* YCJAnswers.m in Sources */,
 				EEFE478319E05BA00054AA25 /* Reachability.m in Sources */,
+				EE4D168A19E47FEC00B03CCF /* YCJContributeViewController.m in Sources */,
 				EEB0BF2F199F2C61006D7B3D /* YCJQuestionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
