@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -257,10 +256,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EH-pK-HfR">
-                                <rect key="frame" x="104" y="432" width="112" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="Z3T-U6-Kca"/>
-                                </constraints>
+                                <rect key="frame" x="104" y="359" width="112" height="41"/>
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -269,19 +265,31 @@
                                     <action selector="nextQuestion:" destination="iey-62-6Tf" eventType="touchUpInside" id="LF0-7d-Ao1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWD-Qr-9oz">
+                                <rect key="frame" x="74" y="439" width="173" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Contribute Questions!">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <accessibility key="accessibilityConfiguration" label=""/>
                         <constraints>
+                            <constraint firstItem="8EH-pK-HfR" firstAttribute="top" secondItem="G3d-aK-eRb" secondAttribute="bottom" constant="50" id="2GO-mA-aCB"/>
                             <constraint firstItem="ip9-xh-T3Z" firstAttribute="leading" secondItem="G3d-aK-eRb" secondAttribute="leading" id="5KR-3p-t2T"/>
-                            <constraint firstItem="ip9-xh-T3Z" firstAttribute="centerX" secondItem="8EH-pK-HfR" secondAttribute="centerX" id="K3o-6b-xTX"/>
+                            <constraint firstItem="8EH-pK-HfR" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="88" id="CwW-8a-Ac4"/>
                             <constraint firstItem="G3d-aK-eRb" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="4" id="L70-7H-n3T"/>
                             <constraint firstItem="G3d-aK-eRb" firstAttribute="top" secondItem="ip9-xh-T3Z" secondAttribute="bottom" constant="41" id="M0e-kd-g7B"/>
-                            <constraint firstItem="8EH-pK-HfR" firstAttribute="centerX" secondItem="VFh-s6-3yR" secondAttribute="centerX" id="Sdn-yg-ThT"/>
-                            <constraint firstItem="8EH-pK-HfR" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="88" id="dLq-Kd-yaY"/>
-                            <constraint firstItem="IZH-kj-4tf" firstAttribute="top" secondItem="8EH-pK-HfR" secondAttribute="bottom" constant="95" id="iMg-FF-pu4"/>
+                            <constraint firstItem="mWD-Qr-9oz" firstAttribute="centerX" secondItem="8EH-pK-HfR" secondAttribute="centerX" id="NmK-Ox-fKf"/>
+                            <constraint firstItem="mWD-Qr-9oz" firstAttribute="top" secondItem="8EH-pK-HfR" secondAttribute="bottom" constant="39" id="YYJ-ua-YdF"/>
+                            <constraint firstItem="8EH-pK-HfR" firstAttribute="centerX" secondItem="G3d-aK-eRb" secondAttribute="centerX" id="b3d-UL-3CW"/>
+                            <constraint firstItem="8EH-pK-HfR" firstAttribute="centerX" secondItem="VFh-s6-3yR" secondAttribute="centerX" id="fwp-C0-KYf"/>
                             <constraint firstItem="G3d-aK-eRb" firstAttribute="centerY" secondItem="VFh-s6-3yR" secondAttribute="centerY" id="iX1-SK-url"/>
+                            <constraint firstItem="mWD-Qr-9oz" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="58" id="ooT-DB-ufa"/>
                             <constraint firstItem="ip9-xh-T3Z" firstAttribute="trailing" secondItem="G3d-aK-eRb" secondAttribute="trailing" id="pbS-Lh-BTW"/>
                             <constraint firstItem="ip9-xh-T3Z" firstAttribute="top" secondItem="Z0a-OZ-8ek" secondAttribute="bottom" constant="21" id="uAD-yD-HsV"/>
+                            <constraint firstItem="IZH-kj-4tf" firstAttribute="top" secondItem="8EH-pK-HfR" secondAttribute="bottom" constant="168" id="vqA-eq-gXL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="DUMPSTER." id="iPt-Lw-Q6O">
@@ -291,6 +299,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="answerLabel" destination="ip9-xh-T3Z" id="jeg-nW-jUf"/>
+                        <outlet property="contribute" destination="mWD-Qr-9oz" id="6Kk-G7-87i"/>
                         <outlet property="learnMoreButton" destination="G3d-aK-eRb" id="bnP-h9-p67"/>
                         <outlet property="nextButton" destination="8EH-pK-HfR" id="ZNO-gA-Lgv"/>
                     </connections>

@@ -28,6 +28,12 @@
     }
     return self;
 }
+
+- (IBAction)contribute:(UIButton *)sender {
+    
+    
+}
+
 - (IBAction)nextQuestion:(UIButton *)sender {
     NSArray *viewControllers = self.navigationController.viewControllers;
     YCJQuestionViewController *back = [viewControllers objectAtIndex:0];
