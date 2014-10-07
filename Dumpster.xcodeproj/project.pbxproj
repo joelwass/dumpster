@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EE0B940C19E1F539002B474C /* DumpsterLaunch960.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0B940A19E1F539002B474C /* DumpsterLaunch960.png */; };
 		EE0B940D19E1F539002B474C /* DumpsterLaunch1136.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0B940B19E1F539002B474C /* DumpsterLaunch1136.png */; };
+		EE4D168819E47FB500B03CCF /* YCJContributeViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = EE4D168719E47FB500B03CCF /* YCJContributeViewController.h */; };
+		EE4D168A19E47FEC00B03CCF /* YCJContributeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4D168919E47FEC00B03CCF /* YCJContributeViewController.m */; };
 		EE61B67A19D72ABD0054D77D /* UIWebView+Clean.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61B67819D72ABD0054D77D /* UIWebView+Clean.m */; };
 		EE61B67F19D8EA940054D77D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B67C19D8EA940054D77D /* Bolts.framework */; };
 		EE61B68019D8EA940054D77D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B67D19D8EA940054D77D /* Parse.framework */; };
@@ -20,7 +22,6 @@
 		EE65F35D19DDE49B006EBEF1 /* DumpsterLogo76.png in Resources */ = {isa = PBXBuildFile; fileRef = EE65F35719DDE49B006EBEF1 /* DumpsterLogo76.png */; };
 		EE65F35E19DDE49B006EBEF1 /* DumpsterLogo120.png in Resources */ = {isa = PBXBuildFile; fileRef = EE65F35819DDE49B006EBEF1 /* DumpsterLogo120.png */; };
 		EE65F35F19DDE49B006EBEF1 /* DumpsterLogo152.png in Resources */ = {isa = PBXBuildFile; fileRef = EE65F35919DDE49B006EBEF1 /* DumpsterLogo152.png */; };
-		EE7E304619E476A600114A70 /* UIViewController+YCJContributeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7E304519E476A600114A70 /* UIViewController+YCJContributeViewController.m */; };
 		EEA38DCF1991A74A002623C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DCE1991A74A002623C3 /* Foundation.framework */; };
 		EEA38DD11991A74A002623C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD01991A74A002623C3 /* CoreGraphics.framework */; };
 		EEA38DD31991A74A002623C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA38DD21991A74A002623C3 /* UIKit.framework */; };
@@ -78,6 +79,8 @@
 		C5BE037ADB5546B784A581BF /* libPods-Dumpster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dumpster.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0B940A19E1F539002B474C /* DumpsterLaunch960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLaunch960.png; sourceTree = "<group>"; };
 		EE0B940B19E1F539002B474C /* DumpsterLaunch1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLaunch1136.png; sourceTree = "<group>"; };
+		EE4D168719E47FB500B03CCF /* YCJContributeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCJContributeViewController.h; sourceTree = "<group>"; };
+		EE4D168919E47FEC00B03CCF /* YCJContributeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCJContributeViewController.m; sourceTree = "<group>"; };
 		EE61B67819D72ABD0054D77D /* UIWebView+Clean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Clean.m"; sourceTree = "<group>"; };
 		EE61B67919D72ABD0054D77D /* UIWebView+Clean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Clean.h"; sourceTree = "<group>"; };
 		EE61B67C19D8EA940054D77D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -92,8 +95,6 @@
 		EE65F35819DDE49B006EBEF1 /* DumpsterLogo120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo120.png; sourceTree = "<group>"; };
 		EE65F35919DDE49B006EBEF1 /* DumpsterLogo152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo152.png; sourceTree = "<group>"; };
 		EE65F35A19DDE49B006EBEF1 /* DumpsterLogo180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DumpsterLogo180.png; sourceTree = "<group>"; };
-		EE7E304419E476A600114A70 /* UIViewController+YCJContributeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YCJContributeViewController.h"; sourceTree = "<group>"; };
-		EE7E304519E476A600114A70 /* UIViewController+YCJContributeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YCJContributeViewController.m"; sourceTree = "<group>"; };
 		EEA38DCB1991A74A002623C3 /* Dumpster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dumpster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA38DCE1991A74A002623C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EEA38DD01991A74A002623C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -337,8 +338,8 @@
 				EEB983F319BBA9B30014D8B7 /* YCJWVViewController.h */,
 				EEB983F419BBA9B30014D8B7 /* YCJWVViewController.m */,
 				EEB983F519BBA9B30014D8B7 /* YCJWVViewController.xib */,
-				EE7E304419E476A600114A70 /* UIViewController+YCJContributeViewController.h */,
-				EE7E304519E476A600114A70 /* UIViewController+YCJContributeViewController.m */,
+				EE4D168719E47FB500B03CCF /* YCJContributeViewController.h */,
+				EE4D168919E47FEC00B03CCF /* YCJContributeViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -502,17 +503,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEA38DE51991A74A002623C3 /* YCJViewController.m in Sources */,
-				EE7E304619E476A600114A70 /* UIViewController+YCJContributeViewController.m in Sources */,
 				EE61B67A19D72ABD0054D77D /* UIWebView+Clean.m in Sources */,
 				EEB0BF2B199F2BA8006D7B3D /* YCJQuestions.m in Sources */,
 				EEFE478119E05B730054AA25 /* Reachability.h in Sources */,
 				EE61B68519DB68200054D77D /* UIImage+animatedGIF.m in Sources */,
 				EEB983F619BBA9B30014D8B7 /* YCJWVViewController.m in Sources */,
 				EEA38DDB1991A74A002623C3 /* main.m in Sources */,
+				EE4D168819E47FB500B03CCF /* YCJContributeViewController.h in Sources */,
 				EEA38DDF1991A74A002623C3 /* YCJAppDelegate.m in Sources */,
 				EEB983F119BB9F270014D8B7 /* YCJAPViewController.m in Sources */,
 				EEB0BF33199F2CF9006D7B3D /* YCJAnswers.m in Sources */,
 				EEFE478319E05BA00054AA25 /* Reachability.m in Sources */,
+				EE4D168A19E47FEC00B03CCF /* YCJContributeViewController.m in Sources */,
 				EEB0BF2F199F2C61006D7B3D /* YCJQuestionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

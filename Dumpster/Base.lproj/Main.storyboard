@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -66,6 +67,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-82" y="-485"/>
+        </scene>
+        <!--Contribute View Controller-->
+        <scene sceneID="29m-gw-Iv2">
+            <objects>
+                <viewController id="8bB-Zv-1Lu" customClass="YCJContributeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FJK-jS-Xnu"/>
+                        <viewControllerLayoutGuide type="bottom" id="SrY-7g-80E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fbU-mF-RG9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSo-Pj-bqU">
+                                <rect key="frame" x="34" y="72" width="253" height="221"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WEQ-kH-oaS"/>
+                    <connections>
+                        <outlet property="aboutUsLabel" destination="fSo-Pj-bqU" id="s5q-ZG-mAg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dps-i4-ozZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1309" y="-637"/>
         </scene>
         <!--question-->
         <scene sceneID="72i-pT-mIl">
@@ -302,6 +333,7 @@
                         <outlet property="contribute" destination="mWD-Qr-9oz" id="6Kk-G7-87i"/>
                         <outlet property="learnMoreButton" destination="G3d-aK-eRb" id="bnP-h9-p67"/>
                         <outlet property="nextButton" destination="8EH-pK-HfR" id="ZNO-gA-Lgv"/>
+                        <segue destination="8bB-Zv-1Lu" kind="push" id="TVK-8D-gmc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdv-l9-GXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
