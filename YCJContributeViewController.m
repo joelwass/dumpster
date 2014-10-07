@@ -13,6 +13,10 @@
 
 
 @property (weak, nonatomic) IBOutlet UITextView *aboutUsField;
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *answerLabel;
+@property (weak, nonatomic) IBOutlet UITextField *questionField;
+@property (weak, nonatomic) IBOutlet UITextField *answerField;
 
 @end
 
