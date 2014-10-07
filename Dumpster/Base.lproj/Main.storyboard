@@ -80,29 +80,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSo-Pj-bqU">
-                                <rect key="frame" x="34" y="64" width="253" height="269"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pMA-FI-xJj">
+                                <rect key="frame" x="21" y="0.0" width="279" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="fSo-Pj-bqU" firstAttribute="centerX" secondItem="fbU-mF-RG9" secondAttribute="centerX" id="6Yb-g5-0H1"/>
-                            <constraint firstItem="SrY-7g-80E" firstAttribute="top" secondItem="fSo-Pj-bqU" secondAttribute="bottom" constant="235" id="ACC-Kl-Yzh"/>
-                            <constraint firstItem="fSo-Pj-bqU" firstAttribute="top" secondItem="FJK-jS-Xnu" secondAttribute="bottom" id="Jm2-ev-1UV"/>
-                            <constraint firstItem="fSo-Pj-bqU" firstAttribute="leading" secondItem="fbU-mF-RG9" secondAttribute="leadingMargin" constant="18" id="p3F-7j-vJS"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WEQ-kH-oaS"/>
                     <connections>
-                        <outlet property="aboutUsLabel" destination="fSo-Pj-bqU" id="s5q-ZG-mAg"/>
+                        <outlet property="aboutUsField" destination="pMA-FI-xJj" id="MRD-QE-kMb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dps-i4-ozZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1309" y="-685"/>
+            <point key="canvasLocation" x="1157" y="-643"/>
         </scene>
         <!--question-->
         <scene sceneID="72i-pT-mIl">
