@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EE0B940C19E1F539002B474C /* DumpsterLaunch960.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0B940A19E1F539002B474C /* DumpsterLaunch960.png */; };
 		EE0B940D19E1F539002B474C /* DumpsterLaunch1136.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0B940B19E1F539002B474C /* DumpsterLaunch1136.png */; };
-		EE4D168819E47FB500B03CCF /* YCJContributeViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = EE4D168719E47FB500B03CCF /* YCJContributeViewController.h */; };
 		EE4D168A19E47FEC00B03CCF /* YCJContributeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4D168919E47FEC00B03CCF /* YCJContributeViewController.m */; };
 		EE61B67A19D72ABD0054D77D /* UIWebView+Clean.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61B67819D72ABD0054D77D /* UIWebView+Clean.m */; };
 		EE61B67F19D8EA940054D77D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE61B67C19D8EA940054D77D /* Bolts.framework */; };
@@ -54,7 +53,6 @@
 		EEB983F719BBA9B30014D8B7 /* YCJWVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB983F519BBA9B30014D8B7 /* YCJWVViewController.xib */; };
 		EECA3A6619C2155F0050F431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA38DE01991A74A002623C3 /* Main.storyboard */; };
 		EECA3A6819C216EF0050F431 /* DumpsterTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = EEA38DEC1991A74A002623C3 /* DumpsterTests.xctest */; };
-		EEFE478119E05B730054AA25 /* Reachability.h in Sources */ = {isa = PBXBuildFile; fileRef = EEFE478019E05B730054AA25 /* Reachability.h */; };
 		EEFE478319E05BA00054AA25 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFE478219E05BA00054AA25 /* Reachability.m */; };
 		EEFE478D19E078F10054AA25 /* DumpsterLogo29.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFE478419E078F10054AA25 /* DumpsterLogo29.png */; };
 		EEFE478E19E078F10054AA25 /* DumpsterLogo58.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFE478519E078F10054AA25 /* DumpsterLogo58.png */; };
@@ -505,11 +503,9 @@
 				EEA38DE51991A74A002623C3 /* YCJViewController.m in Sources */,
 				EE61B67A19D72ABD0054D77D /* UIWebView+Clean.m in Sources */,
 				EEB0BF2B199F2BA8006D7B3D /* YCJQuestions.m in Sources */,
-				EEFE478119E05B730054AA25 /* Reachability.h in Sources */,
 				EE61B68519DB68200054D77D /* UIImage+animatedGIF.m in Sources */,
 				EEB983F619BBA9B30014D8B7 /* YCJWVViewController.m in Sources */,
 				EEA38DDB1991A74A002623C3 /* main.m in Sources */,
-				EE4D168819E47FB500B03CCF /* YCJContributeViewController.h in Sources */,
 				EEA38DDF1991A74A002623C3 /* YCJAppDelegate.m in Sources */,
 				EEB983F119BB9F270014D8B7 /* YCJAPViewController.m in Sources */,
 				EEB0BF33199F2CF9006D7B3D /* YCJAnswers.m in Sources */,

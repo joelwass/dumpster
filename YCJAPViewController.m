@@ -11,6 +11,7 @@
 #import "YCJWVViewController.h"
 #import "parse/parse.h"
 #import "YCJQuestionViewController.h"
+#import "YCJContributeViewController.h"
 
 @interface YCJAPViewController ()
 
@@ -30,7 +31,7 @@
 }
 
 - (IBAction)contribute:(UIButton *)sender {
-    
+    [self performSegueWithIdentifier:@"contributeSegue" sender:sender];
     
 }
 
@@ -54,10 +55,7 @@
     
         _answerLabel.text = [@"Correct, the answer is: " stringByAppendingString:self.correctAnswer];
     
-        
     
-    
-    _urlDestination = [[NSURL alloc] initWithString:@"http://en.wikipedia.org/w/api.php?format=json&action=query&titles=Germany&prop=revisions&rvprop=content"];
     
     
     
@@ -76,8 +74,13 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    YCJWVViewController *controller = (YCJWVViewController *)segue.destinationViewController;
-    controller.keyWord = self.correctAnswer;
+    if([segue.identifier isEqualToString:@"contributeSegue"]){
+
+    }
+    else {
+        YCJWVViewController *controller = (YCJWVViewController *)segue.destinationViewController;
+        controller.keyWord = self.correctAnswer;
+    }
 }
 
 - (void)didReceiveMemoryWarning

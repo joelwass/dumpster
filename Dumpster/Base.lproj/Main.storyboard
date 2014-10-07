@@ -80,14 +80,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSo-Pj-bqU">
-                                <rect key="frame" x="34" y="72" width="253" height="221"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSo-Pj-bqU">
+                                <rect key="frame" x="34" y="64" width="253" height="269"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fSo-Pj-bqU" firstAttribute="centerX" secondItem="fbU-mF-RG9" secondAttribute="centerX" id="6Yb-g5-0H1"/>
+                            <constraint firstItem="SrY-7g-80E" firstAttribute="top" secondItem="fSo-Pj-bqU" secondAttribute="bottom" constant="235" id="ACC-Kl-Yzh"/>
+                            <constraint firstItem="fSo-Pj-bqU" firstAttribute="top" secondItem="FJK-jS-Xnu" secondAttribute="bottom" id="Jm2-ev-1UV"/>
+                            <constraint firstItem="fSo-Pj-bqU" firstAttribute="leading" secondItem="fbU-mF-RG9" secondAttribute="leadingMargin" constant="18" id="p3F-7j-vJS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WEQ-kH-oaS"/>
                     <connections>
@@ -96,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dps-i4-ozZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1309" y="-637"/>
+            <point key="canvasLocation" x="1309" y="-685"/>
         </scene>
         <!--question-->
         <scene sceneID="72i-pT-mIl">
@@ -303,6 +309,9 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="contribute:" destination="iey-62-6Tf" eventType="touchUpInside" id="brf-fP-Vks"/>
+                                </connections>
                             </button>
                         </subviews>
                         <accessibility key="accessibilityConfiguration" label=""/>
@@ -333,7 +342,7 @@
                         <outlet property="contribute" destination="mWD-Qr-9oz" id="6Kk-G7-87i"/>
                         <outlet property="learnMoreButton" destination="G3d-aK-eRb" id="bnP-h9-p67"/>
                         <outlet property="nextButton" destination="8EH-pK-HfR" id="ZNO-gA-Lgv"/>
-                        <segue destination="8bB-Zv-1Lu" kind="push" id="TVK-8D-gmc"/>
+                        <segue destination="8bB-Zv-1Lu" kind="push" identifier="contributeSegue" id="TVK-8D-gmc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdv-l9-GXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
