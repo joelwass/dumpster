@@ -36,12 +36,16 @@
 }
 
 
+- (IBAction)submitButtonPress:(id)sender {
+    
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    
+    [_submitButton setTitle:@"Submit" forState:UIControlStateNormal];
+    [_submitButton.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:16]];
     _aboutUsField.layer.borderWidth = 2.0f;
     _aboutUsField.layer.borderColor = [[UIColor blackColor] CGColor];
     [self.view setBackgroundColor: [self colorWithHexString:@"68C3A3"]];
