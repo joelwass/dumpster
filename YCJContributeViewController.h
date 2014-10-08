@@ -10,4 +10,5 @@
 
 @interface YCJContributeViewController : UIViewController
 
+
 @end
