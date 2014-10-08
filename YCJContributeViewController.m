@@ -18,6 +18,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *questionField;
 @property (weak, nonatomic) IBOutlet UITextField *answerField;
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
+@property (weak, nonatomic) IBOutlet UILabel *incorrectAnswersLabel;
+@property (weak, nonatomic) IBOutlet UITextField *incorrectAnswerField;
+
+@property NSString *question;
+@property NSString *answer;
 
 
 @end
@@ -36,9 +41,35 @@
 }
 
 
+
+
+
 - (IBAction)submitButtonPress:(id)sender {
     
+    _question = _questionField.text;
+    _answer = _answerField.text;
+    NSString *messageString = [NSString stringWithFormat:@"Are you sure you want to submit the question: %@\n\n with the correct answer: %@", _question, _answer];
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Submit Question"
+                                                      message:messageString
+                                                     delegate:self
+                                            cancelButtonTitle:@"Cancel"
+                                            otherButtonTitles:@"Yes!", nil];
+    
+    [message show];
 }
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+        if (buttonIndex == 1)
+    {
+        
+        NSLog(@"yay you submit");
+    }
+    else
+    {
+        NSLog(@"cancel");
+    }
+}
+
 
 - (void)viewDidLoad
 {
@@ -52,6 +83,16 @@
     [_aboutUsField setFont:[UIFont fontWithName:@"Chalkduster" size:16]];
     [_aboutUsField setBackgroundColor:[self colorWithHexString:@"68C3A3"]];
     _aboutUsField.text = @"Here at IVΣT we not only believe in open sourcing code, we believe in open sourcing education. We encourage you to participate by contributing questions to our network of questions. We hope to provide the platform from which education enthusiasts around the world will dive into the World Wide Web. Please, help us. - IVΣT";
+    _incorrectAnswersLabel.text = @"and 3 incorrect answers,\n seperated by commas";
+    [_incorrectAnswersLabel setFont:[UIFont fontWithName:@"Chalkduster" size:15]];
+    _incorrectAnswerField.autocorrectionType = UITextAutocorrectionTypeYes;
+    _incorrectAnswerField.keyboardType = UIKeyboardTypeDefault;
+    _incorrectAnswerField.placeholder = @"Incorrect Answers";
+    _incorrectAnswerField.returnKeyType = UIReturnKeyDone;
+    [_incorrectAnswerField setDelegate:self];
+    _incorrectAnswerField.textAlignment = NSTextAlignmentCenter;
+    _incorrectAnswerField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    _incorrectAnswerField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     _questionLabel.text = @"Type your question:";
     [_questionLabel setFont:[UIFont fontWithName:@"Chalkduster" size:15]];
     _answerField.autocorrectionType = UITextAutocorrectionTypeYes;
@@ -119,12 +160,14 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [_questionField resignFirstResponder];
     [_answerField resignFirstResponder];
+    [_incorrectAnswerField resignFirstResponder];
     return YES;
 }
 
 -(void)dismissKeyboard {
     [_questionField resignFirstResponder];
     [_answerField resignFirstResponder];
+    [_incorrectAnswerField resignFirstResponder];
 }
 
 
