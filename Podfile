@@ -3,6 +3,7 @@
 
 target "Dumpster" do
 
+pod 'mailgun', '~> 1.0'
 
 end
 
