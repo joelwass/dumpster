@@ -64,21 +64,27 @@
         
         if (buttonIndex == 1)
     {
-        NSArray *qandAs = [[NSArray alloc] initWithObjects:_questionField.text, _answerField.text, _incorrectAnswerField.text, nil];
-        NSString *messageBody = [qandAs componentsJoinedByString:@" | "];
+        //Sends message with answers they filled out to email.
+        NSString *q = @"Question: ";
+        NSString *a = @" Answer: ";
+        NSString *incAs = @" Incorrect Answers: ";
+        NSString *denotion = @" | ";
+        NSArray *qandAs = [[NSArray alloc] initWithObjects:q, _questionField.text, denotion, a, _answerField.text, denotion, incAs, _incorrectAnswerField.text, nil];
+        NSString *messageBody = [qandAs componentsJoinedByString:@""];
+        
         Mailgun *mailgun = [Mailgun clientWithDomain:@"sandboxa042e16a1b484de4a35e40785f8ef81b.mailgun.org" apiKey:@"key-38646dfb1d2c7fcbb838e0ec449db997"];
         [mailgun sendMessageTo:@"Joel Wasserman <joel.wasserman8@gmail.com>"
                           from:@"Excited User <someone@sample.org>"
                        subject:@"New Dumpster Question"
                           body:messageBody];
-        UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:nil message:@"Question Sent" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:nil message:@"Question Sent.\nThank you!" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         alert2.tag = 101;
         [alert2 show];
-        NSLog(@"yay you submit");
+        //NSLog(@"yay you submit");
     }
     else
     {
-        NSLog(@"cancel");
+        //NSLog(@"cancel");
     }
     }
     else if (alertView.tag == 101) {
@@ -90,7 +96,7 @@
             _questionField.text = nil;
             _answerField.text = nil;
             _incorrectAnswerField.text = nil;
-            NSLog(@"Yep, message sent");
+           // NSLog(@"Yep, message sent");
         }
     }
 }
