@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220C81AB265A48FFB17DAB4B /* libPods-Dumpster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BE037ADB5546B784A581BF /* libPods-Dumpster.a */; };
 		EE0B940C19E1F539002B474C /* DumpsterLaunch960.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0B940A19E1F539002B474C /* DumpsterLaunch960.png */; };
 		EE0B940D19E1F539002B474C /* DumpsterLaunch1136.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0B940B19E1F539002B474C /* DumpsterLaunch1136.png */; };
 		EE4D168A19E47FEC00B03CCF /* YCJContributeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4D168919E47FEC00B03CCF /* YCJContributeViewController.m */; };
@@ -168,6 +169,7 @@
 				EEA38DD31991A74A002623C3 /* UIKit.framework in Frameworks */,
 				EEA38E171991A8E7002623C3 /* Parse.framework in Frameworks */,
 				EEA38DCF1991A74A002623C3 /* Foundation.framework in Frameworks */,
+				220C81AB265A48FFB17DAB4B /* libPods-Dumpster.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

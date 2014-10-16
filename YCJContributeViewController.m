@@ -7,6 +7,7 @@
 //
 
 #import "YCJContributeViewController.h"
+#import "Mailgun.h"
 
 
 @interface YCJContributeViewController ()
@@ -63,6 +64,13 @@
         
         if (buttonIndex == 1)
     {
+        NSArray *qandAs = [[NSArray alloc] initWithObjects:_questionField.text, _answerField.text, _incorrectAnswerField.text];
+        NSString *messageBody = [qandAs componentsJoinedByString:@" | "];
+        Mailgun *mailgun = [Mailgun clientWithDomain:@"samples.mailgun.org" apiKey:@"key-3ax6xnjp29jd6fds4gc373sgvjxteol0"];
+        [mailgun sendMessageTo:@"Joel Wasserman <joel.wasserman8@gmail.com>"
+                          from:@"Excited User <someone@sample.org>"
+                       subject:@"New Dumpster Question"
+                          body:messageBody];
         UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:nil message:@"Question Sent" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         alert2.tag = 101;
         [alert2 show];
