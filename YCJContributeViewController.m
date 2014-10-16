@@ -68,8 +68,9 @@
         NSString *q = @"Question: ";
         NSString *a = @" Answer: ";
         NSString *incAs = @" Incorrect Answers: ";
-        NSArray *qandAs = [[NSArray alloc] initWithObjects:q, _questionField.text, a, _answerField.text, incAs, _incorrectAnswerField.text, nil];
-        NSString *messageBody = [qandAs componentsJoinedByString:@" | "];
+        NSString *denotion = @" | ";
+        NSArray *qandAs = [[NSArray alloc] initWithObjects:q, _questionField.text, denotion, a, _answerField.text, denotion, incAs, _incorrectAnswerField.text, nil];
+        NSString *messageBody = [qandAs componentsJoinedByString:@""];
         
         Mailgun *mailgun = [Mailgun clientWithDomain:@"sandboxa042e16a1b484de4a35e40785f8ef81b.mailgun.org" apiKey:@"key-38646dfb1d2c7fcbb838e0ec449db997"];
         [mailgun sendMessageTo:@"Joel Wasserman <joel.wasserman8@gmail.com>"
