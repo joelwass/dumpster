@@ -64,9 +64,9 @@
         
         if (buttonIndex == 1)
     {
-        NSArray *qandAs = [[NSArray alloc] initWithObjects:_questionField.text, _answerField.text, _incorrectAnswerField.text];
+        NSArray *qandAs = [[NSArray alloc] initWithObjects:_questionField.text, _answerField.text, _incorrectAnswerField.text, nil];
         NSString *messageBody = [qandAs componentsJoinedByString:@" | "];
-        Mailgun *mailgun = [Mailgun clientWithDomain:@"samples.mailgun.org" apiKey:@"key-3ax6xnjp29jd6fds4gc373sgvjxteol0"];
+        Mailgun *mailgun = [Mailgun clientWithDomain:@"postmaster@sandboxa042e16a1b484de4a35e40785f8ef81b.mailgun.org" apiKey:@"key-38646dfb1d2c7fcbb838e0ec449db997"];
         [mailgun sendMessageTo:@"Joel Wasserman <joel.wasserman8@gmail.com>"
                           from:@"Excited User <someone@sample.org>"
                        subject:@"New Dumpster Question"
