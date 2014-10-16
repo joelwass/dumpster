@@ -50,6 +50,7 @@
     [_answerLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
     [_learnMoreButton.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
     [_nextButton.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    [_contribute.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:14]];
     self.navigationController.navigationBar.translucent = NO;
     
     

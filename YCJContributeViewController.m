@@ -49,24 +49,41 @@
     _question = _questionField.text;
     _answer = _answerField.text;
     NSString *messageString = [NSString stringWithFormat:@"Are you sure you want to submit the question: %@\n\n with the correct answer: %@", _question, _answer];
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Submit Question"
+    UIAlertView *alert1 = [[UIAlertView alloc] initWithTitle:@"Submit Question"
                                                       message:messageString
                                                      delegate:self
                                             cancelButtonTitle:@"Cancel"
                                             otherButtonTitles:@"Yes!", nil];
-    
-    [message show];
+    alert1.tag = 100;
+    [alert1 show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (alertView.tag == 100) {
+        
         if (buttonIndex == 1)
     {
-        
+        UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:nil message:@"Question Sent" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        alert2.tag = 101;
+        [alert2 show];
         NSLog(@"yay you submit");
     }
     else
     {
         NSLog(@"cancel");
+    }
+    }
+    else if (alertView.tag == 101) {
+        if (buttonIndex == 1)
+        {
+            NSLog(@"cool, message sent");
+        }
+        else {
+            _questionField.text = nil;
+            _answerField.text = nil;
+            _incorrectAnswerField.text = nil;
+            NSLog(@"Yep, message sent");
+        }
     }
 }
 

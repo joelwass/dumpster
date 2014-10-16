@@ -370,7 +370,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EH-pK-HfR">
-                                <rect key="frame" x="104" y="359" width="112" height="41"/>
+                                <rect key="frame" x="75" y="349" width="171" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Uyz-KC-36u"/>
+                                </constraints>
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -380,12 +383,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWD-Qr-9oz">
-                                <rect key="frame" x="74" y="439" width="173" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <rect key="frame" x="63" y="498" width="195" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Contribute Questions!">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="contribute:" destination="iey-62-6Tf" eventType="touchUpInside" id="brf-fP-Vks"/>
                                 </connections>
@@ -393,20 +401,20 @@
                         </subviews>
                         <accessibility key="accessibilityConfiguration" label=""/>
                         <constraints>
-                            <constraint firstItem="8EH-pK-HfR" firstAttribute="top" secondItem="G3d-aK-eRb" secondAttribute="bottom" constant="50" id="2GO-mA-aCB"/>
                             <constraint firstItem="ip9-xh-T3Z" firstAttribute="leading" secondItem="G3d-aK-eRb" secondAttribute="leading" id="5KR-3p-t2T"/>
-                            <constraint firstItem="8EH-pK-HfR" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="88" id="CwW-8a-Ac4"/>
+                            <constraint firstItem="8EH-pK-HfR" firstAttribute="centerX" secondItem="VFh-s6-3yR" secondAttribute="centerX" id="E2f-SN-1Zl"/>
                             <constraint firstItem="G3d-aK-eRb" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="4" id="L70-7H-n3T"/>
                             <constraint firstItem="G3d-aK-eRb" firstAttribute="top" secondItem="ip9-xh-T3Z" secondAttribute="bottom" constant="41" id="M0e-kd-g7B"/>
-                            <constraint firstItem="mWD-Qr-9oz" firstAttribute="centerX" secondItem="8EH-pK-HfR" secondAttribute="centerX" id="NmK-Ox-fKf"/>
-                            <constraint firstItem="mWD-Qr-9oz" firstAttribute="top" secondItem="8EH-pK-HfR" secondAttribute="bottom" constant="39" id="YYJ-ua-YdF"/>
-                            <constraint firstItem="8EH-pK-HfR" firstAttribute="centerX" secondItem="G3d-aK-eRb" secondAttribute="centerX" id="b3d-UL-3CW"/>
-                            <constraint firstItem="8EH-pK-HfR" firstAttribute="centerX" secondItem="VFh-s6-3yR" secondAttribute="centerX" id="fwp-C0-KYf"/>
+                            <constraint firstAttribute="bottom" secondItem="mWD-Qr-9oz" secondAttribute="bottom" constant="20" symbolic="YES" id="OGj-Lz-Ezd"/>
+                            <constraint firstItem="8EH-pK-HfR" firstAttribute="centerX" secondItem="mWD-Qr-9oz" secondAttribute="centerX" id="UVU-c2-RtE"/>
+                            <constraint firstItem="8EH-pK-HfR" firstAttribute="centerX" secondItem="G3d-aK-eRb" secondAttribute="centerX" id="UzH-XF-gru"/>
+                            <constraint firstItem="8EH-pK-HfR" firstAttribute="top" secondItem="G3d-aK-eRb" secondAttribute="bottom" constant="40" id="amU-Le-3TI"/>
+                            <constraint firstItem="8EH-pK-HfR" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="59" id="b0j-iM-NQn"/>
                             <constraint firstItem="G3d-aK-eRb" firstAttribute="centerY" secondItem="VFh-s6-3yR" secondAttribute="centerY" id="iX1-SK-url"/>
-                            <constraint firstItem="mWD-Qr-9oz" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="58" id="ooT-DB-ufa"/>
+                            <constraint firstItem="mWD-Qr-9oz" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="47" id="o4g-NZ-YJE"/>
                             <constraint firstItem="ip9-xh-T3Z" firstAttribute="trailing" secondItem="G3d-aK-eRb" secondAttribute="trailing" id="pbS-Lh-BTW"/>
+                            <constraint firstItem="mWD-Qr-9oz" firstAttribute="top" secondItem="8EH-pK-HfR" secondAttribute="bottom" constant="94" id="sH0-qO-5MN"/>
                             <constraint firstItem="ip9-xh-T3Z" firstAttribute="top" secondItem="Z0a-OZ-8ek" secondAttribute="bottom" constant="21" id="uAD-yD-HsV"/>
-                            <constraint firstItem="IZH-kj-4tf" firstAttribute="top" secondItem="8EH-pK-HfR" secondAttribute="bottom" constant="168" id="vqA-eq-gXL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="DUMPSTER." id="iPt-Lw-Q6O">
@@ -424,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdv-l9-GXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1309" y="29"/>
+            <point key="canvasLocation" x="1309" y="15"/>
         </scene>
         <!--DUMPSTER.-->
         <scene sceneID="cla-qR-YMM">
