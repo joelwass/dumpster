@@ -46,6 +46,8 @@
 {
 
     [super viewDidLoad];
+    _scoreLabel.text = [NSString stringWithFormat:@"+1.5! Score: %d", _score];
+    [_scoreLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
     [self.view setBackgroundColor: [self colorWithHexString:@"68C3A3"]];
     [_answerLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
     [_learnMoreButton.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
@@ -54,7 +56,9 @@
     self.navigationController.navigationBar.translucent = NO;
     
     
-        _answerLabel.text = [@"Correct, the answer is: " stringByAppendingString:self.correctAnswer];
+    NSString *text1 = [@"Correct, the answer is: " stringByAppendingString:self.correctAnswer];
+
+    _answerLabel.text = text1;
     
     
     

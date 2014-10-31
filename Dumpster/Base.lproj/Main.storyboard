@@ -355,6 +355,9 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="ip9-xh-T3Z">
                                 <rect key="frame" x="20" y="85" width="280" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="133" id="zpW-FR-H5U"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -407,23 +410,31 @@
                                     <action selector="contribute:" destination="iey-62-6Tf" eventType="touchUpInside" id="brf-fP-Vks"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GC8-fs-iMi">
+                                <rect key="frame" x="95" y="230" width="131" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <accessibility key="accessibilityConfiguration" label=""/>
                         <constraints>
-                            <constraint firstItem="ip9-xh-T3Z" firstAttribute="leading" secondItem="G3d-aK-eRb" secondAttribute="leading" id="5KR-3p-t2T"/>
                             <constraint firstItem="8EH-pK-HfR" firstAttribute="centerX" secondItem="VFh-s6-3yR" secondAttribute="centerX" id="E2f-SN-1Zl"/>
                             <constraint firstItem="G3d-aK-eRb" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="4" id="L70-7H-n3T"/>
-                            <constraint firstItem="G3d-aK-eRb" firstAttribute="top" secondItem="ip9-xh-T3Z" secondAttribute="bottom" constant="41" id="M0e-kd-g7B"/>
                             <constraint firstAttribute="bottom" secondItem="mWD-Qr-9oz" secondAttribute="bottom" constant="20" symbolic="YES" id="OGj-Lz-Ezd"/>
+                            <constraint firstItem="ip9-xh-T3Z" firstAttribute="trailing" secondItem="G3d-aK-eRb" secondAttribute="trailing" id="StP-Ev-RWp"/>
                             <constraint firstItem="8EH-pK-HfR" firstAttribute="centerX" secondItem="mWD-Qr-9oz" secondAttribute="centerX" id="UVU-c2-RtE"/>
                             <constraint firstItem="8EH-pK-HfR" firstAttribute="centerX" secondItem="G3d-aK-eRb" secondAttribute="centerX" id="UzH-XF-gru"/>
                             <constraint firstItem="8EH-pK-HfR" firstAttribute="top" secondItem="G3d-aK-eRb" secondAttribute="bottom" constant="40" id="amU-Le-3TI"/>
                             <constraint firstItem="8EH-pK-HfR" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="59" id="b0j-iM-NQn"/>
                             <constraint firstItem="G3d-aK-eRb" firstAttribute="centerY" secondItem="VFh-s6-3yR" secondAttribute="centerY" id="iX1-SK-url"/>
+                            <constraint firstItem="GC8-fs-iMi" firstAttribute="centerX" secondItem="G3d-aK-eRb" secondAttribute="centerX" id="kdM-jT-ONm"/>
+                            <constraint firstItem="G3d-aK-eRb" firstAttribute="top" secondItem="GC8-fs-iMi" secondAttribute="bottom" constant="8" symbolic="YES" id="lEm-CJ-kPH"/>
+                            <constraint firstItem="ip9-xh-T3Z" firstAttribute="leading" secondItem="G3d-aK-eRb" secondAttribute="leading" id="nxU-pG-qOQ"/>
                             <constraint firstItem="mWD-Qr-9oz" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="47" id="o4g-NZ-YJE"/>
-                            <constraint firstItem="ip9-xh-T3Z" firstAttribute="trailing" secondItem="G3d-aK-eRb" secondAttribute="trailing" id="pbS-Lh-BTW"/>
                             <constraint firstItem="mWD-Qr-9oz" firstAttribute="top" secondItem="8EH-pK-HfR" secondAttribute="bottom" constant="94" id="sH0-qO-5MN"/>
-                            <constraint firstItem="ip9-xh-T3Z" firstAttribute="top" secondItem="Z0a-OZ-8ek" secondAttribute="bottom" constant="21" id="uAD-yD-HsV"/>
+                            <constraint firstItem="ip9-xh-T3Z" firstAttribute="top" secondItem="Z0a-OZ-8ek" secondAttribute="bottom" constant="21" id="vMY-Wd-nGR"/>
+                            <constraint firstItem="GC8-fs-iMi" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="79" id="xI9-mq-aGa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="DUMPSTER." id="iPt-Lw-Q6O">
@@ -436,6 +447,7 @@
                         <outlet property="contribute" destination="mWD-Qr-9oz" id="6Kk-G7-87i"/>
                         <outlet property="learnMoreButton" destination="G3d-aK-eRb" id="bnP-h9-p67"/>
                         <outlet property="nextButton" destination="8EH-pK-HfR" id="ZNO-gA-Lgv"/>
+                        <outlet property="scoreLabel" destination="GC8-fs-iMi" id="LoY-OF-Oor"/>
                         <segue destination="8bB-Zv-1Lu" kind="push" identifier="contributeSegue" id="TVK-8D-gmc"/>
                     </connections>
                 </viewController>
