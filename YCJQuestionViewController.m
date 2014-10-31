@@ -187,13 +187,13 @@
     
 }
 
-- (void)updateScore:(double)score {
-    _scoreLabel.text = [NSString stringWithFormat:@"Score: %.01f", score];
+- (void)updateScore:(int)score {
+    _scoreLabel.text = [NSString stringWithFormat:@"Score: %d", score];
 }
 
 - (IBAction)buttonPressed:(UIButton *)sender {
     if(sender.currentTitle == self.correctAnswer){
-        _score += 1.5;
+        _score += 2;
         [self updateScore:_score];
         [self performSegueWithIdentifier:@"showAnswerSegue" sender:sender];
     }else{
