@@ -397,7 +397,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWD-Qr-9oz">
                                 <rect key="frame" x="63" y="498" width="195" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Contribute Questions!">
+                                <state key="normal" title="Contribute Questions">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -411,7 +411,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GC8-fs-iMi">
-                                <rect key="frame" x="95" y="230" width="131" height="21"/>
+                                <rect key="frame" x="72" y="230" width="177" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -419,8 +419,11 @@
                         </subviews>
                         <accessibility key="accessibilityConfiguration" label=""/>
                         <constraints>
+                            <constraint firstItem="G3d-aK-eRb" firstAttribute="top" secondItem="GC8-fs-iMi" secondAttribute="bottom" constant="8" symbolic="YES" id="9wD-iW-lyH"/>
+                            <constraint firstItem="GC8-fs-iMi" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="56" id="A66-Ek-9Ne"/>
                             <constraint firstItem="8EH-pK-HfR" firstAttribute="centerX" secondItem="VFh-s6-3yR" secondAttribute="centerX" id="E2f-SN-1Zl"/>
                             <constraint firstItem="G3d-aK-eRb" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="4" id="L70-7H-n3T"/>
+                            <constraint firstItem="GC8-fs-iMi" firstAttribute="centerX" secondItem="G3d-aK-eRb" secondAttribute="centerX" id="O2U-bp-7dl"/>
                             <constraint firstAttribute="bottom" secondItem="mWD-Qr-9oz" secondAttribute="bottom" constant="20" symbolic="YES" id="OGj-Lz-Ezd"/>
                             <constraint firstItem="ip9-xh-T3Z" firstAttribute="trailing" secondItem="G3d-aK-eRb" secondAttribute="trailing" id="StP-Ev-RWp"/>
                             <constraint firstItem="8EH-pK-HfR" firstAttribute="centerX" secondItem="mWD-Qr-9oz" secondAttribute="centerX" id="UVU-c2-RtE"/>
@@ -428,13 +431,10 @@
                             <constraint firstItem="8EH-pK-HfR" firstAttribute="top" secondItem="G3d-aK-eRb" secondAttribute="bottom" constant="40" id="amU-Le-3TI"/>
                             <constraint firstItem="8EH-pK-HfR" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="59" id="b0j-iM-NQn"/>
                             <constraint firstItem="G3d-aK-eRb" firstAttribute="centerY" secondItem="VFh-s6-3yR" secondAttribute="centerY" id="iX1-SK-url"/>
-                            <constraint firstItem="GC8-fs-iMi" firstAttribute="centerX" secondItem="G3d-aK-eRb" secondAttribute="centerX" id="kdM-jT-ONm"/>
-                            <constraint firstItem="G3d-aK-eRb" firstAttribute="top" secondItem="GC8-fs-iMi" secondAttribute="bottom" constant="8" symbolic="YES" id="lEm-CJ-kPH"/>
                             <constraint firstItem="ip9-xh-T3Z" firstAttribute="leading" secondItem="G3d-aK-eRb" secondAttribute="leading" id="nxU-pG-qOQ"/>
                             <constraint firstItem="mWD-Qr-9oz" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="47" id="o4g-NZ-YJE"/>
                             <constraint firstItem="mWD-Qr-9oz" firstAttribute="top" secondItem="8EH-pK-HfR" secondAttribute="bottom" constant="94" id="sH0-qO-5MN"/>
                             <constraint firstItem="ip9-xh-T3Z" firstAttribute="top" secondItem="Z0a-OZ-8ek" secondAttribute="bottom" constant="21" id="vMY-Wd-nGR"/>
-                            <constraint firstItem="GC8-fs-iMi" firstAttribute="leading" secondItem="VFh-s6-3yR" secondAttribute="leadingMargin" constant="79" id="xI9-mq-aGa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="DUMPSTER." id="iPt-Lw-Q6O">

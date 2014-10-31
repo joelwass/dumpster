@@ -193,7 +193,7 @@
 
 - (IBAction)buttonPressed:(UIButton *)sender {
     if(sender.currentTitle == self.correctAnswer){
-        _score += 1.5;
+        _score += 2;
         [self updateScore:_score];
         [self performSegueWithIdentifier:@"showAnswerSegue" sender:sender];
     }else{
