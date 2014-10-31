@@ -141,12 +141,15 @@
 {
     
     _skips = 0;
+    _score = 0;
+    
     [self.navigationController.navigationBar setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
       [UIFont fontWithName:@"Chalkduster" size:21],
       NSFontAttributeName, nil]];
     
     [super viewDidLoad];
+    [_scoreLabel setText:[NSString stringWithFormat:@"Score: %d", _score]];
     _button1.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     _button1.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.view setBackgroundColor: [self colorWithHexString:@"68C3A3"]];
@@ -182,12 +185,19 @@
     
 }
 
+- (void)updateScore:(int)score {
+    _scoreLabel.text = [NSString stringWithFormat:@"Score: %d", score];
+}
+
 - (IBAction)buttonPressed:(UIButton *)sender {
     if(sender.currentTitle == self.correctAnswer){
-        
+        _score += 2;
+        [self updateScore:_score];
         [self performSegueWithIdentifier:@"showAnswerSegue" sender:sender];
     }else{
 //        [self setAnswerRed:sender];
+        _score -= 1;
+        [self updateScore:_score];
         [UIView animateWithDuration:.2 animations:^{
             sender.backgroundColor = [UIColor redColor];
         } completion:^(BOOL finished) {

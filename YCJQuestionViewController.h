@@ -16,8 +16,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *button3;
 @property (weak, nonatomic) IBOutlet UIButton *button4;
 @property (weak, nonatomic) IBOutlet UIButton *skipButton;
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property  int randomKey;
 @property  int skips;
+@property  int score;
 
 @property (strong, nonatomic) NSString *correctAnswer;
 

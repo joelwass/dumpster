@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -292,10 +292,17 @@
                                     <action selector="buttonPressed:" destination="cLv-Gz-vKd" eventType="touchUpInside" id="YYr-Dw-Y7T"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngY-th-FQu">
+                                <rect key="frame" x="258" y="515" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="TbV-zx-TCn" firstAttribute="top" secondItem="2Pt-dr-jDc" secondAttribute="bottom" constant="8" symbolic="YES" id="0WA-XR-Rcm"/>
                             <constraint firstItem="9z9-fz-eIb" firstAttribute="leading" secondItem="u4L-BC-Y5s" secondAttribute="leadingMargin" constant="4" id="1aZ-rn-hyz"/>
+                            <constraint firstItem="ngY-th-FQu" firstAttribute="baseline" secondItem="9oK-qb-muD" secondAttribute="baseline" id="4x1-02-H4j"/>
                             <constraint firstItem="9z9-fz-eIb" firstAttribute="trailing" secondItem="CgI-Xy-nDr" secondAttribute="trailing" id="DO1-8P-6dl"/>
                             <constraint firstItem="CgI-Xy-nDr" firstAttribute="leading" secondItem="ria-48-G2g" secondAttribute="leading" id="ES1-4e-Pd8"/>
                             <constraint firstItem="9oK-qb-muD" firstAttribute="leading" secondItem="u4L-BC-Y5s" secondAttribute="leadingMargin" constant="96" id="PxE-yZ-ELn"/>
@@ -312,6 +319,7 @@
                             <constraint firstItem="ria-48-G2g" firstAttribute="trailing" secondItem="2Pt-dr-jDc" secondAttribute="trailing" id="mBb-CO-ecv"/>
                             <constraint firstItem="ria-48-G2g" firstAttribute="trailing" secondItem="CgI-Xy-nDr" secondAttribute="trailing" id="rhU-YJ-DCJ"/>
                             <constraint firstItem="9oK-qb-muD" firstAttribute="top" secondItem="TbV-zx-TCn" secondAttribute="bottom" constant="20" id="u98-vz-Yjw"/>
+                            <constraint firstItem="ngY-th-FQu" firstAttribute="trailing" secondItem="TbV-zx-TCn" secondAttribute="trailing" id="wpY-LN-O0P"/>
                             <constraint firstItem="9oK-qb-muD" firstAttribute="centerX" secondItem="TbV-zx-TCn" secondAttribute="centerX" id="xCf-Lk-N4n"/>
                         </constraints>
                     </view>
@@ -324,6 +332,7 @@
                         <outlet property="button3" destination="2Pt-dr-jDc" id="fVV-Bg-Br9"/>
                         <outlet property="button4" destination="TbV-zx-TCn" id="bYO-jv-0pM"/>
                         <outlet property="questionLabel" destination="9z9-fz-eIb" id="waf-xN-w3f"/>
+                        <outlet property="scoreLabel" destination="ngY-th-FQu" id="pVn-iS-mbJ"/>
                         <outlet property="skipButton" destination="9oK-qb-muD" id="lDb-wZ-b2F"/>
                         <segue destination="iey-62-6Tf" kind="push" identifier="showAnswerSegue" id="5Ko-pw-Re3"/>
                     </connections>
