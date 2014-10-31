@@ -150,6 +150,8 @@
     
     [super viewDidLoad];
     [_scoreLabel setText:[NSString stringWithFormat:@"Score: %d", _score]];
+    [_scoreLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
+    
     _button1.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     _button1.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.view setBackgroundColor: [self colorWithHexString:@"68C3A3"]];
@@ -191,7 +193,7 @@
 
 - (IBAction)buttonPressed:(UIButton *)sender {
     if(sender.currentTitle == self.correctAnswer){
-        _score += 2;
+        _score += 1.5;
         [self updateScore:_score];
         [self performSegueWithIdentifier:@"showAnswerSegue" sender:sender];
     }else{
@@ -216,6 +218,7 @@
         YCJAPViewController *controller = (YCJAPViewController *)segue.destinationViewController;
         
         controller.correctAnswer = self.correctAnswer;
+        controller.score = self.score;
         
         
     }

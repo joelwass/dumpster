@@ -17,5 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *learnMoreButton;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (weak, nonatomic) IBOutlet UIButton *contribute;
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property  int score;
 
 @end
