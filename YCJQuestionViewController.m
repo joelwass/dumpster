@@ -187,8 +187,8 @@
     
 }
 
-- (void)updateScore:(int)score {
-    _scoreLabel.text = [NSString stringWithFormat:@"Score: %d", score];
+- (void)updateScore:(double)score {
+    _scoreLabel.text = [NSString stringWithFormat:@"Score: %.01f", score];
 }
 
 - (IBAction)buttonPressed:(UIButton *)sender {

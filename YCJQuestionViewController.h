@@ -19,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property  int randomKey;
 @property  int skips;
-@property  int score;
+@property  double score;
 
 @property (strong, nonatomic) NSString *correctAnswer;
 

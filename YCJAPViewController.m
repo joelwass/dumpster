@@ -46,7 +46,7 @@
 {
 
     [super viewDidLoad];
-    _scoreLabel.text = [NSString stringWithFormat:@"+1.5! Score: %d", _score];
+    _scoreLabel.text = [NSString stringWithFormat:@"+1.5! Score: %.01f", _score];
     [_scoreLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
     [self.view setBackgroundColor: [self colorWithHexString:@"68C3A3"]];
     [_answerLabel setFont:[UIFont fontWithName:@"Chalkduster" size:18]];
