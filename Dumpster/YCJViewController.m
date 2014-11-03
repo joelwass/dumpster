@@ -135,7 +135,8 @@ Reachability *internetReachableFoo;
 
 -(void)makeQuestions:(long)skipNum{
     
-    
+    if (_satSwitch) {
+        NSLog(@"derpppppppp");
     PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
     skipNum = arc4random_uniform([questionQuery countObjects]-10);
     [questionQuery setLimit:10];
@@ -170,6 +171,10 @@ Reachability *internetReachableFoo;
             
         }
     }];
+    }
+    else {
+        NSLog(@"derpppppppppp1");
+    }
     
 }
 
@@ -184,6 +189,7 @@ Reachability *internetReachableFoo;
         YCJQuestionViewController *controller = (YCJQuestionViewController *)navController.topViewController;
         controller.answerArray = answerArray;
         controller.questionArray = questionArray;
+        controller.satSwitch = _satSwitch;
         
     }
     

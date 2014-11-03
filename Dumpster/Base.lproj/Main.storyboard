@@ -26,11 +26,18 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lEY-gT-VZ1">
+                                <rect key="frame" x="17" y="60" width="287" height="448"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8W3-d9-06E">
+                                <rect key="frame" x="255" y="512" width="51" height="31"/>
+                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qT0-34-kAr">
-                                <rect key="frame" x="123" y="508" width="75" height="40"/>
+                                <rect key="frame" x="16" y="503" width="75" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="34a-V7-fyr"/>
-                                    <constraint firstAttribute="height" constant="40" id="3Zp-Vp-D3D"/>
+                                    <constraint firstAttribute="width" constant="75" id="cFa-9c-mch"/>
+                                    <constraint firstAttribute="height" constant="40" id="eZc-Kz-GTJ"/>
                                 </constraints>
                                 <state key="normal" title="START">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -40,18 +47,16 @@
                                     <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3ou-e2-U3D"/>
                                 </connections>
                             </button>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lEY-gT-VZ1">
-                                <rect key="frame" x="17" y="60" width="287" height="448"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="tCn-Ae-3gv" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="3St-Kx-q13"/>
-                            <constraint firstItem="lEY-gT-VZ1" firstAttribute="centerX" secondItem="qT0-34-kAr" secondAttribute="centerX" id="4b4-UO-B3p"/>
                             <constraint firstItem="lEY-gT-VZ1" firstAttribute="centerX" secondItem="tCn-Ae-3gv" secondAttribute="centerX" id="5Uj-Gh-Rfu"/>
-                            <constraint firstAttribute="bottom" secondItem="qT0-34-kAr" secondAttribute="bottom" constant="20" symbolic="YES" id="7jJ-eP-z7L"/>
+                            <constraint firstItem="MVL-lp-nAB" firstAttribute="top" secondItem="qT0-34-kAr" secondAttribute="bottom" constant="25" id="98u-8I-RKR"/>
+                            <constraint firstItem="qT0-34-kAr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Ecc-sL-lbx"/>
                             <constraint firstItem="lEY-gT-VZ1" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Gxo-AZ-Y87"/>
                             <constraint firstItem="lEY-gT-VZ1" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="KrR-GU-RRx"/>
+                            <constraint firstItem="8W3-d9-06E" firstAttribute="bottom" secondItem="qT0-34-kAr" secondAttribute="bottom" id="ZtR-i2-hUQ"/>
+                            <constraint firstItem="8W3-d9-06E" firstAttribute="trailing" secondItem="lEY-gT-VZ1" secondAttribute="trailing" id="efN-4X-ITC"/>
                             <constraint firstItem="lEY-gT-VZ1" firstAttribute="top" secondItem="6sI-zN-Igq" secondAttribute="bottom" constant="40" id="est-gk-DlB"/>
                             <constraint firstItem="tCn-Ae-3gv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="38" id="gwi-Sz-Aq7"/>
                             <constraint firstItem="tCn-Ae-3gv" firstAttribute="top" secondItem="6sI-zN-Igq" secondAttribute="bottom" constant="64" id="k5Q-zL-N7Z"/>
@@ -60,6 +65,7 @@
                     <connections>
                         <outlet property="gifImage" destination="lEY-gT-VZ1" id="j4N-SZ-7qB"/>
                         <outlet property="nextButton" destination="qT0-34-kAr" id="0qb-pJ-ufD"/>
+                        <outlet property="satSwitch" destination="kh9-bI-dsS" id="WG7-MZ-rlm"/>
                         <outlet property="titleLabel" destination="tCn-Ae-3gv" id="h1Z-C3-Keq"/>
                         <segue destination="7xw-WA-3jp" kind="modal" identifier="showQuestionSegue" id="6T0-de-D8z"/>
                     </connections>

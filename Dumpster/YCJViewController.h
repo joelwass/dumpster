@@ -17,6 +17,7 @@
 
 @property (strong, nonatomic)NSMutableArray *questionArray;
 @property (strong, nonatomic)NSMutableArray *answerArray;
+@property (strong, nonatomic) IBOutlet UIView *satSwitch;
 @property BOOL internet;
 @property (strong, nonatomic) IBOutlet UIWebView *gifImage;
 //@property (strong, nonatomic)UIWebView *gifImage;

@@ -25,6 +25,7 @@
 
 @property (strong, nonatomic) NSMutableArray *answerArray;
 @property (strong, nonatomic) NSMutableArray *questionArray;
+@property (strong, nonatomic) IBOutlet UIView *satSwitch;
 
 
 - (void)populateQuestions;
