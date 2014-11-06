@@ -40,9 +40,7 @@
 }
 
 - (void)populateQuestions{
-    
-    
-    
+
     randomKey = arc4random_uniform(_questionArray.count);
     
     
