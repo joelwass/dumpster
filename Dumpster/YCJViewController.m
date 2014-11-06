@@ -138,8 +138,8 @@ Reachability *internetReachableFoo;
     if (_satSwitch) {
         NSLog(@"derpppppppp");
     PFQuery *questionQuery = [PFQuery queryWithClassName:@"Questions"];
-    skipNum = arc4random_uniform([questionQuery countObjects]-10);
-    [questionQuery setLimit:10];
+    skipNum = arc4random_uniform([questionQuery countObjects]-5);
+    [questionQuery setLimit:5];
     [questionQuery setSkip:skipNum];
     [questionQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -157,7 +157,7 @@ Reachability *internetReachableFoo;
     }];
     
     PFQuery *answerQuery = [PFQuery queryWithClassName:@"Answers"];
-    [answerQuery setLimit:10];
+    [answerQuery setLimit:5];
     [answerQuery setSkip:skipNum];
     [answerQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
