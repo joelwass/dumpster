@@ -30,8 +30,7 @@
 @synthesize randomKey;
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -82,8 +81,7 @@
     
 }
 
-- (NSUInteger)supportedInterfaceOrientations
-{
+- (NSUInteger)supportedInterfaceOrientations{
     return UIInterfaceOrientationMaskPortrait;
 }
 
@@ -135,8 +133,7 @@
     [sender setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     
     _skips = 0;
     _score = 0;
